@@ -59,3 +59,5 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Virtueller Server: server.md
+    - Frontend: frontend.md
+    - Backend: backend.md

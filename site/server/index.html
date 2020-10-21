@@ -1,0 +1,994 @@
+
+
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Anleitungen und Hilfen für die Projekte">
+      
+      
+        <link rel="canonical" href="http://freiheit.f4.htw-berlin.de/projekte/server/">
+      
+      
+        <meta name="author" content="Jörn Freiheit">
+      
+      <link rel="shortcut icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
+    
+    
+      
+        <title>Virtueller Server - Projekte</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a676eddb.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b302131d.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#virtuellen-server-einrichten" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="">
+    <a href="http://freiheit.f4.htw-berlin.de/projekte" title="Projekte" class="md-header-nav__button md-logo" aria-label="Projekte">
+      
+  <img src="../img/fiw.jpg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Projekte
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Virtueller Server
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suchbegriff eingeben
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/jfreiheit/projekte/" title="Quellcode" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webtech
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="http://freiheit.f4.htw-berlin.de/projekte" title="Projekte" class="md-nav__button md-logo" aria-label="Projekte">
+      
+  <img src="../img/fiw.jpg" alt="logo">
+
+    </a>
+    Projekte
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/jfreiheit/projekte/" title="Quellcode" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webtech
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Virtueller Server
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Virtueller Server" class="md-nav__link md-nav__link--active">
+      Virtueller Server
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einloggen-per-ssh" class="md-nav__link">
+    Einloggen per ssh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systeminformationen" class="md-nav__link">
+    Systeminformationen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-firewall-anpassen" class="md-nav__link">
+    Die Firewall anpassen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installationen" class="md-nav__link">
+    Installationen
+  </a>
+  
+    <nav class="md-nav" aria-label="Installationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apche-webserver" class="md-nav__link">
+    Apche Webserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php-installieren" class="md-nav__link">
+    PHP installieren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql-installieren" class="md-nav__link">
+    MySQL installieren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phpmyadmin" class="md-nav__link">
+    phpMyAdmin
+  </a>
+  
+    <nav class="md-nav" aria-label="phpMyAdmin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zugriff-auf-phpmyadmin-uber-den-webserver" class="md-nav__link">
+    Zugriff auf phpMyAdmin über den Webserver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+    <nav class="md-nav" aria-label="git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-von-git" class="md-nav__link">
+    Verwendung von git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../frontend/" title="Frontend" class="md-nav__link">
+      Frontend
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../backend/" title="Backend" class="md-nav__link">
+      Backend
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einloggen-per-ssh" class="md-nav__link">
+    Einloggen per ssh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systeminformationen" class="md-nav__link">
+    Systeminformationen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-firewall-anpassen" class="md-nav__link">
+    Die Firewall anpassen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installationen" class="md-nav__link">
+    Installationen
+  </a>
+  
+    <nav class="md-nav" aria-label="Installationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apche-webserver" class="md-nav__link">
+    Apche Webserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php-installieren" class="md-nav__link">
+    PHP installieren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql-installieren" class="md-nav__link">
+    MySQL installieren
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phpmyadmin" class="md-nav__link">
+    phpMyAdmin
+  </a>
+  
+    <nav class="md-nav" aria-label="phpMyAdmin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zugriff-auf-phpmyadmin-uber-den-webserver" class="md-nav__link">
+    Zugriff auf phpMyAdmin über den Webserver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+    <nav class="md-nav" aria-label="git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-von-git" class="md-nav__link">
+    Verwendung von git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/jfreiheit/projekte/edit/master/docs/server.md" title="Seite editieren" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="virtuellen-server-einrichten">Virtuellen Server einrichten<a class="headerlink" href="#virtuellen-server-einrichten" title="Permanent link">&para;</a></h1>
+<p>Wir wollen erläutern, wie Sie sich einen Virtuellen Server einrichten können. Einen solchen Server erhalten Sie auf Antrag bei den Laboringenieuren in der 6. Etage des C-Gebäudes. Wir beschreiben hier die Einrichtung eines solchen Servers, der hier die IP <code>141.45.146.202</code> und den Namen <code>htwfb5.f4.htw-berlin.de</code> hat. Nach Einrichtung durch die Laboringenieure hat ein solcher Server zwei User: <code>local</code> und <code>root</code>. Sie können sich baer weder per <code>ssh</code> noch per <code>sftp</code> als <code>root</code> auf dem Server einloggen. </p>
+<h2 id="einloggen-per-ssh">Einloggen per <code>ssh</code><a class="headerlink" href="#einloggen-per-ssh" title="Permanent link">&para;</a></h2>
+<p>Sie können sich nur als <code>local</code> einloggen. Geben Sie dazu im Terminal </p>
+<div class="highlight"><pre><span></span><code> % ssh local@141.45.146.202
+The authenticity of host <span class="s1">&#39;141.45.146.202 (141.45.146.202)&#39;</span> can<span class="s1">&#39;t be established.</span>
+<span class="s1">ECDSA key fingerprint is SHA256:Kh3JNWKv1J29LDdFn12p2p+cKzP8zzQHpwuhVoQqOio.</span>
+<span class="s1">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</span>
+<span class="s1">Warning: Permanently added &#39;</span><span class="m">141</span>.45.146.202<span class="s1">&#39; (ECDSA) to the list of known hosts.</span>
+<span class="s1">local@141.45.146.202&#39;</span>s password: 
+Linux htwfb5 <span class="m">4</span>.19.0-5-amd64 <span class="c1">#1 SMP Debian 4.19.37-5 (2019-06-19) x86_64</span>
+
+The programs included with the Debian GNU/Linux system are free software<span class="p">;</span>
+the exact distribution terms <span class="k">for</span> each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Oct <span class="m">19</span> <span class="m">10</span>:19:16 <span class="m">2020</span> from <span class="m">141</span>.45.154.161
+local@htwfb5:~$ 
+</code></pre></div>
+
+<p>und auf Nachfrage das Passwort des Users <code>local</code> ein. Anstelle von <code>ssh local@141.45.146.202</code> hätten Sie auch <code>ssh local@htwfb5.f4.htw-berlin.de</code> verwenden können. Um nun <code>root</code>-Rechte zu erlangen, geben Sie <code>su -</code> (super user - Minus nicht vergessen!) und das Passwort für <code>root</code> ein. </p>
+<div class="highlight"><pre><span></span><code>local@htwfb5:~$ su -
+Password: 
+root@htwfb5:/home/local# 
+</code></pre></div>
+
+<p>Sie sind nun als <code>root</code> auf dem Server eingeloggt. </p>
+<h2 id="systeminformationen">Systeminformationen<a class="headerlink" href="#systeminformationen" title="Permanent link">&para;</a></h2>
+<p>Probieren Sie ein paar Befehle aus, um Informationen über das Sytem zu ermitteln. Zunächst Details über das Betriebssystem:</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~# hostnamectl
+   Static hostname: htwfb5
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: 8074a4fe7a1e4160882b8739fc91ff6b
+           Boot ID: 1289d3137b284315b3e780bae4672d53
+    Virtualization: xen
+  Operating System: Debian GNU/Linux <span class="m">10</span> <span class="o">(</span>buster<span class="o">)</span>
+            Kernel: Linux <span class="m">4</span>.19.0-5-amd64
+      Architecture: x86-64
+root@htwfb5:~# 
+</code></pre></div>
+
+<p>Und so fragen Sie laufende Prozesse ab:</p>
+<div class="highlight"><pre><span></span><code>ps aux 
+</code></pre></div>
+
+<p>Liste aller Nutzer (<code>less</code> mit <code>q</code>beenden):</p>
+<div class="highlight"><pre><span></span><code>less /etc/passwd 
+</code></pre></div>
+
+<p>Liste aller Gruppen:</p>
+<div class="highlight"><pre><span></span><code>less /etc/group q
+</code></pre></div>
+
+<h2 id="die-firewall-anpassen">Die Firewall anpassen<a class="headerlink" href="#die-firewall-anpassen" title="Permanent link">&para;</a></h2>
+<p>Als erstes passen wir die <em>firewall</em> an, da es standardmäßig nicht erlaubt ist, sich von außerhalb des HTW-Netzes auf einen solchen Server einzuloggen (Sie müssten dann immer erst einen VPN-Tunnel aufmachen). </p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:/home/local# <span class="nb">cd</span> /root
+root@htwfb5:~# ls -la
+total <span class="m">36</span>
+drwx------  <span class="m">2</span> root root <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">13</span>:40 .
+drwxr-xr-x <span class="m">22</span> root root <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">09</span>:20 ..
+-rw-------  <span class="m">1</span> root root  <span class="m">417</span> Oct <span class="m">19</span> <span class="m">10</span>:19 .bash_history
+-rw-r--r--  <span class="m">1</span> root root  <span class="m">570</span> Jan <span class="m">31</span>  <span class="m">2010</span> .bashrc
+-rw-r--r--  <span class="m">1</span> root root  <span class="m">148</span> Aug <span class="m">17</span>  <span class="m">2015</span> .profile
+-rw-------  <span class="m">1</span> root root <span class="m">1587</span> Oct <span class="m">19</span> <span class="m">13</span>:40 .viminfo
+-rwxr-xr-x  <span class="m">1</span> root root   <span class="m">90</span> Jul  <span class="m">8</span>  <span class="m">2019</span> firewall-disable.sh
+-rwxr-xr-x  <span class="m">1</span> root root <span class="m">4112</span> Jul  <span class="m">8</span>  <span class="m">2019</span> firewall.sh
+root@htwfb5:~# 
+</code></pre></div>
+
+<p>Öffnen Sie die <code>firewall.sh</code> mit <code>vim</code> (ist bereits installiert), also <code>vim firewall.sh</code> und entfernen Sie dann in folgenden Zeilen das <code>#</code> (den Kommentar): </p>
+<div class="highlight"><pre><span></span><code>iptables -A INPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
+iptables -A OUTPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
+
+iptables -A INPUT -p tcp --dport <span class="m">443</span> -j ACCEPT
+iptables -A OUTPUT -p tcp --dport <span class="m">443</span> -j ACCEPT
+
+iptables -A INPUT -p tcp --dport <span class="m">8080</span> -j ACCEPT
+iptables -A OUTPUT -p tcp --dport <span class="m">8080</span> -j ACCEPT
+</code></pre></div>
+
+<p>jeweils 2 Mal (für außerhalb und innerhalb). Alles andere sollte zunächst so bleiben. Lesen Sie die aktualisierte <code>firewall.sh</code> ein (als <code>root</code>):</p>
+<div class="highlight"><pre><span></span><code>./firewall.sh
+</code></pre></div>
+
+<p>Jetzt können Sie sich auch von außen als <code>local</code> einloggen und können auch von außen <code>sftp</code> verwenden.</p>
+<h2 id="installationen">Installationen<a class="headerlink" href="#installationen" title="Permanent link">&para;</a></h2>
+<p>Wir wollen im folgenden ein System aus </p>
+<ul>
+<li>Apache Webserver</li>
+<li>MySQL (und phpMyAdmin)</li>
+</ul>
+<p>erstellen und installieren dafür nun die entsprechenden Komponenten. Vor jeder Neuinstallation geben wir zunächst (als <code>root</code>)</p>
+<p><div class="highlight"><pre><span></span><code>apt update
+</code></pre></div>
+ ein und falls es etwas zu upgraden gibt:</p>
+<div class="highlight"><pre><span></span><code>apt full-upgrade
+</code></pre></div>
+
+<h3 id="apche-webserver">Apche Webserver<a class="headerlink" href="#apche-webserver" title="Permanent link">&para;</a></h3>
+<p>Um den Apache Webserver zu installieren, geben wir </p>
+<div class="highlight"><pre><span></span><code>apt install apache2
+</code></pre></div>
+
+<p>ein und drücken bei Nachfragen einfach <code>Enter</code>. Nach der Installation können Sie den Status des Webservers abfragen: </p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~# systemctl status apache2
+* apache2.service - The Apache HTTP Server
+   Loaded: loaded <span class="o">(</span>/lib/systemd/system/apache2.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+   Active: active <span class="o">(</span>running<span class="o">)</span> since Mon <span class="m">2020</span>-10-19 <span class="m">14</span>:51:24 UTC<span class="p">;</span> 26min ago
+     Docs: https://httpd.apache.org/docs/2.4/
+ Main PID: <span class="m">24209</span> <span class="o">(</span>apache2<span class="o">)</span>
+    Tasks: <span class="m">55</span> <span class="o">(</span>limit: <span class="m">1074</span><span class="o">)</span>
+   Memory: <span class="m">4</span>.6M
+   CGroup: /system.slice/apache2.service
+           <span class="p">|</span>-24209 /usr/sbin/apache2 -k start
+           <span class="p">|</span>-24211 /usr/sbin/apache2 -k start
+           <span class="sb">`</span>-24212 /usr/sbin/apache2 -k start
+
+Oct <span class="m">19</span> <span class="m">14</span>:51:23 htwfb5 systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Starting The Apache HTTP Server...
+Oct <span class="m">19</span> <span class="m">14</span>:51:24 htwfb5 systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Started The Apache HTTP Server.
+root@htwfb5:~# 
+</code></pre></div>
+
+<p>und auch die URL <code>http://htwfb5.f4.htw-berlin.de/</code> in den Browser eingeben. Es erscheint:
+<img alt="apache" src="../files/01_apache_1.png" /></p>
+<p>Falls Sie den Webserver neu starten wollen/müssen, geben Sie einfach</p>
+<div class="highlight"><pre><span></span><code>systemctl restart apache2
+</code></pre></div>
+
+<p>ein. Sollte es Probleme mit dem Webserver geben, schauen Sie sich die <code>*.log</code>-Dateien unter <code>/var/log/apache2</code> an:</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:/var/log/apache2# ls -la
+total <span class="m">16</span>
+drwxr-x--- <span class="m">2</span> root adm  <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">14</span>:51 .
+drwxr-xr-x <span class="m">6</span> root root <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">14</span>:51 ..
+-rw-r----- <span class="m">1</span> root adm  <span class="m">1024</span> Oct <span class="m">19</span> <span class="m">15</span>:22 access.log
+-rw-r----- <span class="m">1</span> root adm   <span class="m">281</span> Oct <span class="m">19</span> <span class="m">14</span>:51 error.log
+-rw-r----- <span class="m">1</span> root adm     <span class="m">0</span> Oct <span class="m">19</span> <span class="m">14</span>:51 other_vhosts_access.log
+root@htwfb5:/var/log/apache2# 
+</code></pre></div>
+
+<h3 id="php-installieren">PHP installieren<a class="headerlink" href="#php-installieren" title="Permanent link">&para;</a></h3>
+<p>Um zum Beispiel <code>phpMyAdmin</code> für unsere <code>MySQL</code>-Datenbank nutzen zu können, benötigen wir PHP. Dazu installieren wir</p>
+<div class="highlight"><pre><span></span><code>apt install php php-cgi php-mysqli php-pear php-mbstring php-gettext libapache2-mod-php php-common php-phpseclib php-mysql
+</code></pre></div>
+
+<p>und drücken bei Nachfragen einfach <code>Enter</code>. Die erfolgreiche Installation können Sie überprüfen, indem Sie </p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~# php --version
+PHP <span class="m">7</span>.3.19-1~deb10u1 <span class="o">(</span>cli<span class="o">)</span> <span class="o">(</span>built: Jul  <span class="m">5</span> <span class="m">2020</span> <span class="m">06</span>:46:45<span class="o">)</span> <span class="o">(</span> NTS <span class="o">)</span>
+Copyright <span class="o">(</span>c<span class="o">)</span> <span class="m">1997</span>-2018 The PHP Group
+Zend Engine v3.3.19, Copyright <span class="o">(</span>c<span class="o">)</span> <span class="m">1998</span>-2018 Zend Technologies
+    with Zend OPcache v7.3.19-1~deb10u1, Copyright <span class="o">(</span>c<span class="o">)</span> <span class="m">1999</span>-2018, by Zend Technologies
+root@htwfb5:~# 
+</code></pre></div>
+
+<p>eingeben. </p>
+<h3 id="mysql-installieren">MySQL installieren<a class="headerlink" href="#mysql-installieren" title="Permanent link">&para;</a></h3>
+<p>Es spricht gar nichts dagegen, anstelle von MySQL MariaDB zu installieren. In der Verwendung sind beide Datenbankmanagementsysteme kompatibel. Wir zeigen hier die Installation von MySQL. </p>
+<p>Zunächst benötigen wir das GnuPG Package, eine Open-Source-Implementierung des OpenPGP-Standards. Geben Sie </p>
+<div class="highlight"><pre><span></span><code>apt install gnupg
+</code></pre></div>
+
+<p>ein und drücken bei Nachfragen einfach <code>Enter</code>.</p>
+<p>Öffnen Sie im Browser nun die Seite <code>https://dev.mysql.com/downloads/repo/apt/</code> und klicken dort den "Download"-Button. Auf der folgenden Seite klicken Sie weder auf den "Login"- noch auf den "Sign Up"-Button, sondern <strong>rechts-klicken</strong>(!) auf den Link <strong>No thanks, just start my download</strong>. Kopieren Sie diesen Link in Ihre Zwischenablage. Geben Sie nun im Terminal ein:</p>
+<div class="highlight"><pre><span></span><code>wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
+</code></pre></div>
+
+<p>Die <code>https://...</code>-Adresse ist der kopierte Link! Ihr Ordner enthält dann die <code>mysql-...deb</code>-Datei. Geben Sie nun </p>
+<div class="highlight"><pre><span></span><code>dpkg -i mysql-apt-config*
+</code></pre></div>
+
+<p>in Ihr Terminal ein. Es erscheint ein blaues Fenster. Durch die Menüpunkte können Sie mit den Pfeiltasten navigieren. Sie können aber alles so lassen (den oberen Menüpunkt) und mit der <code>Tab-Taste</code> zu <code>&lt;Ok&gt;</code> wechseln. Drücken Sie <code>Enter</code>. Auch auf der nächsten Seite. Geben Sie nun </p>
+<p><div class="highlight"><pre><span></span><code>root@htwfb5:~# apt-get update
+Get:1 http://repo.mysql.com/apt/debian buster InRelease <span class="o">[</span><span class="m">21</span>.5 kB<span class="o">]</span>
+Hit:2 http://security.debian.org buster/updates InRelease      
+Hit:3 http://httpredir.debian.org/debian buster InRelease      
+Get:4 http://repo.mysql.com/apt/debian buster/mysql-8.0 Sources <span class="o">[</span><span class="m">951</span> B<span class="o">]</span>
+Get:5 http://repo.mysql.com/apt/debian buster/mysql-apt-config amd64 Packages <span class="o">[</span><span class="m">563</span> B<span class="o">]</span>
+Get:6 http://repo.mysql.com/apt/debian buster/mysql-8.0 amd64 Packages <span class="o">[</span><span class="m">7542</span> B<span class="o">]</span>
+Get:7 http://repo.mysql.com/apt/debian buster/mysql-tools amd64 Packages <span class="o">[</span><span class="m">5210</span> B<span class="o">]</span>
+Fetched <span class="m">35</span>.8 kB in 1s <span class="o">(</span><span class="m">69</span>.7 kB/s<span class="o">)</span>                
+Reading package lists... Done
+root@htwfb5:~# 
+</code></pre></div>
+ein. Nun haben wir die Pakete verfügbar und können installieren:</p>
+<div class="highlight"><pre><span></span><code>apt install mysql-server
+</code></pre></div>
+
+<p>Während der Installation werden Sie nach dem <code>root</code>-Passwort für MySQL gefragt, d.h. Sie sollen sich eins überlegen. Notieren Sie sich dieses Passwort! Sie können auch das Passwort des <code>local</code>-Users des Virtuellen Servers verwenden (um sich nicht so viele Passwörter merken zu müssen). Wählen Sie danach "Strong password encryption" aus und drücken <code>&lt;Ok&gt;</code>. </p>
+<p>Prüfen, ob MySQL korrekt installiert ist und läuft:</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~# systemctl status mysql
+* mysql.service - MySQL Community Server
+   Loaded: loaded <span class="o">(</span>/lib/systemd/system/mysql.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+   Active: active <span class="o">(</span>running<span class="o">)</span> since Mon <span class="m">2020</span>-10-19 <span class="m">15</span>:55:55 UTC<span class="p">;</span> 17h ago
+     Docs: man:mysqld<span class="o">(</span><span class="m">8</span><span class="o">)</span>
+           http://dev.mysql.com/doc/refman/en/using-systemd.html
+  Process: <span class="m">6290</span> <span class="nv">ExecStartPre</span><span class="o">=</span>/usr/share/mysql-8.0/mysql-systemd-start pre <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span><span class="m">0</span>/S
+ Main PID: <span class="m">6325</span> <span class="o">(</span>mysqld<span class="o">)</span>
+   Status: <span class="s2">&quot;Server is operational&quot;</span>
+    Tasks: <span class="m">37</span> <span class="o">(</span>limit: <span class="m">1074</span><span class="o">)</span>
+   Memory: <span class="m">331</span>.3M
+   CGroup: /system.slice/mysql.service
+           <span class="sb">`</span>-6325 /usr/sbin/mysqld
+
+Oct <span class="m">19</span> <span class="m">15</span>:55:54 htwfb5 systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Starting MySQL Community Server...
+Oct <span class="m">19</span> <span class="m">15</span>:55:55 htwfb5 systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Started MySQL Community Server.
+</code></pre></div>
+
+<p>Sie können die MySQL-Konfiguration noch absichern, um die Nutzerinnen zu zwingen, relativ starke Passwörter zu verwenden. Dazu gibt es das Tool <code>mysql_secure_installation</code>, welches mit dem MySQL-Server geliefert wird. Sie können darin entscheiden, ob Sie eine Passwortvalidierung verwenden wollen und welche Stärke das Passwort haben soll. ob Sie anonyme User und das <code>root</code>-Login von außen verbieten wollen und ob die <code>test</code>-Datenbank, auf die jeder Zugriff hat, gelöscht werden soll. Wir werden dieses Werkzeug jetzt (noch) nicht ausführen, spätestens aber, wenn wir mit einer Webanwendung auf dem Server in Produktion gehen. </p>
+<p>Sie können nun aber das MySQL-Administrationstool <code>mysqladmin</code> verwenden:</p>
+<div class="highlight"><pre><span></span><code>mysqladmin -u root -p version
+</code></pre></div>
+
+<p><code>-u root</code> gibt an, dass Sie sich als <code>root</code> (MySQL-<code>root</code>) anmelden und <code>-p</code> gibt an, dass das (MySQL-)<code>root</code>-Passwort eingegeben werden muss. </p>
+<p>Für <code>mysqladmin -u root -p version</code> erhalten Sie ungefähr folgende Ausgabe: </p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~# mysqladmin -u root -p version
+Enter password: 
+mysqladmin  Ver <span class="m">8</span>.0.22 <span class="k">for</span> Linux on x86_64 <span class="o">(</span>MySQL Community Server - GPL<span class="o">)</span>
+Copyright <span class="o">(</span>c<span class="o">)</span> <span class="m">2000</span>, <span class="m">2020</span>, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Server version      <span class="m">8</span>.0.22
+Protocol version    <span class="m">10</span>
+Connection      Localhost via UNIX socket
+UNIX socket     /var/run/mysqld/mysqld.sock
+Uptime:         <span class="m">18</span> hours <span class="m">7</span> min <span class="m">43</span> sec
+
+Threads: <span class="m">2</span>  Questions: <span class="m">8</span>  Slow queries: <span class="m">0</span>  Opens: <span class="m">127</span>  Flush tables: <span class="m">3</span>  Open tables: <span class="m">48</span>  Queries per second avg: <span class="m">0</span>.000
+root@htwfb5:~# 
+</code></pre></div>
+
+<p><code>mysqladmin</code> ist ein recht mächtiges Tool. Insbesondere können Sie damit auch alle Nutzerinnen-Passwörter ändern (auch das von <code>root</code>). Weitere Informationen zu <code>mysqladmin</code> finden Sie <a href="https://dev.mysql.com/doc/refman/8.0/en/mysqladmin.html"><strong>hier</strong></a></p>
+<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
+<p>Wir könnten nun Datenbanken, Tabellen usw. über die Kommandozeile des MySQl-Servers anlegen, ändern und löschen, aber wir verwenden dafür lieber die grafische Weboberfläche <code>phpMyAdmin</code>. Wir laden die aktuelle Version von <code>phpMyAdmin</code> zunächst herunter: </p>
+<div class="highlight"><pre><span></span><code>wget -P Downloads https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
+</code></pre></div>
+
+<p>Mit der Option <code>Downloads</code> geben wir an, dass der Download in einen Download-Ordner in dem aufrufenden Ordner erfolgt, d.h. in dem aufrufenden Ordner wird ein Ordner <code>Downloads</code> angelegt, falls er noch nicht existiert. Um die Signatur der heruntergeladenen Datei zu überprüfen, laden wir uns noch den GPG key für <code>phpMyAdmin</code> herunter (ebenfalls in das <code>Downloads</code>- Verzeichnis:</p>
+<div class="highlight"><pre><span></span><code>wget -P Downloads https://files.phpmyadmin.net/phpmyadmin.keyring
+</code></pre></div>
+
+<p>Wir wechseln in den <code>Downloads</code>- Ordner und importieren den <code>keyring</code>:</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~# <span class="nb">cd</span> Downloads/
+root@htwfb5:~/Downloads# gpg --import phpmyadmin.keyring
+gpg: directory <span class="s1">&#39;/root/.gnupg&#39;</span> created
+gpg: keybox <span class="s1">&#39;/root/.gnupg/pubring.kbx&#39;</span> created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key 9C27B31342B7511D: public key <span class="s2">&quot;Michal \xc4\x8ciha\xc5\x99 &lt;michal@cihar.com&gt;&quot;</span> imported
+gpg: key FEFC65D181AF644A: public key <span class="s2">&quot;Marc Delisle &lt;marc@infomarc.info&gt;&quot;</span> imported
+gpg: key CE752F178259BD92: public key <span class="s2">&quot;Isaac Bennetch &lt;bennetch@gmail.com&gt;&quot;</span> imported
+gpg: key DA68AB39218AB947: public key <span class="s2">&quot;phpMyAdmin Security Team &lt;security@phpmyadmin.net&gt;&quot;</span> imported
+gpg: Total number processed: <span class="m">4</span>
+gpg:               imported: <span class="m">4</span>
+</code></pre></div>
+
+<p>Wir verlassen den <code>Downloads</code>-Ordner wieder und laden uns das <code>.asc</code>- File von <code>phpmyadmin</code>herunter. asc-Dateien sind ASCII-Skript-Dateien. Hier enthält es eine digitale Signatur als Text und kann von Ver- und Entschlüsselungsprogrammen, wie z.B. * Pretty Good Privacy (PGP)* geprüft werden. </p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~/Downloads# <span class="nb">cd</span> ..
+root@htwfb5:~# wget -P Downloads https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz.asc
+--2020-10-20 <span class="m">10</span>:41:33--  https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz.asc
+Resolving www.phpmyadmin.net <span class="o">(</span>www.phpmyadmin.net<span class="o">)</span>... <span class="m">195</span>.181.175.48
+Connecting to www.phpmyadmin.net <span class="o">(</span>www.phpmyadmin.net<span class="o">)</span><span class="p">|</span><span class="m">195</span>.181.175.48<span class="p">|</span>:443... connected.
+HTTP request sent, awaiting response... <span class="m">302</span> Found
+Location: https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz.asc <span class="o">[</span>following<span class="o">]</span>
+--2020-10-20 <span class="m">10</span>:41:33--  https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz.asc
+Resolving files.phpmyadmin.net <span class="o">(</span>files.phpmyadmin.net<span class="o">)</span>... <span class="m">195</span>.181.175.55
+Connecting to files.phpmyadmin.net <span class="o">(</span>files.phpmyadmin.net<span class="o">)</span><span class="p">|</span><span class="m">195</span>.181.175.55<span class="p">|</span>:443... connected.
+HTTP request sent, awaiting response... <span class="m">200</span> OK
+Length: <span class="m">833</span> <span class="o">[</span>application/octet-stream<span class="o">]</span>
+Saving to: <span class="s1">&#39;Downloads/phpMyAdmin-latest-all-languages.tar.gz.asc&#39;</span>
+
+phpMyAdmin-latest-all-languages <span class="m">100</span>%<span class="o">[=====================================================</span>&gt;<span class="o">]</span>     <span class="m">833</span>  --.-KB/s    in 0s      
+
+<span class="m">2020</span>-10-20 <span class="m">10</span>:41:33 <span class="o">(</span><span class="m">12</span>.5 MB/s<span class="o">)</span> - <span class="s1">&#39;Downloads/phpMyAdmin-latest-all-languages.tar.gz.asc&#39;</span> saved <span class="o">[</span><span class="m">833</span>/833<span class="o">]</span>
+</code></pre></div>
+
+<p>Nun können wir die <code>phpmyadmin</code>- Signatur überprüfen:</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~# <span class="nb">cd</span> Downloads
+root@htwfb5:~/Downloads# gpg --verify phpMyAdmin-latest-all-languages.tar.gz.asc
+gpg: assuming signed data in <span class="s1">&#39;phpMyAdmin-latest-all-languages.tar.gz&#39;</span>
+gpg: Signature made Thu Oct <span class="m">15</span> <span class="m">18</span>:10:40 <span class="m">2020</span> UTC
+gpg:                using RSA key 3D06A59ECE730EB71B511C17CE752F178259BD92
+gpg: Good signature from <span class="s2">&quot;Isaac Bennetch &lt;bennetch@gmail.com&gt;&quot;</span> <span class="o">[</span>unknown<span class="o">]</span>
+gpg:                 aka <span class="s2">&quot;Isaac Bennetch &lt;isaac@bennetch.org&gt;&quot;</span> <span class="o">[</span>unknown<span class="o">]</span>
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 3D06 A59E CE73 0EB7 1B51  1C17 CE75 2F17 <span class="m">8259</span> BD92
+</code></pre></div>
+
+<h4 id="zugriff-auf-phpmyadmin-uber-den-webserver">Zugriff auf phpMyAdmin über den Webserver<a class="headerlink" href="#zugriff-auf-phpmyadmin-uber-den-webserver" title="Permanent link">&para;</a></h4>
+<p>Wir haben <code>phpMyAdmin</code> nun heruntergeladen und den Download verifiziert. Jetzt wollen wir es für die Nutzung zur Verfügung stellen. Damit es über eine URL, wie z.B. <code>http://htwfb5.f4.htw-berlin.de/phpmyadmin</code> erreichbar ist, kopieren wir <code>phpmyadmin</code> in unser * DocumentRoot* . Das ist in Linux-Systemen typischerweise <code>var/www/html</code>. Wir wechesln in dieses Verzeichnis und erstellen dort den Ordner <code>phpmyadmin</code>:</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:~/Downloads# <span class="nb">cd</span> /var/www/html
+root@htwfb5:/var/www/html# ls -la
+total <span class="m">20</span>
+drwxr-xr-x <span class="m">2</span> root root  <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">14</span>:51 .
+drwxr-xr-x <span class="m">3</span> root root  <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">14</span>:51 ..
+-rw-r--r-- <span class="m">1</span> root root <span class="m">10701</span> Oct <span class="m">19</span> <span class="m">14</span>:51 index.html
+root@htwfb5:/var/www/html# mkdir phpmyadmin
+root@htwfb5:/var/www/html# ls -la
+total <span class="m">24</span>
+drwxr-xr-x <span class="m">3</span> root root  <span class="m">4096</span> Oct <span class="m">20</span> <span class="m">10</span>:53 .
+drwxr-xr-x <span class="m">3</span> root root  <span class="m">4096</span> Oct <span class="m">19</span> <span class="m">14</span>:51 ..
+-rw-r--r-- <span class="m">1</span> root root <span class="m">10701</span> Oct <span class="m">19</span> <span class="m">14</span>:51 index.html
+drwxr-xr-x <span class="m">2</span> root root  <span class="m">4096</span> Oct <span class="m">20</span> <span class="m">10</span>:53 phpmyadmin
+</code></pre></div>
+
+<p>Danach wechseln wir wieder in unseren <code>Downloads</code>-Ordner zurück und entpacken dort unsere gezippte <code>phpmyadmin</code>-Datei direkt in den <code>/var/www/html/phpmyadmin</code>-Ordner:</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:/var/www/html# <span class="nb">cd</span> /root/Downloads/
+root@htwfb5:~/Downloads# tar xvf phpMyAdmin-latest-all-languages.tar.gz --strip-components<span class="o">=</span><span class="m">1</span> -C /var/www/html/phpmyadmin
+</code></pre></div>
+
+<p>Es erscheint eine sehr lange Liste von Dateien, die alle in den <code>/var/www/html/phpmyadmin</code>-Ordner entpackt werden. Jetzt könnte man die URL <code>http://htwfb5.f4.htw-berlin.de/phpmyadmin/</code> bereits in den Browser eingeben und es käme bereits das Anmeldeformular für <code>phpmyadmin</code>: <img alt="phpmyadmin" src="../files/02_phpmyadmin_1.png" /></p>
+<p>Wir wollen uns aber zunächst noch um eine sichere Anmeldung kümmern. Dazu wechseln wir in das <code>/var/www/html/phpmyadmin</code>-Verzeichnis. Darin gibt es eine Datei <code>config.sample.inc.php</code>, welche eine Beispiel-Konfiguration für <code>phpmyadmin</code> enthält. Diese Datei kopieren wir in eine <code>config.inc.php</code>-Datei (diese wird erstellt):  </p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /var/www/html/phpmyadmin
+cp config.sample.inc.php config.inc.php
+</code></pre></div>
+
+<p>Wir öffnen diese <code>config.inc.php</code>mit einem Terminaleditor (z.B. <code>nano</code> oder <code>vim</code>). IN Zeile <code>18</code>in dieser Datei gibt es folgenden Eintrag:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$cfg</span><span class="o">[</span><span class="s1">&#39;blowfish_secret&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>  /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+</code></pre></div>
+
+<p>Wir benötigen eine Passphrase für den <em>Blowfish-Verschlüsselungsalgorithmus</em>, der für die Authentifikation mithilfe von Cookies verwendet wird. Diese Passphrase soll mindestens 32 Zeichen lang sein. Sie tragen diese Passphrase direkt in die Datei <code>config.inc.php</code> ein, deshalb müssen Sie sich diese auch gar nicht merken, da sie dort ja jederzeit für Sie lesbar ist. Geben Sie also ein Satz dort ein, der aus mindestens 32 Zeichen besteht (kann Sonderzeichen, Leerzeichen usw. enthalten). Speichern Sie dann die Datei <code>config.inc.php</code>. Wir wechseln die Zugriffsrechte der Datei <code>config.inc.php</code> von <code>644</code> auf <code>660</code> (schreib- und lesbar durch User und Group, aber weder noch für die Welt):</p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:/var/www/html/phpmyadmin# chmod <span class="m">660</span> config.inc.php
+root@htwfb5:/var/www/html/phpmyadmin# ls -la config.inc.php
+-rw-rw---- <span class="m">1</span> root root <span class="m">4590</span> Oct <span class="m">20</span> <span class="m">11</span>:18 config.inc.php
+</code></pre></div>
+
+<p>Wir haben das gesamte Verzeichnis <code>phpmyadmin</code> in <code>/var/www/html</code> als <code>root</code>angelegt. Dadurch ist <code>root</code> dort auch Owner. Das wollen wir ändern. Rekursiv wird das gesamte Verzeichnis dem User (und der Group) <code>www-data</code> zugeordnet. </p>
+<div class="highlight"><pre><span></span><code>chown -R www-data:www-data phpmyadmin
+</code></pre></div>
+
+<p>Jetzt starten wir noch unseren Webserver neu und dann können wir <code>phpmyadmin</code> im Browser aufrufen:</p>
+<div class="highlight"><pre><span></span><code>systemctl restart apache2
+</code></pre></div>
+
+<details><summary>Mögliche Login-Probleme phpmyadmin</summary><ul>
+<li>eventuelle Fehlerausschrift: <code>mysqli::real_connect(): The server requested authentication method unknown to the client [caching_sha2_password]</code> </li>
+<li>und/oder <code>mysqli::real_connect(): (HY000/2054): The server requested authentication method unknown to the client</code></li>
+<li>mögliche Lösungen: PHP-Update auf 7.4 (davor hat <code>mysqli</code> <code>caching_sha2</code> nicht unterstützt)</li>
+<li>wenn das auch nicht hilft:<ul>
+<li>per <code>mysql -u root -p</code> als <code>root</code> auf den MySQl-Server anmelden</li>
+<li>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hierDasRootPasswort';</li>
+<li>dann wird wieder native Passwort geprüft</li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="git">git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h2>
+<p>Damit Sie Ihr Repository / Ihre Repositories auch auf den virtuellen Server "pullen" können, benötigen Sie noch <a href="https://git-scm.com/"><strong>git</strong></a>. Die Installation ist einfach:</p>
+<div class="highlight"><pre><span></span><code>apt install git
+</code></pre></div>
+
+<p>Beantworten Sie eventuelle Fragen einfach mit <code>Enter</code>. Testen Sie, ob die Installation erfolgreich war:</p>
+<div class="highlight"><pre><span></span><code>git --version
+</code></pre></div>
+
+<p>Es sollte etwas wie <code>git version 2.20.1</code> ausgegeben werden. </p>
+<h3 id="verwendung-von-git">Verwendung von git<a class="headerlink" href="#verwendung-von-git" title="Permanent link">&para;</a></h3>
+<p>Sie müssen nun Ihr <em>Remote Rpository</em> (die entsprechende URL erhalten Sie bei GitHub oder GitLab oder welchen git-Host Sie auch verwenden) <em>genau ein Mal clonen</em> (<code>git clone RemoteRepositoryCloneURL</code>). Meistens wollen Sie genau in den Ordner <code>/var/www/html</code> clonen, da dort dann Ihr lokales Repository angelegt wird und Sie gleichzeitig im <em>DocumentRoot</em> sind. </p>
+<p>Wir zeigen hier einmal exemplarisch das Clonen des GitHub-Repositories mit der Clone_URL <code>https://github.com/jfreiheit/projekte.git</code>. Wir wechseln zunächst in das Verzeichnis <code>/var/www/html/</code> und clonen dorthin unser Repository. </p>
+<div class="highlight"><pre><span></span><code>root@htwfb5:/# <span class="nb">cd</span> /var/www/html 
+root@htwfb5:/var/www/html# git clone https://github.com/jfreiheit/projekte.git
+Cloning into <span class="s1">&#39;projekte&#39;</span>...
+remote: Enumerating objects: <span class="m">12</span>, <span class="k">done</span>.
+remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">12</span>/12<span class="o">)</span>, <span class="k">done</span>.
+remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">11</span>/11<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">12</span> <span class="o">(</span>delta <span class="m">1</span><span class="o">)</span>, reused <span class="m">11</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, pack-reused <span class="m">0</span>
+Unpacking objects: <span class="m">100</span>% <span class="o">(</span><span class="m">12</span>/12<span class="o">)</span>, <span class="k">done</span>.
+root@htwfb5:/var/www/html#  
+</code></pre></div>
+
+<p>Es entsteht ein Ordner <code>projekte</code> innerhalb von <code>/var/www/html</code>. Um über den Browser auf diesen Ordner zuzugreifen, müssen Sie jetzt nur noch die URL <code>http://htwfb5.f4.htw-berlin.de/projekte</code> in Ihrem Browser aufrufen. </p>
+<p>Nachdem Sie einmal geclont haben, müssen Sie stets nur noch innerhalb des <code>projekte</code>-Ordners (<code>cd /var/www/html/projekte</code>) aufrufen:</p>
+<div class="highlight"><pre><span></span><code>git pull
+</code></pre></div>
+
+<p>, um sich die neueste Version Ihres Repositories auf den virtuellen Server zu ziehen. </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="">
+        
+          <a href=".." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Zurück
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../frontend/" title="Frontend" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Weiter
+                </span>
+                Frontend
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Jörn Freiheit
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "", "search.config.separator": "", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["instant", "tabs"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Anleitungen für Projekte
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Hier werden einige Anleitungen, Hilfen und Informationen für und über die Projekte in der Wirtschaft abgelegt werden. Es soll ein Sammelsurium immer wieder auftretender technischer Fragestellungen beantwortet werden. 
 
-## Commands
+## Bisherige Anleitungen
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- Einrichten eines [**Virtuellen Servers**](./server/#virtuellen-server-einrichten)
+- Beginn Erstellung [**Frontend**](./frontend/#frontend) mit Angular
+- Beginn Erstellung [**Backend**](./backend/#backend) mit node.js
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Schauen Sie auch im [**WebTech-Skript**](http://freiheit.f4.htw-berlin.de/webtech/) (Zugang: webtech:webtech2021) nach, da werden im Laufe des Semsters viele Details zu den Themen Angular und node.js erläutert. 
