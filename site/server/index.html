@@ -325,6 +325,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#eine-testdatenbank" class="md-nav__link">
+    Eine Testdatenbank
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -472,6 +479,13 @@
           <li class="md-nav__item">
   <a href="#zugriff-auf-phpmyadmin-uber-den-webserver" class="md-nav__link">
     Zugriff auf phpMyAdmin über den Webserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eine-testdatenbank" class="md-nav__link">
+    Eine Testdatenbank
   </a>
   
 </li>
@@ -876,6 +890,279 @@ root@htwfb5:/var/www/html/phpmyadmin# ls -la config.inc.php
 </li>
 </ul>
 </details>
+<h4 id="eine-testdatenbank">Eine Testdatenbank<a class="headerlink" href="#eine-testdatenbank" title="Permanent link">&para;</a></h4>
+<p>Rufen Sie <code>phpmyadmin</code> im Browser auf und loggen sich als <code>root</code> ein. In der linken Spalte sind alle bisherigen Datenbanken aufgelistet. Klicken Sie dort auf <code>Neu</code> und erstellen Sie eine neue Datenbank <code>Test20</code>. Wählen Sie diese Datenbank links aus, indem Sie sie anklicken. Gehen Sie auf den Reiter <code>SQL</code> und kopieren Sie folgenden Inhalt in das <code>SQL</code>-Terminal:</p>
+<details><summary>Test20.sql</summary><div class="highlight"><pre><span></span><code><span class="c1">-- phpMyAdmin SQL Dump</span>
+<span class="c1">-- version 5.0.4</span>
+<span class="c1">-- https://www.phpmyadmin.net/</span>
+<span class="c1">--</span>
+<span class="c1">-- Host: localhost</span>
+<span class="c1">-- Erstellungszeit: 20. Okt 2020 um 15:44</span>
+<span class="c1">-- Server-Version: 8.0.22</span>
+<span class="c1">-- PHP-Version: 7.3.19-1~deb10u1</span>
+
+<span class="k">SET</span> <span class="n">SQL_MODE</span> <span class="o">=</span> <span class="ss">&quot;NO_AUTO_VALUE_ON_ZERO&quot;</span><span class="p">;</span>
+<span class="k">START</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+<span class="k">SET</span> <span class="n">time_zone</span> <span class="o">=</span> <span class="ss">&quot;+00:00&quot;</span><span class="p">;</span>
+
+
+<span class="cm">/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */</span><span class="p">;</span>
+<span class="cm">/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */</span><span class="p">;</span>
+<span class="cm">/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */</span><span class="p">;</span>
+<span class="cm">/*!40101 SET NAMES utf8mb4 */</span><span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Datenbank: `Test20`</span>
+<span class="c1">--</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Tabellenstruktur für Tabelle `assistenten`</span>
+<span class="c1">--</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">assistenten</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">name</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">fachgebiet</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">von</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Daten für Tabelle `assistenten`</span>
+<span class="c1">--</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">assistenten</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">fachgebiet</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">von</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">3002</span><span class="p">,</span> <span class="s1">&#39;Sokrates&#39;</span><span class="p">,</span> <span class="s1">&#39;Ideenlehre&#39;</span><span class="p">,</span> <span class="mi">2125</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3003</span><span class="p">,</span> <span class="s1">&#39;Aristoteles&#39;</span><span class="p">,</span> <span class="s1">&#39;Syllogistik&#39;</span><span class="p">,</span> <span class="mi">2125</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3004</span><span class="p">,</span> <span class="s1">&#39;Wittgenstein&#39;</span><span class="p">,</span> <span class="s1">&#39;Sprachtheorie&#39;</span><span class="p">,</span> <span class="mi">2126</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3005</span><span class="p">,</span> <span class="s1">&#39;Mitchell&#39;</span><span class="p">,</span> <span class="s1">&#39;Planetenbewegung&#39;</span><span class="p">,</span> <span class="mi">2127</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3006</span><span class="p">,</span> <span class="s1">&#39;Newton&#39;</span><span class="p">,</span> <span class="s1">&#39;Keplersche Gesetze&#39;</span><span class="p">,</span> <span class="mi">2134</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3007</span><span class="p">,</span> <span class="s1">&#39;Whitehead&#39;</span><span class="p">,</span> <span class="s1">&#39;analytische Philosophie&#39;</span><span class="p">,</span> <span class="mi">2134</span><span class="p">);</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Tabellenstruktur für Tabelle `hoeren`</span>
+<span class="c1">--</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">hoeren</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Daten für Tabelle `hoeren`</span>
+<span class="c1">--</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">hoeren</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">25403</span><span class="p">,</span> <span class="mi">5022</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">26120</span><span class="p">,</span> <span class="mi">5001</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">27550</span><span class="p">,</span> <span class="mi">4052</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">27550</span><span class="p">,</span> <span class="mi">5001</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">28106</span><span class="p">,</span> <span class="mi">5041</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">28106</span><span class="p">,</span> <span class="mi">5052</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">28106</span><span class="p">,</span> <span class="mi">5216</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">28106</span><span class="p">,</span> <span class="mi">5259</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">29120</span><span class="p">,</span> <span class="mi">5001</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">29120</span><span class="p">,</span> <span class="mi">5041</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">29120</span><span class="p">,</span> <span class="mi">5049</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">29555</span><span class="p">,</span> <span class="mi">5001</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">29555</span><span class="p">,</span> <span class="mi">5022</span><span class="p">);</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Tabellenstruktur für Tabelle `professoren`</span>
+<span class="c1">--</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">professoren</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">name</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">rang</span><span class="o">`</span> <span class="nb">char</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">raum</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Daten für Tabelle `professoren`</span>
+<span class="c1">--</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">professoren</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">rang</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">raum</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">2125</span><span class="p">,</span> <span class="s1">&#39;Hypathia&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">,</span> <span class="mi">226</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2126</span><span class="p">,</span> <span class="s1">&#39;Russel&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">,</span> <span class="mi">232</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2127</span><span class="p">,</span> <span class="s1">&#39;Meitner&#39;</span><span class="p">,</span> <span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="mi">310</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2133</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="mi">52</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2134</span><span class="p">,</span> <span class="s1">&#39;Kepler&#39;</span><span class="p">,</span> <span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="mi">309</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2136</span><span class="p">,</span> <span class="s1">&#39;Curie&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">,</span> <span class="mi">36</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2137</span><span class="p">,</span> <span class="s1">&#39;Galileo&#39;</span><span class="p">,</span> <span class="s1">&#39;C4&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Tabellenstruktur für Tabelle `pruefen`</span>
+<span class="c1">--</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">pruefen</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">note</span><span class="o">`</span> <span class="nb">decimal</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Daten für Tabelle `pruefen`</span>
+<span class="c1">--</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">pruefen</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">note</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">25403</span><span class="p">,</span> <span class="mi">5041</span><span class="p">,</span> <span class="mi">2125</span><span class="p">,</span> <span class="s1">&#39;2.0&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">27550</span><span class="p">,</span> <span class="mi">4630</span><span class="p">,</span> <span class="mi">2137</span><span class="p">,</span> <span class="s1">&#39;2.0&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">28106</span><span class="p">,</span> <span class="mi">5001</span><span class="p">,</span> <span class="mi">2126</span><span class="p">,</span> <span class="s1">&#39;1.0&#39;</span><span class="p">);</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Tabellenstruktur für Tabelle `studenten`</span>
+<span class="c1">--</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">studenten</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">name</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">semester</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Daten für Tabelle `studenten`</span>
+<span class="c1">--</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">studenten</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">name</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">semester</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">24002</span><span class="p">,</span> <span class="s1">&#39;Dijkstra&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">25403</span><span class="p">,</span> <span class="s1">&#39;Einstein&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">26120</span><span class="p">,</span> <span class="s1">&#39;Goeppert-Mayer&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">26830</span><span class="p">,</span> <span class="s1">&#39;Noether&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">27550</span><span class="p">,</span> <span class="s1">&#39;Goedel&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">28106</span><span class="p">,</span> <span class="s1">&#39;Lovelace&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">29120</span><span class="p">,</span> <span class="s1">&#39;Bartik&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">29555</span><span class="p">,</span> <span class="s1">&#39;Pasteur&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Tabellenstruktur für Tabelle `voraussetzen`</span>
+<span class="c1">--</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">voraussetzen</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">vorgaenger</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">nachfolger</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Daten für Tabelle `voraussetzen`</span>
+<span class="c1">--</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">voraussetzen</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">vorgaenger</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">nachfolger</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">5041</span><span class="p">,</span> <span class="mi">5052</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5041</span><span class="p">,</span> <span class="mi">5216</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5043</span><span class="p">,</span> <span class="mi">5052</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5052</span><span class="p">,</span> <span class="mi">5022</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5259</span><span class="p">,</span> <span class="mi">5041</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5259</span><span class="p">,</span> <span class="mi">5043</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5259</span><span class="p">,</span> <span class="mi">5049</span><span class="p">);</span>
+
+<span class="c1">-- --------------------------------------------------------</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Tabellenstruktur für Tabelle `vorlesungen`</span>
+<span class="c1">--</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">vorlesungen</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">titel</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">sws</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">gelesen_von</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Daten für Tabelle `vorlesungen`</span>
+<span class="c1">--</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">`</span><span class="n">vorlesungen</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">titel</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">sws</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">gelesen_von</span><span class="o">`</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">4052</span><span class="p">,</span> <span class="s1">&#39;Medizin&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2125</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4630</span><span class="p">,</span> <span class="s1">&#39;Mechanik&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2137</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5001</span><span class="p">,</span> <span class="s1">&#39;Physik&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2137</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5022</span><span class="p">,</span> <span class="s1">&#39;Astronomie&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2134</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5041</span><span class="p">,</span> <span class="s1">&#39;Ethik&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2125</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5043</span><span class="p">,</span> <span class="s1">&#39;Erkenntnistheorie&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2126</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5049</span><span class="p">,</span> <span class="s1">&#39;Philosophie&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2125</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5052</span><span class="p">,</span> <span class="s1">&#39;Wissenschaftstheorie&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2126</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5216</span><span class="p">,</span> <span class="s1">&#39;Logik&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2126</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5259</span><span class="p">,</span> <span class="s1">&#39;Mathematik&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2133</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes der exportierten Tabellen</span>
+<span class="c1">--</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes für die Tabelle `assistenten`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">assistenten</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">ADD</span> <span class="k">KEY</span> <span class="o">`</span><span class="n">von</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">von</span><span class="o">`</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes für die Tabelle `hoeren`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">hoeren</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes für die Tabelle `professoren`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">professoren</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">ADD</span> <span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="o">`</span><span class="n">raum</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">raum</span><span class="o">`</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes für die Tabelle `pruefen`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">pruefen</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes für die Tabelle `studenten`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">studenten</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">matr_nr</span><span class="o">`</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes für die Tabelle `voraussetzen`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">voraussetzen</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">vorgaenger</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">nachfolger</span><span class="o">`</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Indizes für die Tabelle `vorlesungen`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">vorlesungen</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">vorl_nr</span><span class="o">`</span><span class="p">);</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Constraints der exportierten Tabellen</span>
+<span class="c1">--</span>
+
+<span class="c1">--</span>
+<span class="c1">-- Constraints der Tabelle `assistenten`</span>
+<span class="c1">--</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">assistenten</span><span class="o">`</span>
+  <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">assistenten_ibfk_1</span><span class="o">`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">von</span><span class="o">`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">professoren</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">pers_nr</span><span class="o">`</span><span class="p">);</span>
+<span class="k">COMMIT</span><span class="p">;</span>
+
+<span class="cm">/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */</span><span class="p">;</span>
+<span class="cm">/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */</span><span class="p">;</span>
+<span class="cm">/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</span><span class="p">;</span>
+</code></pre></div>
+
+</details>
+<p>Klicken Sie dann auf <code>OK</code>. Es werden mehrere Tabellen erstellt und diese befüllt. Prüfen Sie das Ergebnis. Anstelle des Hineinkopierens des SQL-Codes können Sie auch unter dem Reiter <code>Importieren</code> die Datei <code>Test20.sql</code> hochladen und ausführen lassen. Laden Sie sich dazu die Datei <a href="../files/Test20.sql"><strong>Test20.sql</strong></a> herunter, speichern Sie ab und laden Sie dann unter dem Reiter <code>Importieren</code> hoch. </p>
 <h2 id="git">git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h2>
 <p>Damit Sie Ihr Repository / Ihre Repositories auch auf den virtuellen Server "pullen" können, benötigen Sie noch <a href="https://git-scm.com/"><strong>git</strong></a>. Die Installation ist einfach:</p>
 <div class="highlight"><pre><span></span><code>apt install git
