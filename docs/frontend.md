@@ -28,7 +28,7 @@ npm -v
 Außerdem benötigen Sie das *Angular-Command-Line-Interface (CLI)*, das Sie mithilfe des Befehls 
 
 ```bash 
-npm install -g angular-cli 
+npm install -g @angular/cli 
 ```
 
 installieren. Danach sollte 
