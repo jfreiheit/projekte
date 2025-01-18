@@ -40,7 +40,6 @@ ng --version
 funktionieren und Ihnen etwas in dieser Art ausgeben:
 
 ```bash
-
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
    / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
@@ -49,23 +48,28 @@ funktionieren und Ihnen etwas in dieser Art ausgeben:
                 |___/
     
 
-Angular CLI: 9.0.1
-Node: 13.3.0
+Angular CLI: 11.0.0
+Node: 12.19.0
 OS: darwin x64
 
-Angular: 
-... 
-Ivy Workspace: 
+Angular: 11.0.0
+... animations, cli, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+Ivy Workspace: Yes
 
-Package                      Version
-------------------------------------------------------
-@angular-devkit/architect    0.900.1
-@angular-devkit/core         9.0.1
-@angular-devkit/schematics   9.0.1
-@schematics/angular          9.0.1
-@schematics/update           0.900.1
-rxjs                         6.5.3
-    
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1100.0
+@angular-devkit/build-angular   0.1100.0
+@angular-devkit/core            11.0.0
+@angular-devkit/schematics      11.0.0
+@angular/cdk                    9.2.4
+@angular/material               9.2.4
+@schematics/angular             11.0.0
+@schematics/update              0.1100.0
+rxjs                            6.6.3
+typescript                      4.0.5
 ```
 
 Jetzt können wir unser erstes Projekt erstellen. 
@@ -306,7 +310,7 @@ Wir wollen hier exemplarisch einmal **SemanticUI** einbinden. Geben Sie dazu im 
 npm install semantic-ui-css
 ```
 
-ein. Sollten Sie die Meldung bekommen, dass Paket bedenklich ist (`found 1 high severity vulnerability`), geben Sie danach noch `npm audit fix` ein. Durch diese Anweisung werden die benötigten Style-Dateien geladen und unter dem Ordner `node_modules/semantic-ui-css` gespeichert. Diese müssen jetzt nur noch in das Projekt eingebunden werden. Öffnen Sie dazu in Ihrer IDE die Datei `angular.json`. Bei dieser Datei handelt es sich um eine [JSON](./javascript/#json)-Datei, die für die Konfiguration unserer Angular-Anwendung zuständig ist. In der `angular.json`-Datei ändern wir unter **"projects"-->"frontend"-->"architect"-->"build"-->"options"-->"styles"** den Eintrag von 
+ein. Sollten Sie die Meldung bekommen, dass Paket bedenklich ist (`found 1 high severity vulnerability`), geben Sie danach noch `npm audit fix` ein. Durch diese Anweisung werden die benötigten Style-Dateien geladen und unter dem Ordner `node_modules/semantic-ui-css` gespeichert. Diese müssen jetzt nur noch in das Projekt eingebunden werden. Öffnen Sie dazu in Ihrer IDE die Datei `angular.json`. Bei dieser Datei handelt es sich um eine [JSON](https://www.json.org/json-de.html)-Datei, die für die Konfiguration unserer Angular-Anwendung zuständig ist. In der `angular.json`-Datei ändern wir unter **"projects"-->"frontend"-->"architect"-->"build"-->"options"-->"styles"** den Eintrag von 
 
 ```json
 "styles": [
@@ -497,3 +501,4 @@ Sie können nun
 - Routen definieren.
 
 Damit haben Sie erstmal die notwendigsten Hilfsmittel in der Hand, um loszulegen, denke ich. Viel Spaß mit Angular und viel Erfolg im Projekt! 
+

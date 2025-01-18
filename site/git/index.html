@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Anleitungen und Hilfen für die Projekte">
+      
+      
+        <meta name="author" content="Jörn Freiheit">
+      
+      
+        <link rel="canonical" href="http://freiheit.f4.htw-berlin.de/projekte/git/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../spring/">
+      
+      
+      <link rel="icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+    
+    
+      
+        <title>Git - Projekte</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Projekte" class="md-header__button md-logo" aria-label="Projekte" data-md-component="logo">
+      
+  <img src="../img/fiw.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projekte
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jfreiheit/projekte" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    projekte
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Projekte" class="md-nav__button md-logo" aria-label="Projekte" data-md-component="logo">
+      
+  <img src="../img/fiw.jpg" alt="logo">
+
+    </a>
+    Projekte
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jfreiheit/projekte" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    projekte
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-von-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation von Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-als-versionierungswerkzeug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git als Versionierungswerkzeug
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git als Versionierungswerkzeug">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-init-ein-repository-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git init - ein Repository erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitignore-dateien-aus-der-verwaltung-ausschlieen" class="md-nav__link">
+    <span class="md-ellipsis">
+      .gitignore - Dateien aus der Verwaltung ausschließen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add-dem-repository-dateien-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add - dem Repository Dateien hinzufügen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-einen-snapshot-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit - einen Snapshot erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-log-und-git-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      git log und git show
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-branch-und-git-ckeckout-branches-in-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      git branch und git ckeckout - Branches in Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-merge-branches-zusammenfuhren" class="md-nav__link">
+    <span class="md-ellipsis">
+      git merge - Branches zusammenführen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="git merge - Branches zusammenführen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konflikte-auflosen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konflikte auflösen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-abbrechen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge abbrechen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-stash-arbeit-unterbrechen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git stash - Arbeit unterbrechen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einige-weitere-nutzliche-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einige weitere nützliche Befehle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Einige weitere nützliche Befehle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-als-kollaborationswerkzeug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git als Kollaborationswerkzeug
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git als Kollaborationswerkzeug">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ein-zentrales-repository-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein zentrales Repository anlegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alltag-mit-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alltag mit Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alltag mit Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-add-eine-neue-datei-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add - eine neue Datei hinzufügen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-anderungen-speichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit - Änderungen "speichern"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-push-anderungen-auf-das-zentrale-repository-spielen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git push - Änderungen auf das zentrale Repository spielen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ein-existierendes-zentrales-repository-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein existierendes zentrales Repository verwenden
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      git config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzliche-links-zu-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nützliche Links zu Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#egit-git-mit-eclipse" class="md-nav__link">
+    <span class="md-ellipsis">
+      EGit - Git mit Eclipse
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtueller Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buchung/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beispiel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST-API mit Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vaadin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vaadin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-von-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation von Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-als-versionierungswerkzeug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git als Versionierungswerkzeug
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git als Versionierungswerkzeug">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-init-ein-repository-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git init - ein Repository erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitignore-dateien-aus-der-verwaltung-ausschlieen" class="md-nav__link">
+    <span class="md-ellipsis">
+      .gitignore - Dateien aus der Verwaltung ausschließen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add-dem-repository-dateien-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add - dem Repository Dateien hinzufügen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-einen-snapshot-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit - einen Snapshot erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-log-und-git-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      git log und git show
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-branch-und-git-ckeckout-branches-in-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      git branch und git ckeckout - Branches in Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-merge-branches-zusammenfuhren" class="md-nav__link">
+    <span class="md-ellipsis">
+      git merge - Branches zusammenführen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="git merge - Branches zusammenführen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konflikte-auflosen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konflikte auflösen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-abbrechen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge abbrechen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-stash-arbeit-unterbrechen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git stash - Arbeit unterbrechen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einige-weitere-nutzliche-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einige weitere nützliche Befehle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Einige weitere nützliche Befehle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-als-kollaborationswerkzeug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git als Kollaborationswerkzeug
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git als Kollaborationswerkzeug">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ein-zentrales-repository-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein zentrales Repository anlegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alltag-mit-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alltag mit Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alltag mit Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-add-eine-neue-datei-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git add - eine neue Datei hinzufügen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-anderungen-speichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      git commit - Änderungen "speichern"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-push-anderungen-auf-das-zentrale-repository-spielen" class="md-nav__link">
+    <span class="md-ellipsis">
+      git push - Änderungen auf das zentrale Repository spielen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ein-existierendes-zentrales-repository-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein existierendes zentrales Repository verwenden
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      git config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzliche-links-zu-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nützliche Links zu Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#egit-git-mit-eclipse" class="md-nav__link">
+    <span class="md-ellipsis">
+      EGit - Git mit Eclipse
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<p><a href="https://git-scm.com/">Git</a> ist ein Versionierungswerkzeug für die Softwareentwicklung. Mit Git können Sie</p>
+<ul>
+<li>Ihre Software versionieren, d.h. Versionen Ihrer Software erstellen und zwischen diesen Versionen hin- und herwecheseln sowie</li>
+<li>im Team gemeinsam an einem Softwareprojekt arbeiten und die einzelnen Entwicklungen aller Teammitglieder geeignet zusammenführen. </li>
+</ul>
+<p>Git ist <a href="https://git-scm.com/about/free-and-open-source">Open Source</a> und <a href="https://git-scm.com/downloads">frei verfügbar</a>. Entstanden ist Git im Rahmen der Entwicklung von <a href="https://linuxfoundation.org/">Linux</a>, initiiert durch <a href="https://github.com/torvalds">Linus Torvalds</a>, dem Initiator von Linux.</p>
+<h2 id="installation-von-git">Installation von Git<a class="headerlink" href="#installation-von-git" title="Permanent link">&para;</a></h2>
+<p>Um Git verwenden zu können, müssen Sie es zunächst installieren. Laden Sie sich Git für Ihr Betriebssystem von der <a href="https://git-scm.com/downloads">Download-Seite</a> herunter bzw. gehen Sie so vor, wie für Ihr Betriebssystenm beschrieben. Installationshilfen erhalten Sie z.B. auch im frei verfügbaren <a href="https://git-scm.com/book/de/v2">Git-Buch</a> unter <a href="https://git-scm.com/book/de/v2/Erste-Schritte-Git-installieren">Git installieren</a> oder auch im <a href="https://git-scm.com/video/get-going">Video</a> über die ersten Schritte mit Git. </p>
+<p>Wenn Sie unter Windows arbeiten, dann erhalten Sie mit Git eine <code>GitBash</code>. Wenn wir von nun an vom <code>Terminal</code> (oder <code>Shell</code> oder <code>Bash</code>) sprechen, dann verwenden Sie bitte immer diese <code>GitBash</code>. </p>
+<p>Nach erfolgreicher Installation können Sie im Terminal den Befehl</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>--version
+</span></code></pre></div>
+<p>eingeben und es sollte eine Ausgabe, wie</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.30.1
+</span></code></pre></div>
+<p>oder eine aktuellere Versionsnummer erfolgen.</p>
+<p>Wir können Git nun verwenden und betrachten zunächst, wie <a href="https://git-scm.com/video/what-is-version-control">Git als Versionierungswerkzeug</a> verwendet werden kann und schauen uns danach an, wie es als Kollaborationswerkzeug verwendet wird. </p>
+<h2 id="git-als-versionierungswerkzeug">Git als Versionierungswerkzeug<a class="headerlink" href="#git-als-versionierungswerkzeug" title="Permanent link">&para;</a></h2>
+<p>Die grundsätzliche Idee von Git ist, Änderungen an Dateien und Ordnern so zu speichern, dass alle diese Änderungen nachverfolgbar sind. Git erzeugt sogenannte <em>Snapshots</em> aller Dateien und Ordner und speichert diese <em>Snapshots</em> nacheinander <strong>lokal</strong> ab. D.h. alles passiert bei Ihnen lokal auf dem Rechner, Sie benötigen keine Verbindung zu einem Server. Wenn Sie später im Team zu Mehreren an einem Projekt arbeiten, dann gleichen Sie immer nur die Historien Ihrer Snapshots ab. Git fügt immer nur hinzu und das ist auch korrekt so. Selbst, wenn in späteren Versionen Ihres eine Datei nicht mehr existiert, die in früheren Versionen des Projektes noch existierte, soll diese Datei gar nicht gelöscht werden, denn es könnte ja sein, dass Sie irgendwann nochmal die frühere Version anschauen wollen, die die Datei enthielt. </p>
+<p>Dieses Skript hier z.B. verwalte ich mit Git. Das bedeutet, dass alle Dateien eines Ordners (und Unterordnern) in einem sogenannten <em>Git-Repository</em> (oder nur <em>Repository</em>) verwaltet werden. Für dieses Skript hier könnte das z.B. so aussehen:</p>
+<p><img alt="git" src="../files/01_git.png" /></p>
+<p>Das heißt, ich erstelle zunächst 3 Dateien: <code>Einführung</code>, <code>Wiederholung</code> und <code>Git</code> und "sage" Git, dass dies <code>Version1</code> sein soll. Danach füge ich 3 weitere Dateien hinzu <code>Aufgaben</code>, <code>Übungen</code> und <code>Wrapperklassen</code> und zusammen mit den vorherigen 3 Dateien aus Version 1 ergibt das dann <code>Version 2</code>. Danach ändere ich (füge hinzu) die Dateien <code>Aufgaben</code> und <code>übungen</code> und füge außerdem neue Dateien für <code>Exceptions</code> und <code>JUnit</code> hinzu und "sage", dass das insgesamt <code>Version 3</code> ergibt usw. Git verwaltet nun diese Versionen und der Vorteil ist, dass ich jede dieser Versionen separat zur Verfügung stellen könnte und auch auf diesen Versionen weiterarbeiten. Wir werden in Zukunft in Bezug auf Git aber nicht mehr unbedingt von Versionen sprechen, sondern von <em>Snapshots</em>. Wir schauen uns das nun in einem Besipiel an. </p>
+<h3 id="git-init-ein-repository-erstellen">git init - ein Repository erstellen<a class="headerlink" href="#git-init-ein-repository-erstellen" title="Permanent link">&para;</a></h3>
+<p>Angenommen, wir haben in unserem <code>workspace</code> folgende Ordner-Struktur:</p>
+<p><img alt="git" src="../files/02_git.png" /></p>
+<p>In dem <code>workspace</code> gibt es ein Projekt <code>Projekt1</code> und darin einen <code>src</code>-Ordner mit unseren <code>*.java</code>-Dateien und einen <code>bin</code>-Ordner mit unseren <code>*.class</code>-Dateien. Wir lassen für dieses einführende Beispiel einmal Pakete weg. Diese würden ja als Ordner-Struktur sowohl innerhalb von <code>src</code> als auch von <code>bin</code> auftauchen. So sieht also ein typischer <code>workspace</code> aus. Es gibt darin noch weitere Ordner und Dateien, wie z.B. <code>.idea</code>, <code>.metadata</code>, <code>.classpath</code>, <code>.project</code>, <code>.settings</code>, die von unseren Entwicklungsumgebungen (Eclipse, IntelliJ, ...) angelegt wurden. </p>
+<p>Wir wollen nun unseren <code>workspace</code> von Git verwalten lassen. Dazu wechseln wir im Terminal in den <code>workspace</code>-Ordner und führen dort das Kommando</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>init
+</span></code></pre></div>
+<p>aus. Dieses Kommando erstellt das <em>Git-Repository</em>. Es muss genau einmal, nämlich ganz am Anfang zur Erstellung des Repositorys ausgeführt werden. Im Terminal erscheint</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Hinweis:<span class="w"> </span>Als<span class="w"> </span>Name<span class="w"> </span>für<span class="w"> </span>den<span class="w"> </span>initialen<span class="w"> </span>Branch<span class="w"> </span>wurde<span class="w"> </span><span class="s1">&#39;master&#39;</span><span class="w"> </span>benutzt.<span class="w"> </span>Dieser
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Hinweis:<span class="w"> </span>Standard-Branchname<span class="w"> </span>kann<span class="w"> </span>sich<span class="w"> </span>ändern.<span class="w"> </span>Um<span class="w"> </span>den<span class="w"> </span>Namen<span class="w"> </span>des<span class="w"> </span>initialen<span class="w"> </span>Branches
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Hinweis:<span class="w"> </span>zu<span class="w"> </span>konfigurieren,<span class="w"> </span>der<span class="w"> </span><span class="k">in</span><span class="w"> </span>allen<span class="w"> </span>neuen<span class="w"> </span>Repositories<span class="w"> </span>verwendet<span class="w"> </span>werden<span class="w"> </span>soll<span class="w"> </span>und
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Hinweis:<span class="w"> </span>um<span class="w"> </span>diese<span class="w"> </span>Warnung<span class="w"> </span>zu<span class="w"> </span>unterdrücken,<span class="w"> </span>führen<span class="w"> </span>Sie<span class="w"> </span>aus:
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Hinweis:<span class="w"> </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Hinweis:<span class="w">    </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span>&lt;Name&gt;
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Hinweis:<span class="w"> </span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>Hinweis:<span class="w"> </span>Häufig<span class="w"> </span>gewählte<span class="w"> </span>Namen<span class="w"> </span>statt<span class="w"> </span><span class="s1">&#39;master&#39;</span><span class="w"> </span>sind<span class="w"> </span><span class="s1">&#39;main&#39;</span>,<span class="w"> </span><span class="s1">&#39;trunk&#39;</span><span class="w"> </span>und
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Hinweis:<span class="w"> </span><span class="s1">&#39;development&#39;</span>.<span class="w"> </span>Der<span class="w"> </span>gerade<span class="w"> </span>erstellte<span class="w"> </span>Branch<span class="w"> </span>kann<span class="w"> </span>mit<span class="w"> </span>diesem<span class="w"> </span>Befehl
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Hinweis:<span class="w"> </span>umbenannt<span class="w"> </span>werden:
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Hinweis:<span class="w"> </span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>Hinweis:<span class="w">    </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>&lt;Name&gt;
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>Leeres<span class="w"> </span>Git-Repository<span class="w"> </span><span class="k">in</span><span class="w"> </span>/...IhrPfadZumWorkspaceOrdner.../workspace/.git/<span class="w"> </span>initialisiert
+</span></code></pre></div>
+<p>Somit wurde ein <em>Git-Repository</em> erstellt. Der <code>workspace</code>-Ordner wird nun von Git verwaltet. Dies erkennen Sie daran, dass in dem <code>workspace</code>-Ordner ein <code>.git</code>-Ordner angelegt wurde:</p>
+<p><img alt="git" src="../files/03_git.png" /></p>
+<p>Klicken Sie ruhig mal in den Ordner, um zu sehen, was da alles drin ist.</p>
+<h3 id="gitignore-dateien-aus-der-verwaltung-ausschlieen">.gitignore - Dateien aus der Verwaltung ausschließen<a class="headerlink" href="#gitignore-dateien-aus-der-verwaltung-ausschlieen" title="Permanent link">&para;</a></h3>
+<p>Git würde nun den gesamten <code>workspace</code>-Ordner verwalten. Das wäre zunächst auch gar kein Problem. Aber wenn Sie im Team zu mehreren am selben Projekt (workspace) arbeiten, dann wollen Sie bestimmte Dateien gar nicht untereinander austauschen, z.B. alle Dateien, die von Ihrer IDE erstellt wurden (z.B. <code>.idea</code>, <code>.metadata</code>, <code>.classpath</code>, <code>.project</code>, <code>.settings</code>). Auch alle Dateien im <code>bin</code>-Ordner müssen nicht von Git verwaltet werden, weil Sie ja stets neu durch das Compilieren erzeugt werden. </p>
+<p>Noch bevor wir nun also unsere erste Version erzeugen wollen, schließen wir zunächst einige Ordner und Dateien aus der Verwaltung von Git aus. Dazu wird im <code>workspace</code>-Ordner eine Datei <code>.gitignore</code> erstellt, in die wir alle Dateien und Ordner eintragen, die wir aus der Git-Verwaltung ausschließen wollen. Bevor wir das machen, geben wir im Terminal in unserem <code>workspace</code>-Ordner einmal den Befehl </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>status
+</span></code></pre></div>
+<p>ein. Dies wird der am meisten verwendete Befehl für uns sein, der mit dem Befehl bekommen wir Auskunft über den aktuellen Status des Repositorys. Die Ausgabe derzeit ist</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Auf<span class="w"> </span>Branch<span class="w"> </span>master
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Noch<span class="w"> </span>keine<span class="w"> </span>Commits
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Unversionierte<span class="w"> </span>Dateien:
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add &lt;Datei&gt;...&quot;</span>,<span class="w"> </span>um<span class="w"> </span>die<span class="w"> </span>Änderungen<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorzumerken<span class="o">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span>.DS_Store
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span>.idea/
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span>.metadata/
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span>Projekt1/
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>nichts<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorgemerkt,<span class="w"> </span>aber<span class="w"> </span>es<span class="w"> </span>gibt<span class="w"> </span>unversionierte<span class="w"> </span>Dateien
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>zum<span class="w"> </span>Versionieren<span class="o">)</span>
+</span></code></pre></div>
+<p>Das müssen wir zum jetzigen Zeitpunkt noch nicht alles verstehen, aber wir sehen, dass Git derzeit die Datei <code>.DS_Store</code> und die Ordner <code>.idea/</code>, <code>.metadata/</code> und <code>Projekt1/</code> verwaltet und wir ja eigentlich nur die Verwaltung von <code>Projekt1/</code> wünschen (und darin auch nicht alles). Wir erstellen uns also im <code>workspace</code>-Ordner eine <code>.gitignore</code>-Datei und geben darin ein:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>.DS_Store
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>.idea
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>.metadata
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Projekt1/bin
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Projekt1/.classpath
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Projekt1/.project
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Projekt1/.settings
+</span></code></pre></div>
+<p>Damit geben wir an, dass die Datei <code>.DS_Store</code> ignoriert werden soll (gibt es nur unter Mac - legt der Finder automatisch zur schnelleren Suche an) sowie die Ordner <code>.idea</code> und <code>.metadata</code>. Hätten wir <code>.idea/</code> und <code>.metadata/</code> geschrieben, würde der Ordner jeweils selbst mit in der Git-Verwaltung sein, jedoch der Kontent nicht. Ansonsten soll auch noch der Ordner <code>Projekt1/bin</code> aus der Git-Verwaltung entfernt werden und alle Dateien und Ordner, die mit einem Punkt beginnen und im Ordner <code>Projekt1</code> liegen.</p>
+<p>Wenn man alle Dateien ignorieren möchte, die mit einem Punkt beginnen, egal in welchem ordner, dann könnte man auch <code>.*</code> in die <code>.gitignore</code> schreiben. Dann würde allerdings auch die <code>.gitignore</code> selbst dazugehören. Diese kann und sollte man aber ruhig mit in die Git-Verwaltung aufnehmen. Eine Übersicht über mögliche Einträge in die <code>.gitignore</code> findet man z.B. <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore">hier</a> oder <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">hier</a>.</p>
+<p>Wenn wir jetzt erneut </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>status
+</span></code></pre></div>
+<p>eingeben, dann ist die Ausgabe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Auf<span class="w"> </span>Branch<span class="w"> </span>master
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Noch<span class="w"> </span>keine<span class="w"> </span>Commits
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Unversionierte<span class="w"> </span>Dateien:
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add &lt;Datei&gt;...&quot;</span>,<span class="w"> </span>um<span class="w"> </span>die<span class="w"> </span>Änderungen<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorzumerken<span class="o">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span>.gitignore
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span>Projekt1/
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>nichts<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorgemerkt,<span class="w"> </span>aber<span class="w"> </span>es<span class="w"> </span>gibt<span class="w"> </span>unversionierte<span class="w"> </span>Dateien
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>zum<span class="w"> </span>Versionieren<span class="o">)</span>
+</span></code></pre></div>
+<p>D.h. wir sehen, dass die Dateien und Ordner <code>.DS_Store</code>, <code>.idea/</code> und <code>.metadata/</code> nun nicht mehr mit verwaltet werden, dafür aber die <code>.gitignore</code>.</p>
+<p>Wir haben jetzt ein <em>Git-Repoitory</em>, aber es ist noch leer. Wir fügen nun Dateien diesem <em>Repository</em> hinzu. </p>
+<h3 id="git-add-dem-repository-dateien-hinzufugen">git add - dem Repository Dateien hinzufügen<a class="headerlink" href="#git-add-dem-repository-dateien-hinzufugen" title="Permanent link">&para;</a></h3>
+<p>Wir haben noch keine Ordner und Dateien in unser <em>Repository</em> aufgenommen, d.h. es werden noch keine Änderungen an diesen Dateien durch Git verwaltet. Um Dateien dem <em>Repository</em> hinzuzufügen, verwenden wir das Kommando <a href="https://git-scm.com/docs/git-add">git add</a>. Wir wollen den Ordner <code>Projekt1</code> und die Datei <code>.gitignore</code> dem Repository hinzufügen, um sie von nun an von Git verwalten zu lassen (d.h. ihre Änderungen zu "protokollieren").</p>
+<p>Wir geben im Terminal im <code>workspace</code>-Ordner ein:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>add<span class="w"> </span>.gitignore
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>add<span class="w"> </span>Projekt1
+</span></code></pre></div>
+<p>und fügen somit den gesamten Ordner <code>Projekt1</code> (aber nicht die in der <code>.gitignore</code> definierten Dateien und Ordner aus dem Ordner <code>Projekt1</code>) und die <code>.gitignore</code>-Datei dem <em>Repository</em> hinzu.  </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>status
+</span></code></pre></div>
+<p>ergibt nun:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Auf<span class="w"> </span>Branch<span class="w"> </span>master
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Noch<span class="w"> </span>keine<span class="w"> </span>Commits
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>Zum<span class="w"> </span>Commit<span class="w"> </span>vorgemerkte<span class="w"> </span>Änderungen:
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git rm --cached &lt;Datei&gt;...&quot;</span><span class="w"> </span>zum<span class="w"> </span>Entfernen<span class="w"> </span>aus<span class="w"> </span>der<span class="w"> </span>Staging-Area<span class="o">)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span>neue<span class="w"> </span>Datei:<span class="w">     </span>.gitignore
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span>neue<span class="w"> </span>Datei:<span class="w">     </span>Projekt1/src/A.java
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span>neue<span class="w"> </span>Datei:<span class="w">     </span>Projekt1/src/B.java
+</span></code></pre></div>
+<p>D.h. von nun an werden von Git die Dateien <code>.gitignore</code>, <code>Projekt1/src/A.java</code> und <code>Projekt1/src/B.java</code> verwaltet. Die Dateien <code>A.java</code> und <code>B.java</code> sind jetzt noch leer. </p>
+<blockquote>
+<p>Wann immer wir eine neue Datei in unserem <code>workspace</code> erstellen und wir wollen, dass sie von Git verwaltet wird, fügen wir diese Datei mit <code>git add &lt;datei&gt;</code> dem repository hinzu!</p>
+<p>Wann immer wir eine neue Datei in unserem <code>workspace</code> erstellen und wir <strong>nicht</strong> wollen, dass sie von Git verwaltet wird, fügen wir diese Datei der <code>.gitignore</code>-Datei hinzu!</p>
+</blockquote>
+<p>Mit dem Befehl</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span></code></pre></div>
+<p>werden einfach immer alle neuen Dateien hinzugefügt. Wir werden diesen Befehl häufig nutzen, um nicht alle neuen Dateien einzeln aufzulisten. Es gibt für <code>add</code> auch die Option <code>--all</code> (<code>-A</code>), mit der alle Dateien aus einem Ordner hinzugefügt werden.</p>
+<h3 id="git-commit-einen-snapshot-erstellen">git commit - einen Snapshot erstellen<a class="headerlink" href="#git-commit-einen-snapshot-erstellen" title="Permanent link">&para;</a></h3>
+<p>Mit <code>git commit</code> "speichern" wir das gesamte Repository. Git merkt sich den Stand aller Dateien und Ordner und den Zeitpunkt des Commits. Zusätzlich geben wir zum <code>git commit</code> noch eine <em>Commit-Nachricht</em> an, um den Stand der Arbeit zu beschreiben. In einem Snapshot werden alle Änderungen im Vergleich zum vorherigen Snapshot gespeichert. Man kann sich also die Versionierung mit Git wie eine Reihe von Commits (Snapshots) vorstellen:</p>
+<p><img alt="git" src="../files/04_git.png" /></p>
+<p>Ganz am Anfang ein initiales Commit (<code>C0</code>), dann wurde weiter gearbeitet und ein weiteres Commit (<code>C1</code>) gesetzt und so weiter (<code>C2</code>). Es ist ohne Probleme möglich, wieder zum Stand von <code>C1</code> oder sogar <code>C0</code> "zurückzuspringen" (zeigen wir später, wie). </p>
+<p>Zunächst erstellen wir unser initiales Commit. Dazu geben wir im Terminal im <code>workspace</code>-Ordner ein:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initiales Commit. A.java und B.java jeweils leer.&quot;</span>
+</span></code></pre></div>
+<p>es erscheint die Ausgabe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">[</span>master<span class="w"> </span><span class="o">(</span>Root-Commit<span class="o">)</span><span class="w"> </span>8236e8a<span class="o">]</span><span class="w"> </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w"> </span><span class="m">3</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">8</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>.gitignore
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>Projekt1/src/A.java
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>Projekt1/src/B.java
+</span></code></pre></div>
+<p>Unser erstes Commit (das sogenannte <em>Root-Commit</em>) wurde erstellt. Wir haben jetzt einen "gespeicherten" Ausgangszustand, zu dem wir immer wieder zurücksetzen könnten. Unser "Entwicklungsstrang" nennt sich <em>Branch</em>. Der <em>Hauptstrang</em>, an dem wir versuchen, alle Entwicklungen immer ordentlich zusammenzuführen, nennt sich <strong>master</strong>-Branch. Das letzte Commit ist stets der <code>HEAD</code>. Derzeit ist unser <code>HEAD</code> also dieses initiale Commit. Die Begriffe sind in der folgenden Abbildung dargestellt:</p>
+<p><img alt="git" src="../files/05_git.png" /></p>
+<p>Wir ändern nun mal die Datei <code>Projekt1/src/A.java</code> und fügen dort einfach ein Zeilenkommentar</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// Zeile 1 hinzugefuegt</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1">// </span>
+</span></code></pre></div>
+<p>hinzu. Wenn wir nun <code>git status</code> aufrufen, erscheint</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Auf<span class="w"> </span>Branch<span class="w"> </span>master
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Änderungen,<span class="w"> </span>die<span class="w"> </span>nicht<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorgemerkt<span class="w"> </span>sind:
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add &lt;Datei&gt;...&quot;</span>,<span class="w"> </span>um<span class="w"> </span>die<span class="w"> </span>Änderungen<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorzumerken<span class="o">)</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git restore &lt;Datei&gt;...&quot;</span>,<span class="w"> </span>um<span class="w"> </span>die<span class="w"> </span>Änderungen<span class="w"> </span>im<span class="w"> </span>Arbeitsverzeichnis<span class="w"> </span>zu<span class="w"> </span>verwerfen<span class="o">)</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span>geändert:<span class="w">       </span>Projekt1/src/A.java
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>keine<span class="w"> </span>Änderungen<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorgemerkt<span class="w"> </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>und/oder<span class="w"> </span><span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+</span></code></pre></div>
+<p>Wir können diese Änderung nun committen, indem wir die Option <code>-a</code> verwenden (oder zuvor <code>git add Projekt1/src/A.java</code>):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;in A.java Zeile 1 hinzugefuegt&quot;</span>
+</span></code></pre></div>
+<p>Wir erhalten die Ausgabe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="o">[</span>master<span class="w"> </span>44ed3a8<span class="o">]</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">2</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+</span></code></pre></div>
+<p>Wir haben jetzt einen neuen <code>HEAD</code>, nicht mehr das <em>Root-Commit</em> mit der "Nummer" <code>8236e8a</code>, sondern nun dieses zweite Commit mit der "Nummer" <code>44ed3a8</code>. Diese Nummern sind Hash-Werte. Tatsächlich sind diese Hash-Werte sogar länger. Wir können Sie uns mit <code>git log</code> anzeigen lassen.</p>
+<h3 id="git-log-und-git-show">git log und git show<a class="headerlink" href="#git-log-und-git-show" title="Permanent link">&para;</a></h3>
+<p>Mit <code>git log</code> können Sie sich alle Ihre Commits auflisten lassen. In unserem jetzigen Zustand erzeugt <code>git log</code> folgende Ausgabe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>commit<span class="w"> </span>44ed3a807200ef537f5da0817e0ff3ac0b958ffd<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>master<span class="o">)</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">18</span>:13:48<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>commit<span class="w"> </span>8236e8ac0b2e2c7d5a83df3f2f71bf73297188a6
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">08</span>:42:37<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">    </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span></code></pre></div>
+<p>Wenn Ihnen diese Ansicht zu unübersichtlich ist, können Sie die Option <code>--oneline</code> verwenden:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</span></code></pre></div>
+<p>erzeugt:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>44ed3a8<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>master<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>8236e8a<span class="w"> </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span></code></pre></div>
+<h3 id="git-branch-und-git-ckeckout-branches-in-git">git branch und git ckeckout - Branches in Git<a class="headerlink" href="#git-branch-und-git-ckeckout-branches-in-git" title="Permanent link">&para;</a></h3>
+<p>Unser Repository sieht derzeit so aus:</p>
+<p><img alt="git" src="../files/06_git.png" /></p>
+<p>Angenommen, wir wollen etwas ausprobieren und unabhängig von dem Hauptentwicklungsstrang (dem <strong>master</strong>-Branch) z.B. an <code>Projekt1/src/B.java</code> arbeiten, ohne aber den bisherigen Stand zu "gefärden". Dazu gibt es die Möglichkeit, neue, eigene <em>Branches</em> zu erstellen. Diese gehen von einem Commit des <strong>master</strong>-Branches aus und können später auch wieder auf den <strong>master</strong>-Branch führen (oder, falls unser Ausprobieren doch nicht erfolgreich war, auch nicht).</p>
+<p>Einen neuen Branch erstellen wir mit <code>git branch &lt;nameDesNeuenBranches&gt;</code>. Wir erstellen uns einen Branch <code>tryB</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>branch<span class="w"> </span>tryB
+</span></code></pre></div>
+<p>Dabei passiert erstmal noch gar nichts. Es wird nur ein Link auf das letzte Commit (den <code>HEAD</code>) erzeugt und dieser Link heißt <code>tryB</code>. Wenn wir jetzt einfach erstmal an <code>Projekt1/src/A.java</code> weiterarbeiten würden und die Änderungen committen, stellen wir fest, dass wir tatsächlich am <strong>master</strong>-Branch weiterarbeiten. Um das zu zeigen, ändern wir die Datei <code>Projekt1/src/A.java</code> und fügen einen weiteren Zeilenkommentar hinzu.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1">// Zeile 1 hinzugefuegt</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="c1">// Zeile 2 hinzugefuegt</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="c1">//</span>
+</span></code></pre></div>
+<p>Wir wissen bereits, wie wir diese Änderung committen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;in A.java Zeile 2 hinzugefuegt&quot;</span>
+</span></code></pre></div>
+<p><code>git log</code> ergibt:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>commit<span class="w"> </span>9c869b672ed42c5af22cbb5c9fdc3419ff863bde<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>master<span class="o">)</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:09:54<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">2</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>commit<span class="w"> </span>44ed3a807200ef537f5da0817e0ff3ac0b958ffd<span class="w"> </span><span class="o">(</span>tryB<span class="o">)</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">18</span>:13:48<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>commit<span class="w"> </span>8236e8ac0b2e2c7d5a83df3f2f71bf73297188a6
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">08</span>:42:37<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>
+</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="w">    </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span></code></pre></div>
+<p>Das zeigt uns, dass wir am <strong>master</strong>-Branch weitergearbeitet haben und dass <code>HEAD</code> auf den <strong>master</strong>-Branch zeigt. Wir sehen aber auch, dass wir auf dem zweiten Commit einen Link <code>tryB</code> haben. Wir wollen jetzt aber auf diesem <code>tryB</code>-Branch arbeiten und nutzen dazu den Befehl <code>git checkout &lt;branch&gt;</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>tryB
+</span></code></pre></div>
+<p>Damit haben wir 2 Sachen getan:</p>
+<ol>
+<li>arbeiten wir jetzt auf einem anderen Branch, als dem <strong>master</strong>-Branch, nämlich dem <strong>tryB</strong>-Branch und</li>
+<li>setzen wir auf den Zustand auf, den wir mit dem Commit gespeichert hatten (<code>44ed3a8</code>), auf den <code>tryB</code> zeigt. </li>
+</ol>
+<p>Den 2. Punkt können wir überprüfen, indem wir uns die Datei <code>Projekt1/src/A.java</code> anschauen. Die sieht nämlich jetzt (wieder) so aus: </p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1">// Zeile 1 hinzugefuegt</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="c1">//</span>
+</span></code></pre></div>
+<p>Wir fügen nun das Gleiche in die <code>Projekt1/src/B.java</code> ein:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1">// Zeile 1 hinzugefuegt</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="c1">//</span>
+</span></code></pre></div>
+<p>und committen diese Änderung:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;in B.java Zeile 1 hinzugefuegt&quot;</span>
+</span></code></pre></div>
+<p>Die Commits lassen wir uns zunächst mit <code>git log</code> anzeigen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>commit<span class="w"> </span>e754d18f0d8cb1e8593edca740fa75b84d5de30f<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>tryB<span class="o">)</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:56:28<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span>B.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>commit<span class="w"> </span>44ed3a807200ef537f5da0817e0ff3ac0b958ffd
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">18</span>:13:48<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>
+</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>commit<span class="w"> </span>8236e8ac0b2e2c7d5a83df3f2f71bf73297188a6
+</span><span id="__span-30-14"><a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-30-15"><a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">08</span>:42:37<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-30-16"><a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>
+</span><span id="__span-30-17"><a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a><span class="w">    </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span></code></pre></div>
+<p>Wir sehen, dass alle Commits aufgelistet werden, die bis zum aktuellen <code>HEAD</code> führen. Es fehlt aber beispielsweise das Commit, das bereits für den <strong>master</strong>-Branch ausgeführt wurde und in dem in <code>Projekt1/src/A.java</code> bereits <code>Zeile 2 hinzugefuegt</code> wurde. Um sich alle Commits auszugeben und sogar eine Graph-ähnliche Darstellung zu erhalten, verwenden wir </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>git<span class="w"> </span>log<span class="w"> </span>--all<span class="w"> </span>--graph
+</span></code></pre></div>
+<p>Wir erhalten folgende Ausgabe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>*<span class="w"> </span>commit<span class="w"> </span>e754d18f0d8cb1e8593edca740fa75b84d5de30f<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>tryB<span class="o">)</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:56:28<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">|</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>B.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="p">|</span><span class="w">   </span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="p">|</span><span class="w"> </span>*<span class="w"> </span>commit<span class="w"> </span>9c869b672ed42c5af22cbb5c9fdc3419ff863bde<span class="w"> </span><span class="o">(</span>master<span class="o">)</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="p">|</span>/<span class="w">  </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="p">|</span><span class="w">   </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:09:54<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="p">|</span><span class="w">   </span>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="p">|</span><span class="w">       </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">2</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>*<span class="w"> </span>commit<span class="w"> </span>44ed3a807200ef537f5da0817e0ff3ac0b958ffd
+</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">18</span>:13:48<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-32-16"><a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-32-17"><a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a><span class="p">|</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-32-18"><a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-32-19"><a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>*<span class="w"> </span>commit<span class="w"> </span>8236e8ac0b2e2c7d5a83df3f2f71bf73297188a6
+</span><span id="__span-32-20"><a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a><span class="w">  </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-32-21"><a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a><span class="w">  </span>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">08</span>:42:37<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-32-22"><a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a>
+</span><span id="__span-32-23"><a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a><span class="w">      </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span></code></pre></div>
+<p>und daraus erkennt man, dass unser Repository (die Commit-Hostorie) derzeit so aussieht:</p>
+<p><img alt="git" src="../files/07_git.png" /></p>
+<h3 id="git-merge-branches-zusammenfuhren">git merge - Branches zusammenführen<a class="headerlink" href="#git-merge-branches-zusammenfuhren" title="Permanent link">&para;</a></h3>
+<p>Wir haben folgende Situation:</p>
+<ul>
+<li>ausgehend von Commit <code>44ed3a8</code> (<code>in A.java Zeile 1 hinzugefuegt</code>) haben wir</li>
+<li>auf dem <strong>master</strong>-Branch weitergearbeitet und dort ein Commit <code>9c869b6</code> (<code>in A.java Zeile 2 hinzugefuegt</code>) erstellt und</li>
+<li>parallel dazu auf dem <strong>tryB</strong>-Branch gearbeitet und dort ein Commit <code>e754d18</code> (<code>in B.java Zeile 1 hinzugefuegt</code>) erstellt.</li>
+</ul>
+<p>Nun wollen wir beide Branches wieder zusammenführen, um mit beiden Änderungen weiterzuarbeiten. Das Zusammenführen von Branches erfolgt mithilfe von <code>git merge &lt;branchToMerge&gt;</code>. Wir wollen gerne den <strong>tryB</strong>-Branch in den <strong>master</strong>-Branch <em>mergen</em>, um dann mit dem <strong>master</strong>-Branch weiterzuarbeiten. Dazu wechseln wir zunächst in den <strong>master</strong>-Branch. das erreichen wir, indem wir <code>checkout</code> verwenden:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>master
+</span></code></pre></div>
+<p>Die Ausgabe ist</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Zu<span class="w"> </span>Branch<span class="w"> </span><span class="s1">&#39;master&#39;</span><span class="w"> </span>gewechselt
+</span></code></pre></div>
+<p>Nun mergen wir diesen mit dem <code>tryB</code>-Branch, indem wir <code>git merge tryB</code> eingeben. Wichtig ist, dass es sich hierbei auch um ein erzwungenes Commit (sogenanntes <em>Merge-Commit</em>) handelt, da beide Branches eigene Commits enthielten. Es wird uns eine Commit-nachricht angeboten. Mit <code>ZZ</code> verlassen wir den <code>vi</code>.</p>
+<p>Wenn wir uns nun die Commit-Logs ausgeben lassen (<code>git log --all --graph</code>), dann erhalten wir folgende Ausgabe </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>*<span class="w">   </span>commit<span class="w"> </span>7ffabf8646580d6bb2ba289de93e6fe20b894084<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>master,<span class="w"> </span>tryB<span class="o">)</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="p">|</span><span class="se">\ </span><span class="w"> </span>Merge:<span class="w"> </span>e754d18<span class="w"> </span>9c869b6
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:21:12<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">     </span>Merge<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;master&#39;</span><span class="w"> </span>into<span class="w"> </span>tryB
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="p">|</span><span class="w"> </span>*<span class="w"> </span>commit<span class="w"> </span>9c869b672ed42c5af22cbb5c9fdc3419ff863bde
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:09:54<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">2</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-35-14"><a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a>*<span class="w"> </span><span class="p">|</span><span class="w"> </span>commit<span class="w"> </span>e754d18f0d8cb1e8593edca740fa75b84d5de30f
+</span><span id="__span-35-15"><a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a><span class="p">|</span>/<span class="w">  </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-35-16"><a id="__codelineno-35-16" name="__codelineno-35-16" href="#__codelineno-35-16"></a><span class="p">|</span><span class="w">   </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:56:28<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-35-17"><a id="__codelineno-35-17" name="__codelineno-35-17" href="#__codelineno-35-17"></a><span class="p">|</span><span class="w">   </span>
+</span><span id="__span-35-18"><a id="__codelineno-35-18" name="__codelineno-35-18" href="#__codelineno-35-18"></a><span class="p">|</span><span class="w">       </span><span class="k">in</span><span class="w"> </span>B.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-35-19"><a id="__codelineno-35-19" name="__codelineno-35-19" href="#__codelineno-35-19"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-35-20"><a id="__codelineno-35-20" name="__codelineno-35-20" href="#__codelineno-35-20"></a>*<span class="w"> </span>commit<span class="w"> </span>44ed3a807200ef537f5da0817e0ff3ac0b958ffd
+</span><span id="__span-35-21"><a id="__codelineno-35-21" name="__codelineno-35-21" href="#__codelineno-35-21"></a><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-35-22"><a id="__codelineno-35-22" name="__codelineno-35-22" href="#__codelineno-35-22"></a><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">18</span>:13:48<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-35-23"><a id="__codelineno-35-23" name="__codelineno-35-23" href="#__codelineno-35-23"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-35-24"><a id="__codelineno-35-24" name="__codelineno-35-24" href="#__codelineno-35-24"></a><span class="p">|</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-35-25"><a id="__codelineno-35-25" name="__codelineno-35-25" href="#__codelineno-35-25"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-35-26"><a id="__codelineno-35-26" name="__codelineno-35-26" href="#__codelineno-35-26"></a>*<span class="w"> </span>commit<span class="w"> </span>8236e8ac0b2e2c7d5a83df3f2f71bf73297188a6
+</span><span id="__span-35-27"><a id="__codelineno-35-27" name="__codelineno-35-27" href="#__codelineno-35-27"></a><span class="w">  </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-35-28"><a id="__codelineno-35-28" name="__codelineno-35-28" href="#__codelineno-35-28"></a><span class="w">  </span>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">08</span>:42:37<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-35-29"><a id="__codelineno-35-29" name="__codelineno-35-29" href="#__codelineno-35-29"></a>
+</span><span id="__span-35-30"><a id="__codelineno-35-30" name="__codelineno-35-30" href="#__codelineno-35-30"></a><span class="w">      </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span></code></pre></div>
+<p>und erkennen, dass die beiden Branches nun wieder "vereint" sind:</p>
+<p><img alt="git" src="../files/08_git.png" /></p>
+<p>Wenn wir uns <code>A.java</code> anschauen, dann sehen wir, dass diese Datei 2 Zeilen enthält und die Datei <code>B.java</code> eine. Beide sind also auf dem aktuellsten Stand. </p>
+<p>Wir üben Mergen an dieser Stelle nochmal und bilden 2 Branches, in dem einen erstellen wir uns eine "Klasse" <code>C.java</code> und in dem anderen eine <code>D.java</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>git<span class="w"> </span>branch<span class="w"> </span>classC
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>git<span class="w"> </span>branch<span class="w"> </span>classD
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>classC
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>touch<span class="w"> </span>Projekt1/src/C.java
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;// Zeile 1 hinzugefuegt&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Projekt1/src/C.java
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>git<span class="w"> </span>add<span class="w"> </span>Projekt1/src/C.java
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;in C.java  Zeile 1 hinzugefuegt&quot;</span>
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>git<span class="w"> </span>checkout<span class="w"> </span>classD
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>touch<span class="w"> </span>Projekt1/src/C.java
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;// Zeile 1 hinzugefuegt&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Projekt1/src/D.java
+</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>git<span class="w"> </span>add<span class="w"> </span>Projekt1/src/D.java
+</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;in D.java  Zeile 1 hinzugefuegt&quot;</span>
+</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>git<span class="w"> </span>checkout<span class="w"> </span>master
+</span><span id="__span-36-14"><a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a>git<span class="w"> </span>merge<span class="w"> </span>classC
+</span></code></pre></div>
+<p>Hierbei handelt es sich um ein sogenanntes <em>Fast-Forward-Commit</em>, da der <strong>master</strong>-Branch keine eigenen Änderungen enthielt, sondern nur die Änderungen des <strong>classC</strong>-Branches in den <strong>master</strong>-Branch eingefügt werden müssen. Es gibt hier keine potenziellen Konflikte.</p>
+<p>Wenn wir nun aber auch den <strong>classD</strong>-Branch in den <strong>master</strong>-Branch mergen wollen, enthält sowohl der <strong>master</strong>-Branch Änderungen (<code>C.java</code>) als auch der <strong>classD</strong>-Branch (<code>D.java</code>). Hierbei handelt es sich also um ein <em>Merge-Commit</em>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>git<span class="w"> </span>merge<span class="w"> </span>classD
+</span></code></pre></div>
+<p><code>vi</code> öffnet und wir können die Commit-Message ändern oder sie so lassen. Wir beenden den <code>vi</code> wieder mit <code>ZZ</code>. <code>git log --all --graph</code> zeigt:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>*<span class="w">   </span>commit<span class="w"> </span>15d5e0b00f2a4af5eaa4d84ba55e340f912ccb42<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>master<span class="o">)</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="p">|</span><span class="se">\ </span><span class="w"> </span>Merge:<span class="w"> </span>0d86294<span class="w"> </span>01f8dfd
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">17</span>:12:18<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">     </span>Merge<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;classD&#39;</span>
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="p">|</span><span class="w"> </span>*<span class="w"> </span>commit<span class="w"> </span>01f8dfd9c68148c984db99dec980d227f1fe4044<span class="w"> </span><span class="o">(</span>classD<span class="o">)</span>
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">17</span>:05:46<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-12"><a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>D.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-38-13"><a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-14"><a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>*<span class="w"> </span><span class="p">|</span><span class="w"> </span>commit<span class="w"> </span>0d8629458ca0a5e244c121be525f8e647b5c6bd9<span class="w"> </span><span class="o">(</span>classC<span class="o">)</span>
+</span><span id="__span-38-15"><a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a><span class="p">|</span>/<span class="w">  </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-16"><a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a><span class="p">|</span><span class="w">   </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:51:14<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-17"><a id="__codelineno-38-17" name="__codelineno-38-17" href="#__codelineno-38-17"></a><span class="p">|</span><span class="w">   </span>
+</span><span id="__span-38-18"><a id="__codelineno-38-18" name="__codelineno-38-18" href="#__codelineno-38-18"></a><span class="p">|</span><span class="w">       </span><span class="k">in</span><span class="w"> </span>C.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-38-19"><a id="__codelineno-38-19" name="__codelineno-38-19" href="#__codelineno-38-19"></a><span class="p">|</span><span class="w">   </span>
+</span><span id="__span-38-20"><a id="__codelineno-38-20" name="__codelineno-38-20" href="#__codelineno-38-20"></a>*<span class="w">   </span>commit<span class="w"> </span>7ffabf8646580d6bb2ba289de93e6fe20b894084<span class="w"> </span><span class="o">(</span>tryB<span class="o">)</span>
+</span><span id="__span-38-21"><a id="__codelineno-38-21" name="__codelineno-38-21" href="#__codelineno-38-21"></a><span class="p">|</span><span class="se">\ </span><span class="w"> </span>Merge:<span class="w"> </span>e754d18<span class="w"> </span>9c869b6
+</span><span id="__span-38-22"><a id="__codelineno-38-22" name="__codelineno-38-22" href="#__codelineno-38-22"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-23"><a id="__codelineno-38-23" name="__codelineno-38-23" href="#__codelineno-38-23"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:21:12<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-24"><a id="__codelineno-38-24" name="__codelineno-38-24" href="#__codelineno-38-24"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-25"><a id="__codelineno-38-25" name="__codelineno-38-25" href="#__codelineno-38-25"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">     </span>Merge<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;master&#39;</span><span class="w"> </span>into<span class="w"> </span>tryB
+</span><span id="__span-38-26"><a id="__codelineno-38-26" name="__codelineno-38-26" href="#__codelineno-38-26"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-27"><a id="__codelineno-38-27" name="__codelineno-38-27" href="#__codelineno-38-27"></a><span class="p">|</span><span class="w"> </span>*<span class="w"> </span>commit<span class="w"> </span>9c869b672ed42c5af22cbb5c9fdc3419ff863bde
+</span><span id="__span-38-28"><a id="__codelineno-38-28" name="__codelineno-38-28" href="#__codelineno-38-28"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-29"><a id="__codelineno-38-29" name="__codelineno-38-29" href="#__codelineno-38-29"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:09:54<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-30"><a id="__codelineno-38-30" name="__codelineno-38-30" href="#__codelineno-38-30"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-31"><a id="__codelineno-38-31" name="__codelineno-38-31" href="#__codelineno-38-31"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">2</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-38-32"><a id="__codelineno-38-32" name="__codelineno-38-32" href="#__codelineno-38-32"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-33"><a id="__codelineno-38-33" name="__codelineno-38-33" href="#__codelineno-38-33"></a>*<span class="w"> </span><span class="p">|</span><span class="w"> </span>commit<span class="w"> </span>e754d18f0d8cb1e8593edca740fa75b84d5de30f
+</span><span id="__span-38-34"><a id="__codelineno-38-34" name="__codelineno-38-34" href="#__codelineno-38-34"></a><span class="p">|</span>/<span class="w">  </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-35"><a id="__codelineno-38-35" name="__codelineno-38-35" href="#__codelineno-38-35"></a><span class="p">|</span><span class="w">   </span>Date:<span class="w">   </span>Sat<span class="w"> </span>Apr<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">09</span>:56:28<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-36"><a id="__codelineno-38-36" name="__codelineno-38-36" href="#__codelineno-38-36"></a><span class="p">|</span><span class="w">   </span>
+</span><span id="__span-38-37"><a id="__codelineno-38-37" name="__codelineno-38-37" href="#__codelineno-38-37"></a><span class="p">|</span><span class="w">       </span><span class="k">in</span><span class="w"> </span>B.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-38-38"><a id="__codelineno-38-38" name="__codelineno-38-38" href="#__codelineno-38-38"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-39"><a id="__codelineno-38-39" name="__codelineno-38-39" href="#__codelineno-38-39"></a>*<span class="w"> </span>commit<span class="w"> </span>44ed3a807200ef537f5da0817e0ff3ac0b958ffd
+</span><span id="__span-38-40"><a id="__codelineno-38-40" name="__codelineno-38-40" href="#__codelineno-38-40"></a><span class="p">|</span><span class="w"> </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-41"><a id="__codelineno-38-41" name="__codelineno-38-41" href="#__codelineno-38-41"></a><span class="p">|</span><span class="w"> </span>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">18</span>:13:48<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-42"><a id="__codelineno-38-42" name="__codelineno-38-42" href="#__codelineno-38-42"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-43"><a id="__codelineno-38-43" name="__codelineno-38-43" href="#__codelineno-38-43"></a><span class="p">|</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>A.java<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-38-44"><a id="__codelineno-38-44" name="__codelineno-38-44" href="#__codelineno-38-44"></a><span class="p">|</span><span class="w"> </span>
+</span><span id="__span-38-45"><a id="__codelineno-38-45" name="__codelineno-38-45" href="#__codelineno-38-45"></a>*<span class="w"> </span>commit<span class="w"> </span>8236e8ac0b2e2c7d5a83df3f2f71bf73297188a6
+</span><span id="__span-38-46"><a id="__codelineno-38-46" name="__codelineno-38-46" href="#__codelineno-38-46"></a><span class="w">  </span>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-38-47"><a id="__codelineno-38-47" name="__codelineno-38-47" href="#__codelineno-38-47"></a><span class="w">  </span>Date:<span class="w">   </span>Fri<span class="w"> </span>Apr<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">08</span>:42:37<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-38-48"><a id="__codelineno-38-48" name="__codelineno-38-48" href="#__codelineno-38-48"></a>
+</span><span id="__span-38-49"><a id="__codelineno-38-49" name="__codelineno-38-49" href="#__codelineno-38-49"></a><span class="w">      </span>Initiales<span class="w"> </span>Commit.<span class="w"> </span>A.java<span class="w"> </span>und<span class="w"> </span>B.java<span class="w"> </span>jeweils<span class="w"> </span>leer.
+</span></code></pre></div>
+<p>Die Commit-Historie unseres Repositories sieht so aus:</p>
+<p><img alt="git" src="../files/09_git.png" /></p>
+<p>Eine umfangreiche Beschreibung aller Änderungen in den jeweiligen Commits erhalten Sie auch durch den Befehl <code>git show --pretty=fuller --abbrev-commit</code>. </p>
+<h4 id="konflikte-auflosen">Konflikte auflösen<a class="headerlink" href="#konflikte-auflosen" title="Permanent link">&para;</a></h4>
+<p>Gerade bei der Arbeit im Team kann es passieren, dass in verschiedenen Branches an der gleichen Datei Änderungen durchgeführt werden. Wenn diese Branches dann "gemerged" werden sollen, kann Git diesen Konflikt nicht alleine auflösen (soll Änderung <em>A</em> gelten oder Änderung <em>B</em> oder beide?). Die Auflösung eines solchen Konfliktes muss durch die Entwicklerinnen geschehen. </p>
+<p>Zur Demonstration erzeugen wir uns erneut zwei Branches, <code>changeA1</code> und <code>changeA2</code> und führen in beiden Branches eine Änderung an <code>Projekt1/src/A.java</code> durch:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>git<span class="w"> </span>branch<span class="w"> </span>changeA1
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>git<span class="w"> </span>branch<span class="w"> </span>changeA2
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>git<span class="w"> </span>checkout<span class="w"> </span>changeA1
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;// eine Änderung durch Entwicklerin A&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Projekt1/src/A.java
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;in A eine Änderung durch Entwicklerin A&quot;</span>
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>git<span class="w"> </span>checkout<span class="w"> </span>changeA2
+</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;// eine Änderung durch Entwicklerin B&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Projekt1/src/A.java
+</span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;in A eine Änderung durch Entwicklerin B&quot;</span>
+</span></code></pre></div>
+<p>Wenn wir jetzt versuchen, die beiden Branches mit <code>git merge changeA1</code> zu mergen, dann erhalten wir folgende Ausgabe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>automatischer<span class="w"> </span>Merge<span class="w"> </span>von<span class="w"> </span>Projekt1/src/A.java
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>KONFLIKT<span class="w"> </span><span class="o">(</span>Inhalt<span class="o">)</span>:<span class="w"> </span>Merge-Konflikt<span class="w"> </span><span class="k">in</span><span class="w"> </span>Projekt1/src/A.java
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>Automatischer<span class="w"> </span>Merge<span class="w"> </span>fehlgeschlagen<span class="p">;</span><span class="w"> </span>beheben<span class="w"> </span>Sie<span class="w"> </span>die<span class="w"> </span>Konflikte<span class="w"> </span>und<span class="w"> </span>committen<span class="w"> </span>Sie<span class="w"> </span>dann<span class="w"> </span>das<span class="w"> </span>Ergebnis.
+</span></code></pre></div>
+<p>Git kann diesen Konflikt nicht automatisch auflösen. Die Ausgabe von <code>git status</code> hilft dabei nicht wirklich weiter:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Auf<span class="w"> </span>Branch<span class="w"> </span>changeA2
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>Sie<span class="w"> </span>haben<span class="w"> </span>nicht<span class="w"> </span>zusammengeführte<span class="w"> </span>Pfade.
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">  </span><span class="o">(</span>beheben<span class="w"> </span>Sie<span class="w"> </span>die<span class="w"> </span>Konflikte<span class="w"> </span>und<span class="w"> </span>führen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git commit&quot;</span><span class="w"> </span>aus<span class="o">)</span>
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git merge --abort&quot;</span>,<span class="w"> </span>um<span class="w"> </span>den<span class="w"> </span>Merge<span class="w"> </span>abzubrechen<span class="o">)</span>
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>Nicht<span class="w"> </span>zusammengeführte<span class="w"> </span>Pfade:
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add/rm &lt;Datei&gt;...&quot;</span>,<span class="w"> </span>um<span class="w"> </span>die<span class="w"> </span>Auflösung<span class="w"> </span>zu<span class="w"> </span>markieren<span class="o">)</span>
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="w">    </span>von<span class="w"> </span>beiden<span class="w"> </span>geändert:<span class="w">    </span>Projekt1/src/A.java
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>keine<span class="w"> </span>Änderungen<span class="w"> </span>zum<span class="w"> </span>Commit<span class="w"> </span>vorgemerkt<span class="w"> </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>und/oder<span class="w"> </span><span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+</span></code></pre></div>
+<p>Mit <code>git log --merge</code> können wir uns die Commits anschauen, die die Änderungen enthalten, welche für den Konflikt sorgen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>commit<span class="w"> </span>da1f715199e68f17ea276b07a9c3a6e88b319e8a<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>changeA2<span class="o">)</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Date:<span class="w">   </span>Sun<span class="w"> </span>Apr<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">08</span>:08:13<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span>A<span class="w"> </span>eine<span class="w"> </span>Änderung<span class="w"> </span>durch<span class="w"> </span>Entwicklerin<span class="w"> </span>B
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>commit<span class="w"> </span>63a9a40ab267bc53f2a688a45e6813d7c15170c6<span class="w"> </span><span class="o">(</span>changeA1<span class="o">)</span>
+</span><span id="__span-42-8"><a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>Author:<span class="w"> </span>J.<span class="w"> </span>Freiheit<span class="w"> </span>&lt;freiheit@htw-berlin.de&gt;
+</span><span id="__span-42-9"><a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>Date:<span class="w">   </span>Sun<span class="w"> </span>Apr<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">08</span>:07:25<span class="w"> </span><span class="m">2021</span><span class="w"> </span>+0200
+</span><span id="__span-42-10"><a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>
+</span><span id="__span-42-11"><a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a><span class="w">    </span><span class="k">in</span><span class="w"> </span>A<span class="w"> </span>eine<span class="w"> </span>Änderung<span class="w"> </span>durch<span class="w"> </span>Entwicklerin<span class="w"> </span>A
+</span></code></pre></div>
+<p>Der Befehl <code>git diff</code> zeigt uns den Konflikt ganz konkret an:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>diff<span class="w"> </span>--cc<span class="w"> </span>Projekt1/src/A.java
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>index<span class="w"> </span>a5c84c3,a920d29..0000000
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>---<span class="w"> </span>a/Projekt1/src/A.java
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>+++<span class="w"> </span>b/Projekt1/src/A.java
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>@@@<span class="w"> </span>-1,4<span class="w"> </span>-1,4<span class="w"> </span>+1,8<span class="w"> </span>@@@
+</span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="w">  </span>//<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="w">  </span>//<span class="w"> </span>Zeile<span class="w"> </span><span class="m">2</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-43-8"><a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a><span class="w">  </span>//
+</span><span id="__span-43-9"><a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>++<span class="o">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt;<span class="w"> </span>HEAD
+</span><span id="__span-43-10"><a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a><span class="w"> </span>+//<span class="w"> </span>eine<span class="w"> </span>Änderung<span class="w"> </span>durch<span class="w"> </span>Entwicklerin<span class="w"> </span>B
+</span><span id="__span-43-11"><a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>++<span class="o">=======</span>
+</span><span id="__span-43-12"><a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a>+<span class="w"> </span>//<span class="w"> </span>eine<span class="w"> </span>Änderung<span class="w"> </span>durch<span class="w"> </span>Entwicklerin<span class="w"> </span>A
+</span><span id="__span-43-13"><a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a>++&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="w"> </span>changeA1
+</span></code></pre></div>
+<p>Diese Darstellung in der Datei finden wir auch wieder, wenn wir uns die Datei <code>Projekt1/src/A.java</code> anschauen:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>//<span class="w"> </span>Zeile<span class="w"> </span><span class="m">1</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>//<span class="w"> </span>Zeile<span class="w"> </span><span class="m">2</span><span class="w"> </span>hinzugefuegt
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>//
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt;<span class="w"> </span>HEAD
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>//<span class="w"> </span>eine<span class="w"> </span>Änderung<span class="w"> </span>durch<span class="w"> </span>Entwicklerin<span class="w"> </span><span class="nv">B</span>
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="o">=======</span>
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>//<span class="w"> </span>eine<span class="w"> </span>Änderung<span class="w"> </span>durch<span class="w"> </span>Entwicklerin<span class="w"> </span>A
+</span><span id="__span-44-8"><a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="w"> </span>changeA1
+</span></code></pre></div>
+<p>In unserer Konflikt-Datei gibt es folgende drei Einträge:</p>
+<ul>
+<li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code></li>
+<li><code>=======</code></li>
+<li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; changeA1</code> </li>
+</ul>
+<p>Aller Inhalt zwischen den ersten beiden Zeilen enthält die Änderungen des aktuellen Branches und alle Änderungen zwischen den letzten beiden Zeilen enthält alle Änderungen des Branches, in den gemerged werden soll (<code>changeA1</code>). Entwicklungsumgebungen (IntelliJ, Eclipse, Atom, Visual Studio Code usw.) unterstützen bei der Auflösung solcher Konflikte. Wir übernehmen einfach beide Änderungen händisch und committen diese Änderung. <code>Projekt1/src/A.java</code> sieht also jetzt so aus:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="c1">// Zeile 1 hinzugefuegt</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="c1">// Zeile 2 hinzugefuegt</span>
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="c1">//</span>
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="c1">// eine Änderung durch Entwicklerin B</span>
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="c1">// eine Änderung durch Entwicklerin A</span>
+</span></code></pre></div>
+<p>und der Commit:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Merge-Konflikt in A.java geloest. Aenderungen A UND B eingefuegt&quot;</span>.
+</span></code></pre></div>
+<h4 id="merge-abbrechen">Merge abbrechen<a class="headerlink" href="#merge-abbrechen" title="Permanent link">&para;</a></h4>
+<p>Sollten Sie aufgrund der Konfliktmeldung den Merge-Vorgang doch nicht durchführen wollen, können Sie mit </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>git<span class="w"> </span>merge<span class="w"> </span>--abort
+</span></code></pre></div>
+<p>den Merge abbrechen und mit </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>git<span class="w"> </span>reset
+</span></code></pre></div>
+<p>die in Konflikt stehenden Dateien auf einen als funktionierend bekannten Zustand zurückzusetzen. </p>
+<h3 id="git-stash-arbeit-unterbrechen">git stash - Arbeit unterbrechen<a class="headerlink" href="#git-stash-arbeit-unterbrechen" title="Permanent link">&para;</a></h3>
+<p>Angenommen, Sie haben bereits Änderungen durchgeführt, diese sind aber noch nicht "fertig" und Sie wollen Sie deshalb noch nicht committen. Stattdessen müssen Sie aber an anderer Stelle zunächst noch einen BugFix erledigen. Dann können Sie Ihre gegenwärtigen Änderungen "stashen" - in einen Stash-Modus setzen, also erstmal <em>verstauen</em>, um daran später weiterzuarbeiten:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>git<span class="w"> </span>stash
+</span></code></pre></div>
+<p>Jetzt können Sie erstmal andere Änderungen durchführen und committen und um dann wieder zu Ihren ursprünglichen Änderungen zurückzukehren, holen Sie diese wieder aus dem Stash-Modus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>git<span class="w"> </span>stash<span class="w"> </span>pop
+</span></code></pre></div>
+<h3 id="einige-weitere-nutzliche-befehle">Einige weitere nützliche Befehle<a class="headerlink" href="#einige-weitere-nutzliche-befehle" title="Permanent link">&para;</a></h3>
+<p>Angenommen, Sie haben committed, aber einige Änderungen vergessen (entweder vorher nicht geadded oder noch gar nicht geändert), dann können Sie den vorherigen Commit "überschreiben".</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;zu frueh committed&quot;</span>
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>//<span class="w"> </span>jetzt<span class="w"> </span>noch<span class="w"> </span>die<span class="w"> </span>Aenderungen<span class="w"> </span>hinzufuegen
+</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>git<span class="w"> </span>commit<span class="w"> </span>--amend
+</span></code></pre></div>
+<p>Angenommen, Sie haben seit dem letzten Commit Änderungen an Dateien vorgenommen, die Sie aber gerne verwerfen möchten. Sie werden in der Literatur dafür Befehle finden, wie z.B. <code>git checkout HEAD</code> oder <code>git reset --hard</code>. Sie sollten damit äußerst vorsichtig sein! Bei <code>git checkout HEAD</code> (aslo dem "Zurücksetzen" auf das letzte Commit) bleiben die geänderten Dateien "modifiziert". Das hilft also gar nicht wirklich. <code>git reset --hard</code> kann Sie unter Umständen auf ein Commit zurücksetzen, das noch weiter zurück in der Historie liegt, als Sie planen. Verwenden Sie zum Zurücksetzen Ihrer Änderungen (Undo) besser </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>git<span class="w"> </span>restore<span class="w"> </span>&lt;dateiUndo&gt;
+</span></code></pre></div>
+<p>Geben Sie also die Datei an, die Sie geändert haben und die wieder auf den Zustand des letzten Commits zurückgesetzt werden soll. </p>
+<blockquote>
+<p>Löschen Sie niemals einfach Dateien oder Ordner in dem durch Git verwalteten Ordner (Ihrem Repository) über den Finder oder den Dateiexplorer! Die Idee von Git ist die, dass immer nur etwas hinzukommt. Selbst, wenn Sie eine bestimmte Datei nicht mehr benötigen, so kann es ja doch sein, dass diese in früheren Versionen vorkommt. Lassen Sie sie einfach im Verzeichnis!</p>
+</blockquote>
+<h4 id="aliases">Aliases<a class="headerlink" href="#aliases" title="Permanent link">&para;</a></h4>
+<p>Es ist ganz hilfreich, sich für einige Optionen Aliase zu definieren, da diese oft verwendet werden. Dazu nutzen Sie <code>git config</code>. Hier einige Beispiele von nützlichen Aliases (aus dem <a href="https://git-scm.com/book/de/v2">Git-Buch</a>):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.co<span class="w"> </span>checkout
+</span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.br<span class="w"> </span>branch
+</span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.ci<span class="w"> </span>commit
+</span><span id="__span-53-4"><a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.st<span class="w"> </span>status
+</span></code></pre></div>
+<h2 id="git-als-kollaborationswerkzeug">Git als Kollaborationswerkzeug<a class="headerlink" href="#git-als-kollaborationswerkzeug" title="Permanent link">&para;</a></h2>
+<p>Im vorherigen Abschnitt haben wir diskutiert, wie wir Git zur Versionsverwaltung verwenden können. Dazu haben wir ein lokales Git-Repository angelegt. Nun wollen wir betrachten, wie Git als Kollaborationswerkzeug eingesetzt werden kann, d.h. wie mehere Entwicklerinnen zusammen an einem (globalen) Git-Repository arbeiten können. Dazu benötigen wir einen <em>Host</em> (Bereitsteller netzbasierter Dienste), der ein zentrales Git-Repository zur Verfügung stellen kann. Es gibt mehrere solcher Git-Hosts. Die bekanntesten sind: </p>
+<ul>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="https://about.gitlab.com/">GitLab</a></li>
+<li><a href="https://bitbucket.org/product/">Bibucket</a> </li>
+</ul>
+<p>Wir zeigen das Verwenden eines zentralen Repositories exemplarisch für <code>GitHub</code>. Sie müssen sich in <code>GitHub</code> <a href="https://docs.github.com/en/github/getting-started-with-github/signing-up-for-github">registrieren</a>. Die Verwendung von <code>GitHub</code> ist <a href="https://docs.github.com/en/github/getting-started-with-github/githubs-products#github-free-for-user-accounts">kostenlos</a>. Die Idee eines zentralen Repositorys ist die, dass daran mehrere lokale Repositories angebunden sein können:</p>
+<p><img alt="git" src="../files/10_git.png" /></p>
+<p>Über das zentrale Repository werden alle lokalen Repositories synchronisiert, so dass alle Repositories über den gleichen Stand, d.h. alle Dateien und Ordner sowie die gleiche Commit-Historie verfügen. Wichtig ist jedoch, dass man zum Entwickeln nicht permanent online sein muss. Vielmehr kann man beliebig lange offline auf dem eigenen lokalen Repository arbeiten, bis man irgendwann seine Änderungen in das zentrale Repository schreiben (<em>push</em>) bzw. dort abgelegte Änderungen aus anderen lokalen Repositories lesen (<em>pull</em>) möchte.</p>
+<h3 id="ein-zentrales-repository-anlegen">Ein zentrales Repository anlegen<a class="headerlink" href="#ein-zentrales-repository-anlegen" title="Permanent link">&para;</a></h3>
+<p>Sie loggen sich in <code>GitHub</code> (oder dem von Ihnen gewählten Diensteanbieter) ein und klicken auf "New":</p>
+<p><img alt="git" src="../files/11_git.png" /></p>
+<p>Dann geben Sie einen sprechenden Namen für das Repository ein. Sie können wählen, ob das Repository <code>Public</code> (für alle lesbar) oder <code>Private</code> (nur für Eingeladene lesbar) sein soll. Die darunter stehenden Checkboxen sollten Sie nicht anklicken, da Sie ein bereits existierendes lokales Repository mit diesem zentralen Repository verbinden wollen. In Ihrem lokalen Repository haben Sie ja wahrscheinlich bereits eine <code>.gitignore</code>-Datei. Würden Sie diese Checkboxen markieren, müssten Sie bereits ganz am Anfang <em>mergen</em>. Klicken Sie auf den Button <code>Create repository</code>. </p>
+<p><img alt="git" src="../files/12_git.png" /></p>
+<p>Das zentrale Repository ist nun erstellt. Nun müssen wir nur noch vorgehen, wie auf der Seite angegeben:</p>
+<p><img alt="git" src="../files/13_git.png" /></p>
+<p>Im Terminal führen wir im <code>workspace</code>-Ordner (in unserem lokalen Repository - der Ordner, der den <code>.git</code>-Ordner enthält) den Befehl </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/jfreiheit/einfuehrung-git.git
+</span></code></pre></div>
+<p>aus. <code>https://github.com/jfreiheit/einfuehrung-git.git</code> entspricht dabei der sogenannten <em>Remote-URL</em>  und lautet bei Ihnen natürlich anders. Es ist der Pfad (die URL) zu Ihrem zentralen Git-Repository. Mit diesem Befehl verbinden wir unser lokales Git-Repository mit dem zentralen Git-Repository. Wir geben dem zentralen Git-Repository dabei den Namen <code>origin</code>.</p>
+<p>Den nächsten von <code>GitHub</code> vorgeschlagenen Befehl</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+</span></code></pre></div>
+<p>können wir ebenfalls ausführen. Wir wissen bereits, dass wir damit einen neuen Branch erstellen, nämlich <code>main</code>. Wir verlassen also den <strong>master</strong>-Branch und wechseln zu einem neuen <strong>main</strong>-Branch. Das kann man machen, muss man aber nicht. Die Option <code>-M</code> steht für <code>--move --force</code>. Damit bestimmen wir, dass wir einen <code>main</code>-Branch erstellen, selbst wenn dieser bereits existierte. Siehe auch die Dokumentation für <a href="https://git-scm.com/docs/git-branch">git branch</a>.</p>
+<p>Der dritte von <code>GitHub</code> vorgeschlagene Befehl </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div>
+<p>bewirkt, dass unser komplettes lokales Git-Repository auf das zentrale Git-Repository gespielt wird. Das heißt, der aktuelle Branch <code>main</code> wird auf das zentrale Git-Repository <code>origin</code> <em>gepushed</em>. Nach Ausführung dieses Befehls ist das zentrale Repository auf dem selben Stand wie das lokale Repository. </p>
+<h3 id="alltag-mit-git">Alltag mit Git<a class="headerlink" href="#alltag-mit-git" title="Permanent link">&para;</a></h3>
+<p>Ihr lokales Repository ist nun mit dem zentralen Repository verknüpft. Wenn Sie jetzt Änderungen an Ihrem Code (Ihrem lokalen Repository) durchführen und diese Änderungen auf dem zentralen Repository speichern wollen, sieht Ihr "Alltag" wie folgt aus. </p>
+<h4 id="git-add-eine-neue-datei-hinzufugen">git add - eine neue Datei hinzufügen<a class="headerlink" href="#git-add-eine-neue-datei-hinzufugen" title="Permanent link">&para;</a></h4>
+<p>Angenommen, Sie erstellen eine neue Klasse (Datei), z.B. <code>Projekt1/src/E.java</code>, dann fügen Sie diese neue Datei mit <code>git add &lt;neueDatei&gt;</code> Ihrem lokalen Repository hinzu:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>git<span class="w"> </span>add<span class="w"> </span>Projekt1/src/E.java
+</span></code></pre></div>
+<p>Wenn Sie sich dann mit <code>git status</code> den Status des Repositorys anschauen, erhalten Sie</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>Auf<span class="w"> </span>Branch<span class="w"> </span>main
+</span><span id="__span-58-2"><a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>Ihr<span class="w"> </span>Branch<span class="w"> </span>ist<span class="w"> </span>auf<span class="w"> </span>demselben<span class="w"> </span>Stand<span class="w"> </span>wie<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+</span><span id="__span-58-3"><a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>
+</span><span id="__span-58-4"><a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>Zum<span class="w"> </span>Commit<span class="w"> </span>vorgemerkte<span class="w"> </span>Änderungen:
+</span><span id="__span-58-5"><a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;Datei&gt;...&quot;</span><span class="w"> </span>zum<span class="w"> </span>Entfernen<span class="w"> </span>aus<span class="w"> </span>der<span class="w"> </span>Staging-Area<span class="o">)</span>
+</span><span id="__span-58-6"><a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a><span class="w">    </span>neue<span class="w"> </span>Datei:<span class="w">     </span>Projekt1/src/E.java
+</span></code></pre></div>
+<blockquote>
+<p>Neue Dateien fügen Sie mittels <code>git add &lt;neueDatei&gt;</code> dem Repository hinzu. </p>
+</blockquote>
+<h4 id="git-commit-anderungen-speichern">git commit - Änderungen "speichern"<a class="headerlink" href="#git-commit-anderungen-speichern" title="Permanent link">&para;</a></h4>
+<p>Angenommen, Sie haben Änderungen an Dateien hinzugefügt, diese Dateien sind aber bereits Teil des Repositorys (wurden also bereits bei Erstellung mit <code>git add</code> hinzugefügt). Dann speichern Sie diese Änderungen mit <code>git commit -am "Commit-Message"</code>. Angenommen, wir haben in <code>Projekt1/src/E.java</code> 2 Zeilen hinzugefügt, dann <em>committen</em> wir diese Änderungen z.B. mit </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;in E.java 2 Zeilen hinzugefuegt&quot;</span>
+</span></code></pre></div>
+<p>Die Option <code>-m</code> steht dafür, dass wir gleich die Commit-Message mit angeben. Fehlt diese Option, öffnet sich ein <code>vi</code> und wir fügen die Commit-Message nachträglich hinzu. Den <code>vi</code> verlassen wir mit <code>ZZ</code>. </p>
+<p>Die Option <code>-a</code> steht für <code>add</code>. Jede Änderung muss zunächst hinzugefügt werden. Häufig sieht man dafür die Verwendung des Befehls <code>git add .</code>. Das lässt sich aber mit der Option <code>-a</code> auch beim Commit selbst erledigen. </p>
+<p>Wenn Sie sich dann mit <code>git status</code> den Status des Repositorys anschauen, erhalten Sie</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>Auf<span class="w"> </span>Branch<span class="w"> </span>main
+</span><span id="__span-60-2"><a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>Ihr<span class="w"> </span>Branch<span class="w"> </span>ist<span class="w"> </span><span class="m">1</span><span class="w"> </span>Commit<span class="w"> </span>vor<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+</span><span id="__span-60-3"><a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="w">  </span><span class="o">(</span>benutzen<span class="w"> </span>Sie<span class="w"> </span><span class="s2">&quot;git push&quot;</span>,<span class="w"> </span>um<span class="w"> </span>lokale<span class="w"> </span>Commits<span class="w"> </span>zu<span class="w"> </span>publizieren<span class="o">)</span>
+</span><span id="__span-60-4"><a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>
+</span><span id="__span-60-5"><a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>nichts<span class="w"> </span>zu<span class="w"> </span>committen,<span class="w"> </span>Arbeitsverzeichnis<span class="w"> </span>unverändert
+</span></code></pre></div>
+<blockquote>
+<p>Änderungen am Code (Repository) "committen" (speichern) Sie mittels <code>git commit -am "Commit-Message"</code>. </p>
+</blockquote>
+<h4 id="git-push-anderungen-auf-das-zentrale-repository-spielen">git push - Änderungen auf das zentrale Repository spielen<a class="headerlink" href="#git-push-anderungen-auf-das-zentrale-repository-spielen" title="Permanent link">&para;</a></h4>
+<p>Sie können beliebig lange und oft Ihr lokales Repository ändern, wie im Abschnitt <a href="#git-als-versionierungswerkzeug">Git als Versionierungswerkzeug</a> beschrieben. Wenn Sie Ihr lokales Repository auf Ihr zentrales Repository spielen möchten, verwenden Sie den Befehl <code>git push</code>. Damit stellen Sie das zentrale Repository auf den Stand Ihres lokalen Repositorys. </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>git<span class="w"> </span>push
+</span></code></pre></div>
+<p>ergibt folgende Ausgabe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>Objekte<span class="w"> </span>aufzählen:<span class="w"> </span><span class="m">8</span>,<span class="w"> </span>fertig.
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>Zähle<span class="w"> </span>Objekte:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">8</span>/8<span class="o">)</span>,<span class="w"> </span>fertig.
+</span><span id="__span-62-3"><a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>Delta-Kompression<span class="w"> </span>verwendet<span class="w"> </span>bis<span class="w"> </span>zu<span class="w"> </span><span class="m">8</span><span class="w"> </span>Threads.
+</span><span id="__span-62-4"><a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>Komprimiere<span class="w"> </span>Objekte:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span>fertig.
+</span><span id="__span-62-5"><a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a>Schreibe<span class="w"> </span>Objekte:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">5</span>/5<span class="o">)</span>,<span class="w"> </span><span class="m">439</span><span class="w"> </span>Bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">439</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span>fertig.
+</span><span id="__span-62-6"><a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a>Gesamt<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">(</span>Delta<span class="w"> </span><span class="m">1</span><span class="o">)</span>,<span class="w"> </span>Wiederverwendet<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>Delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>Pack<span class="w"> </span>wiederverwendet<span class="w"> </span><span class="m">0</span>
+</span><span id="__span-62-7"><a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a>remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">1</span>/1<span class="o">)</span>,<span class="w"> </span>completed<span class="w"> </span>with<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>object.
+</span><span id="__span-62-8"><a id="__codelineno-62-8" name="__codelineno-62-8" href="#__codelineno-62-8"></a>To<span class="w"> </span>https://github.com/jfreiheit/einfuehrung-git.git
+</span><span id="__span-62-9"><a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a><span class="w">   </span>15d5e0b..6ddd0dc<span class="w">  </span>main<span class="w"> </span>-&gt;<span class="w"> </span>main
+</span></code></pre></div>
+<p>Damit übernimmt das zentrale Repository den Stand des lokalen Repositorys. </p>
+<blockquote>
+<p>Um das zentrale Repository auf den Stand Ihres lokalen Repositorys zu bringen, verwenden Sie <code>git push</code>.</p>
+</blockquote>
+<p>Das heißt, wenn Sie alleine an Ihrem zenztralen Repository arbeiten, müssen sie sich nur folgende Befehle merken:</p>
+<ol>
+<li><code>git add &lt;datei&gt;</code>  // falls die Datei neu erstellt wurde und Ihrem Repository bekannt gemacht (hinzugefügt) werden soll</li>
+<li><code>git commit -am "Commit-Message"</code> // um die Änderungen ins lokale Repository zu "speichern"</li>
+<li><code>git push</code>  // um das zentrale Repository auf den Stand des lokalen Repositorys zu bringen</li>
+</ol>
+<p>So sieht einfach sieht der Alltag aus, wenn Sie alleine am (zentralen) Repository arbeiten. </p>
+<h2 id="ein-existierendes-zentrales-repository-verwenden">Ein existierendes zentrales Repository verwenden<a class="headerlink" href="#ein-existierendes-zentrales-repository-verwenden" title="Permanent link">&para;</a></h2>
+<p>Angenommen, jemand anderer besitzt ein zentrales Repository und möchte den Code mit Ihnen teilen - angenommen, ich möchte mit Ihnen den Code aus meinem Repository <code>https://github.com/jfreiheit/einfuehrung-git.git</code> teilen. Sie können dieses Repository klonen (kopieren), indem sie <strong>einmalig</strong> </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/jfreiheit/einfuehrung-git.git
+</span></code></pre></div>
+<p>eingeben. Dadurch erstellen Sie sich ein lokales Repository, das einer identischen Kopie (einem Clone) des zentralen Repositorys <code>https://github.com/jfreiheit/einfuehrung-git.git</code> entspricht. Dieses lokale Repository ist dann bereits auch mit dem zentralen Repository verbunden. </p>
+<p>Angenommen, ich führe nun Änderungen an diesem zentralen Repository durch und somit einige Commits. Damit diese Änderungen auch Ihrem lokalen Repository bekannt werden, führen Sie</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>git<span class="w"> </span>pull
+</span></code></pre></div>
+<p>aus. Damit "holen" Sie sich den aktuellen Stand des zentralen Repositories. </p>
+<h2 id="git-config">git config<a class="headerlink" href="#git-config" title="Permanent link">&para;</a></h2>
+<p>Sollten Sie aufgefordert werden, einige Accountdetails in Ihrer Git-Konfiguration zu speichern, dann machen Sie das. Sie können diese Schritte selbst dann vornehmen, wenn Sie nicht dazu aufgefordert werden:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;you@example.com&quot;</span>
+</span><span id="__span-65-2"><a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+</span></code></pre></div>
+<p>In den Strings geben Sie natürlich Ihre Daten an. Weitere Informationen zur Konfiguration von Git finden Sie auch <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">hier</a>.</p>
+<h2 id="nutzliche-links-zu-git">Nützliche Links zu Git<a class="headerlink" href="#nutzliche-links-zu-git" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://git-scm.com/docs">Git Dokumentation</a></li>
+<li><a href="https://git-scm.com/book/de/v2">Git Buch</a></li>
+<li><a href="https://www.atlassian.com/de/git/tutorials/learn-git-with-bitbucket-cloud">Lerne Git mit Bitbucket Cloud</a></li>
+<li><a href="https://www.embedded-software-engineering.de/git-tutorial-git-und-die-wichtigsten-befehle-kennenlernen-a-725074/">Git-Tutorial: Git und die wichtigsten Befehle kennenlernen</a></li>
+<li><a href="https://learngitbranching.js.org/?locale=de_DE">Learn Git Branching</a></li>
+<li><a href="https://rogerdudler.github.io/git-guide/index.de.html">Git - Der einfache Einstieg</a></li>
+<li><a href="https://marklodato.github.io/visual-git-guide/index-de.html">Git in Bildern</a></li>
+<li><a href="http://onlywei.github.io/explain-git-with-d3/#">Visualizing Git Concepts</a></li>
+<li><a href="http://blog.schauderhaft.de/gitkata/">Git Kata</a></li>
+<li><a href="https://github.com/eficode-academy/git-katas">noch mehr Git Katas</a></li>
+</ul>
+<h2 id="egit-git-mit-eclipse">EGit - Git mit Eclipse<a class="headerlink" href="#egit-git-mit-eclipse" title="Permanent link">&para;</a></h2>
+<p>Mit <a href="">EGit</a> integrieren Sie Git in Eclipse. Sie können prüfen, ob Sie EGit bereits in Eclipse installiert haben, indem Sie in Eclipse unter <code>Help</code>&rarr;<code>Eclipse Marketplace</code> den Reiter <code>Installed</code> anklicken und schauen, ob <code>EGit</code> in dieser Liste auftaucht. Wenn nicht, wählen Sie den Reiter <code>Search</code> und geben in die Suchleiste <code>EGit</code> ein und installieren das PlugIn. Sie können auch unter <code>Help</code>&rarr;<code>Install new Software...</code> diese URL eintragen, um EGit zu installieren: <a href="http://download.eclipse.org/egit/updates">http://download.eclipse.org/egit/updates</a>. </p>
+<p>Sie finden die Installationsanleitung auch unter <a href="https://www.eclipse.org/egit/">https://www.eclipse.org/egit/</a> oder z.B. auch <a href="https://eclipsesource.com/blogs/tutorials/egit-tutorial/">hier</a> und <a href="https://www.vogella.com/tutorials/EclipseGit/article.html">hier</a>.</p>
+<p>Beim Verbinden Ihres lokalen Repositories mit Eclipse können Sie z.B. vorgehen wie <a href="https://www.vogella.com/tutorials/EclipseGit/article.html">hier</a> beschrieben oder <a href="https://eclipsesource.com/blogs/tutorials/egit-tutorial/">hier</a>. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Zurück: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../spring/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Spring Boot">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Spring Boot
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Jörn Freiheit
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "tabs", "content.code.copy", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

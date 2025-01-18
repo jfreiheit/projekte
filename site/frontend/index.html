@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="de" class="no-js">
   <head>
@@ -11,13 +9,20 @@
         <meta name="description" content="Anleitungen und Hilfen für die Projekte">
       
       
+        <meta name="author" content="Jörn Freiheit">
+      
+      
         <link rel="canonical" href="http://freiheit.f4.htw-berlin.de/projekte/frontend/">
       
       
-        <meta name="author" content="Jörn Freiheit">
+        <link rel="prev" href="../server/">
       
-      <link rel="shortcut icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
+      
+        <link rel="next" href="../backend/">
+      
+      
+      <link rel="icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
     
     
       
@@ -25,28 +30,35 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a676eddb.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.b302131d.min.css">
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
+      
+
+
+    
+    
+      
+    
+    
       
         
         
-        <meta name="theme-color" content="#757575">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
+
     
-    
-    
-    
-      
     
     
   </head>
@@ -54,8 +66,12 @@
   
     
     
-    <body dir="" data-md-color-primary="grey" data-md-color-accent="indigo">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -71,55 +87,75 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="">
-    <a href="http://freiheit.f4.htw-berlin.de/projekte" title="Projekte" class="md-header-nav__button md-logo" aria-label="Projekte">
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Projekte" class="md-header__button md-logo" aria-label="Projekte" data-md-component="logo">
       
   <img src="../img/fiw.jpg" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
-    </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
+    <label class="md-header__button md-icon" for="__drawer">
       
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Projekte
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Frontend
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-      </label>
       
-<div class="md-search" data-md-component="search" role="dialog">
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Suchbegriff eingeben
+            Suche wird initialisiert
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -127,65 +163,44 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/jfreiheit/projekte/" title="Quellcode" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/jfreiheit/projekte" title="Zum Repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    webtech
+    projekte
   </div>
 </a>
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
           
-
-<nav class="md-tabs" aria-label="" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href=".." class="md-tabs__link md-tabs__link--active">
-        Home
-      </a>
-    
-  </li>
-
-      
-        
-      
-        
-      
-        
-      
-    </ul>
-  </div>
-</nav>
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://freiheit.f4.htw-berlin.de/projekte" title="Projekte" class="md-nav__button md-logo" aria-label="Projekte">
+    <a href=".." title="Projekte" class="md-nav__button md-logo" aria-label="Projekte" data-md-component="logo">
       
   <img src="../img/fiw.jpg" alt="logo">
 
@@ -194,14 +209,13 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/jfreiheit/projekte/" title="Quellcode" class="md-source">
+      <a href="https://github.com/jfreiheit/projekte" title="Zum Repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    webtech
+    projekte
   </div>
 </a>
     </div>
@@ -210,78 +224,150 @@
     
       
       
-      
-
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../server/" title="Virtueller Server" class="md-nav__link">
-      Virtueller Server
-    </a>
-  </li>
-
-    
-      
-      
-      
-
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
   
 
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Frontend
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Frontend" class="md-nav__link md-nav__link--active">
-      Frontend
-    </a>
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtueller Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Frontend
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Frontend
+  </span>
+  
+
+      </a>
+      
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Inhaltsverzeichnis
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#installationen" class="md-nav__link">
-    Installationen
+    <span class="md-ellipsis">
+      Installationen
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#projekt-erstellen" class="md-nav__link">
-    Projekt erstellen
+    <span class="md-ellipsis">
+      Projekt erstellen
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Projekt erstellen">
@@ -289,63 +375,81 @@
         
           <li class="md-nav__item">
   <a href="#ide" class="md-nav__link">
-    IDE
+    <span class="md-ellipsis">
+      IDE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#git" class="md-nav__link">
-    git
+    <span class="md-ellipsis">
+      git
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#anwendung-starten" class="md-nav__link">
-    Anwendung starten
+    <span class="md-ellipsis">
+      Anwendung starten
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#single-page-application" class="md-nav__link">
-    Single Page Application
+    <span class="md-ellipsis">
+      Single Page Application
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#prefix-andern-optional" class="md-nav__link">
-    Prefix ändern - optional
+    <span class="md-ellipsis">
+      Prefix ändern - optional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#komponenten-selektoren" class="md-nav__link">
-    Komponenten-Selektoren
+    <span class="md-ellipsis">
+      Komponenten-Selektoren
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#neue-komponente-erzeugen" class="md-nav__link">
-    neue Komponente erzeugen
+    <span class="md-ellipsis">
+      neue Komponente erzeugen
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#css-framework-verwenden" class="md-nav__link">
-    CSS-Framework verwenden
+    <span class="md-ellipsis">
+      CSS-Framework verwenden
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#routing" class="md-nav__link">
-    Routing
+    <span class="md-ellipsis">
+      Routing
+    </span>
   </a>
   
 </li>
@@ -358,20 +462,89 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buchung/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beispiel
+  </span>
+  
 
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../backend/" title="Backend" class="md-nav__link">
-      Backend
-    </a>
-  </li>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST-API mit Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vaadin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vaadin
+  </span>
+  
+
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -381,34 +554,39 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Inhaltsverzeichnis
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#installationen" class="md-nav__link">
-    Installationen
+    <span class="md-ellipsis">
+      Installationen
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#projekt-erstellen" class="md-nav__link">
-    Projekt erstellen
+    <span class="md-ellipsis">
+      Projekt erstellen
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Projekt erstellen">
@@ -416,63 +594,81 @@
         
           <li class="md-nav__item">
   <a href="#ide" class="md-nav__link">
-    IDE
+    <span class="md-ellipsis">
+      IDE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#git" class="md-nav__link">
-    git
+    <span class="md-ellipsis">
+      git
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#anwendung-starten" class="md-nav__link">
-    Anwendung starten
+    <span class="md-ellipsis">
+      Anwendung starten
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#single-page-application" class="md-nav__link">
-    Single Page Application
+    <span class="md-ellipsis">
+      Single Page Application
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#prefix-andern-optional" class="md-nav__link">
-    Prefix ändern - optional
+    <span class="md-ellipsis">
+      Prefix ändern - optional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#komponenten-selektoren" class="md-nav__link">
-    Komponenten-Selektoren
+    <span class="md-ellipsis">
+      Komponenten-Selektoren
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#neue-komponente-erzeugen" class="md-nav__link">
-    neue Komponente erzeugen
+    <span class="md-ellipsis">
+      neue Komponente erzeugen
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#css-framework-verwenden" class="md-nav__link">
-    CSS-Framework verwenden
+    <span class="md-ellipsis">
+      CSS-Framework verwenden
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#routing" class="md-nav__link">
-    Routing
+    <span class="md-ellipsis">
+      Routing
+    </span>
   </a>
   
 </li>
@@ -490,19 +686,17 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/jfreiheit/projekte/edit/master/docs/frontend.md" title="Seite editieren" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
-                  </a>
-                
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                <h1 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h1>
+
+  
+  
+
+
+<h1 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h1>
 <p>Um das Frontend zu erstellen, können Sie auf verschiedene JavaScript-Frameworks zurückgreifen, die sich in den letzten Jahren etabliert haben: </p>
 <ul>
 <li><a href="https://angular.io/">Angular</a> </li>
@@ -513,60 +707,59 @@
 <p>Diese gehören zu den meisteverwendeten Frameworks für die Entwicklung sogenannter <em>Single-Page-Applikationen</em>. In einer Single-Page-Applikation wird eine Seite vom Webserver geladen und diese Seite durch unterschiedliche Inhalte befüllt, je nach Nutzerinteraktion. Diese Inhalte werden in Angular durch sogenannte <em>Komponenten</em> bereitgestellt. Komponenten sind die Grundbausteine einer Angular-Anwendung. Wir zeigen hier exemplarisch den Beginn der Erstellung eines Frontends am Beispiel von Angular. </p>
 <h2 id="installationen">Installationen<a class="headerlink" href="#installationen" title="Permanent link">&para;</a></h2>
 <p>Sie benötigen den Paketmanager <code>npm</code>. Laden sie sich dafür <code>node.js</code> <a href="https://nodejs.org/en/download/"><strong>hier</strong></a> herunter und installieren Sie es. Nach erfolgreicher Installation sollte sowohl </p>
-<div class="highlight"><pre><span></span><code>node -v
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>node<span class="w"> </span>-v
+</span></code></pre></div>
 <p>funktionieren und eine Versionsnummer ausgeben (z.B. <code>v13.3.0</code> - aktuell stabile Version ist aber <code>v12.19.x</code>) als auch </p>
-<div class="highlight"><pre><span></span><code>npm -v
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>-v
+</span></code></pre></div>
 <p>(z.B. <code>6.14.8</code>). </p>
 <p>Außerdem benötigen Sie das <em>Angular-Command-Line-Interface (CLI)</em>, das Sie mithilfe des Befehls </p>
-<div class="highlight"><pre><span></span><code>npm install -g @angular/cli 
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@angular/cli<span class="w"> </span>
+</span></code></pre></div>
 <p>installieren. Danach sollte </p>
-<div class="highlight"><pre><span></span><code>ng --version 
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ng<span class="w"> </span>--version<span class="w"> </span>
+</span></code></pre></div>
 <p>funktionieren und Ihnen etwas in dieser Art ausgeben:</p>
-<div class="highlight"><pre><span></span><code>     _                      _                 ____ _     ___
-    / <span class="se">\ </span>  _ __   __ _ _   _<span class="p">|</span> <span class="p">|</span> __ _ _ __     / ___<span class="p">|</span> <span class="p">|</span>   <span class="p">|</span>_ _<span class="p">|</span>
-   / △ <span class="se">\ </span><span class="p">|</span> <span class="s1">&#39;_ \ / _` | | | | |/ _` | &#39;</span>__<span class="p">|</span>   <span class="p">|</span> <span class="p">|</span>   <span class="p">|</span> <span class="p">|</span>    <span class="p">|</span> <span class="p">|</span>
-  / ___ <span class="se">\|</span> <span class="p">|</span> <span class="p">|</span> <span class="p">|</span> <span class="o">(</span>_<span class="p">|</span> <span class="p">|</span> <span class="p">|</span>_<span class="p">|</span> <span class="p">|</span> <span class="p">|</span> <span class="o">(</span>_<span class="p">|</span> <span class="p">|</span> <span class="p">|</span>      <span class="p">|</span> <span class="p">|</span>___<span class="p">|</span> <span class="p">|</span>___ <span class="p">|</span> <span class="p">|</span>
- /_/   <span class="se">\_\_</span><span class="p">|</span> <span class="p">|</span>_<span class="p">|</span><span class="se">\_</span>_, <span class="p">|</span><span class="se">\_</span>_,_<span class="p">|</span>_<span class="p">|</span><span class="se">\_</span>_,_<span class="p">|</span>_<span class="p">|</span>       <span class="se">\_</span>___<span class="p">|</span>_____<span class="p">|</span>___<span class="p">|</span>
-                <span class="p">|</span>___/
-
-
-Angular CLI: <span class="m">9</span>.0.1
-Node: <span class="m">13</span>.3.0
-OS: darwin x64
-
-Angular: 
-... 
-Ivy Workspace: 
-
-Package                      Version
-------------------------------------------------------
-@angular-devkit/architect    <span class="m">0</span>.900.1
-@angular-devkit/core         <span class="m">9</span>.0.1
-@angular-devkit/schematics   <span class="m">9</span>.0.1
-@schematics/angular          <span class="m">9</span>.0.1
-@schematics/update           <span class="m">0</span>.900.1
-rxjs                         <span class="m">6</span>.5.3
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">     </span>_<span class="w">                      </span>_<span class="w">                 </span>____<span class="w"> </span>_<span class="w">     </span>___
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>/<span class="w"> </span><span class="se">\ </span><span class="w">  </span>_<span class="w"> </span>__<span class="w">   </span>__<span class="w"> </span>_<span class="w"> </span>_<span class="w">   </span>_<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>__<span class="w"> </span>_<span class="w"> </span>_<span class="w"> </span>__<span class="w">     </span>/<span class="w"> </span>___<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span>_<span class="w"> </span>_<span class="p">|</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">   </span>/<span class="w"> </span>△<span class="w"> </span><span class="se">\ </span><span class="p">|</span><span class="w"> </span><span class="s1">&#39;_ \ / _` | | | | |/ _` | &#39;</span>__<span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>/<span class="w"> </span>___<span class="w"> </span><span class="se">\|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>_<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span>_<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>_<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w"> </span><span class="p">|</span>___<span class="p">|</span><span class="w"> </span><span class="p">|</span>___<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w"> </span>/_/<span class="w">   </span><span class="se">\_\_</span><span class="p">|</span><span class="w"> </span><span class="p">|</span>_<span class="p">|</span><span class="se">\_</span>_,<span class="w"> </span><span class="p">|</span><span class="se">\_</span>_,_<span class="p">|</span>_<span class="p">|</span><span class="se">\_</span>_,_<span class="p">|</span>_<span class="p">|</span><span class="w">       </span><span class="se">\_</span>___<span class="p">|</span>_____<span class="p">|</span>___<span class="p">|</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                </span><span class="p">|</span>___/
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>Angular<span class="w"> </span>CLI:<span class="w"> </span><span class="m">11</span>.0.0
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Node:<span class="w"> </span><span class="m">12</span>.19.0
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>OS:<span class="w"> </span>darwin<span class="w"> </span>x64
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>Angular:<span class="w"> </span><span class="m">11</span>.0.0
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>...<span class="w"> </span>animations,<span class="w"> </span>cli,<span class="w"> </span>common,<span class="w"> </span>compiler,<span class="w"> </span>compiler-cli,<span class="w"> </span>core,<span class="w"> </span>forms
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>...<span class="w"> </span>language-service,<span class="w"> </span>platform-browser,<span class="w"> </span>platform-browser-dynamic
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>...<span class="w"> </span>router
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>Ivy<span class="w"> </span>Workspace:<span class="w"> </span>Yes
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>Package<span class="w">                         </span>Version
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>---------------------------------------------------------
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>@angular-devkit/architect<span class="w">       </span><span class="m">0</span>.1100.0
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>@angular-devkit/build-angular<span class="w">   </span><span class="m">0</span>.1100.0
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>@angular-devkit/core<span class="w">            </span><span class="m">11</span>.0.0
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>@angular-devkit/schematics<span class="w">      </span><span class="m">11</span>.0.0
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>@angular/cdk<span class="w">                    </span><span class="m">9</span>.2.4
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>@angular/material<span class="w">               </span><span class="m">9</span>.2.4
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>@schematics/angular<span class="w">             </span><span class="m">11</span>.0.0
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>@schematics/update<span class="w">              </span><span class="m">0</span>.1100.0
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>rxjs<span class="w">                            </span><span class="m">6</span>.6.3
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>typescript<span class="w">                      </span><span class="m">4</span>.0.5
+</span></code></pre></div>
 <p>Jetzt können wir unser erstes Projekt erstellen. </p>
 <h2 id="projekt-erstellen">Projekt erstellen<a class="headerlink" href="#projekt-erstellen" title="Permanent link">&para;</a></h2>
 <p>Wir wollen ein Projekt namens <code>frontend</code> erstellen. Wechseln Sie in den Ordner, in dem Sie dieses Projekt erstellen wollen. Geben Sie dann ein:</p>
-<div class="highlight"><pre><span></span><code>ng new frontend
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ng<span class="w"> </span>new<span class="w"> </span>frontend
+</span></code></pre></div>
 <p>Sie werden nun gefragt, ob verschiedene Pakete hinzugefügt werden sollen, z.B.</p>
-<div class="highlight"><pre><span></span><code>? Would you like to add Angular routing? Yes
-? Which stylesheet format would you like to use? CSS
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>?<span class="w"> </span>Would<span class="w"> </span>you<span class="w"> </span>like<span class="w"> </span>to<span class="w"> </span>add<span class="w"> </span>Angular<span class="w"> </span>routing?<span class="w"> </span>Yes
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>?<span class="w"> </span>Which<span class="w"> </span>stylesheet<span class="w"> </span>format<span class="w"> </span>would<span class="w"> </span>you<span class="w"> </span>like<span class="w"> </span>to<span class="w"> </span>use?<span class="w"> </span>CSS
+</span></code></pre></div>
 <h3 id="ide">IDE<a class="headerlink" href="#ide" title="Permanent link">&para;</a></h3>
 <p>Dieses Projekt können Sie mit der IDE Ihrer Wahl öffnen. Ich empfehle</p>
 <ul>
@@ -579,215 +772,216 @@ rxjs                         <span class="m">6</span>.5.3
 </ul>
 <h3 id="git">git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h3>
 <p>Beachten Sie, dass das neue erstellte Projekt bereits von <code>git</code> verwaltet wird, d.h. <code>frontend</code> entspricht bereits Ihrem lokalen Repository. Auch die <code>.gitignore</code> ist bereits erstellt und passt so. Um dieses Repository nach z.B. <code>GitHub</code> zu pushen, erstellen Sie sich dort ein Repository <code>frontend</code> (hier lautet die <em>Remote-Repository-URL</em> <code>https://github.com/jfreiheit/frontend.git</code> - bei Ihnen natürlich anders.) Im Ordner <code>projekte</code> führen Sie dann aus:</p>
-<div class="highlight"><pre><span></span><code>git add .
-git commit -m <span class="s2">&quot;first commit&quot;</span>
-git remote add origin https://github.com/jfreiheit/frontend.git
-git push -u origin master
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;first commit&quot;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/jfreiheit/frontend.git
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
+</span></code></pre></div>
 <p>Dort, wo <code>https://github.com/jfreiheit/frontend.git</code> steht, setzen Sie Ihre <em>Remote-Repository-URL</em> ein. Von nun an müssen Sie stets nur noch </p>
-<div class="highlight"><pre><span></span><code>git add .
-git commit -m <span class="s2">&quot;commit-message&quot;</span>
-git push
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;commit-message&quot;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>git<span class="w"> </span>push
+</span></code></pre></div>
 <p>ausführen, um Ihre aktuelle Version auf das Remote-Repository zu pushen.</p>
 <h3 id="anwendung-starten">Anwendung starten<a class="headerlink" href="#anwendung-starten" title="Permanent link">&para;</a></h3>
 <p>Um die Anwendung zu starten, wählen Sie entweder in Ihrer IDE den entsprechenden Run-Button aus (neben dem grünen Pfeil steht so etwas wie <code>Angular CLI Server</code>) oder Sie rufen in Ihrem <code>frontend</code>-Ordner</p>
-<div class="highlight"><pre><span></span><code>ng serve 
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ng<span class="w"> </span>serve<span class="w"> </span>
+</span></code></pre></div>
 <p>auf. Nachdem das Compilieren erfolgreich war, geben Sie in den Browser die URL <code>http://localhost:4200/</code> ein. Es erscheint:</p>
 <p><img alt="angular" src="../files/03_angular_1.png" /></p>
 <p>Um diese Ansicht zu ändern, öffnen wir in unserer IDE die Datei <code>/frontend/src/app/app.component.html</code>, d.h. in Ihrem Projekt <code>frontend</code> klappen Sie <code>src</code> auf und dann <code>app</code>. Darin befinden sich verschiedene <code>app.*</code>-dateien. Sie öffnen <code>app.component.html</code> im Editor-Fenster.</p>
 <p>Löschen Sie nun den gesamten Inhalt der Datei außer <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code>. Fügen Sie oberhalb von <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code> eine Überschrift <code>&lt;h1&gt;This is app&lt;/h1&gt;</code> hinzu. Die <code>app.component.html</code> sieht jetzt so aus:</p>
-<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">app.component.html</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
-</code></pre></div>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">app.component.html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
 </div>
 </div>
 <p>Beachten Sie, dass Sie im Browser die Seite gar nicht selbst neu laden müssen, sondern dass diese sich selbständig aktualisiert. </p>
 <h3 id="single-page-application">Single Page Application<a class="headerlink" href="#single-page-application" title="Permanent link">&para;</a></h3>
 <p>Wenn wir eine Anwendung mit Angular erstellen, dann handelt es sich dabei um eine sogenannte <em>Single Page Application (SPA)</em>, d.h. es wird genau eine Seite vom Webserver geladen und alle Inhalte werden in diese Seite (nach-)geladen, je nach Nutzerinteraktion. Die hier geladene Seite ist die <code>index.html</code>, die in unserem Projekte-Ordner <code>frontend</code>liegt. Sie sieht so aus:</p>
-<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">index.html</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Frontend<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;favicon.ico&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">app-root</span><span class="p">&gt;&lt;/</span><span class="nt">app-root</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">index.html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">&lt;!doctype html&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Frontend<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>      <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;favicon.ico&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>      <span class="p">&lt;</span><span class="nt">app-root</span><span class="p">&gt;&lt;/</span><span class="nt">app-root</span><span class="p">&gt;</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
 </div>
 </div>
 <p>Das Element <code>&lt;app-root&gt;</code> ist dabei ein sogenannter <em>Tag-Selektor</em> (auch <em>Element-Selektor</em> oder <em>Komponenten-Selektor</em>). </p>
 <h3 id="prefix-andern-optional">Prefix ändern - optional<a class="headerlink" href="#prefix-andern-optional" title="Permanent link">&para;</a></h3>
 <p><code>app</code>ist dabei ein Prefix, der für die gesamte Anwendung gilt. Diesen Prefix können Sie ändern. Öffnen Sie dazu die Datei <code>angular.json</code>, die sich im Projekt-Ordner <code>frontend</code> befindet. Diese Datei enthält die zentrale Konfiguration Ihres Projektes. Sie sieht wie folgt aus (Ausschnitt):</p>
-<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">angular.json</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;./node_modules/@angular/cli/lib/config/schema.json&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
-  <span class="nt">&quot;newProjectRoot&quot;</span><span class="p">:</span> <span class="s2">&quot;projects&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;frontend&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;application&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;schematics&quot;</span><span class="p">:</span> <span class="p">{},</span>
-      <span class="nt">&quot;root&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;sourceRoot&quot;</span><span class="p">:</span> <span class="s2">&quot;src&quot;</span><span class="p">,</span>
-<span class="hll">      <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;app&quot;</span><span class="p">,</span>
-</span>      <span class="nt">&quot;architect&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;builder&quot;</span><span class="p">:</span> <span class="s2">&quot;@angular-devkit/build-angular:browser&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;outputPath&quot;</span><span class="p">:</span> <span class="s2">&quot;dist/frontend&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;index&quot;</span><span class="p">:</span> <span class="s2">&quot;src/index.html&quot;</span><span class="p">,</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">angular.json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./node_modules/@angular/cli/lib/config/schema.json&quot;</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="nt">&quot;newProjectRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;projects&quot;</span><span class="p">,</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="nt">&quot;projects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="nt">&quot;frontend&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">      </span><span class="nt">&quot;projectType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application&quot;</span><span class="p">,</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">      </span><span class="nt">&quot;schematics&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">      </span><span class="nt">&quot;root&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">      </span><span class="nt">&quot;sourceRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src&quot;</span><span class="p">,</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="hll"><span class="w">      </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;app&quot;</span><span class="p">,</span>
+</span></span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">      </span><span class="nt">&quot;architect&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">        </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">          </span><span class="nt">&quot;builder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@angular-devkit/build-angular:browser&quot;</span><span class="p">,</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">          </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">            </span><span class="nt">&quot;outputPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dist/frontend&quot;</span><span class="p">,</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">            </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src/index.html&quot;</span><span class="p">,</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <p>Ändern Sie den Prefix in der hell markierten Zeile auf z.B. "htw" (andere Projekte vielleicht auf "bvg" oder "bsr"). Außerdem muss auch noch die <code>tslint.json</code> angepasst werden:</p>
-<div class="tabbed-set" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">tslint.json</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;extends&quot;</span><span class="p">:</span> <span class="s2">&quot;tslint:recommended&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;array-type&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&quot;arrow-parens&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&quot;deprecation&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;severity&quot;</span><span class="p">:</span> <span class="s2">&quot;warning&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;component-class-suffix&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;contextual-lifecycle&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;directive-class-suffix&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;directive-selector&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="kc">true</span><span class="p">,</span>
-      <span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
-<span class="hll">      <span class="s2">&quot;htw&quot;</span><span class="p">,</span>
-</span>      <span class="s2">&quot;camelCase&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;component-selector&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="kc">true</span><span class="p">,</span>
-      <span class="s2">&quot;element&quot;</span><span class="p">,</span>
-<span class="hll">      <span class="s2">&quot;htw&quot;</span><span class="p">,</span>
-</span>      <span class="s2">&quot;kebab-case&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;import-blacklist&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="kc">true</span><span class="p">,</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">tslint.json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="nt">&quot;extends&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tslint:recommended&quot;</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="nt">&quot;array-type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="nt">&quot;arrow-parens&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="nt">&quot;deprecation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">      </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;warning&quot;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="nt">&quot;component-class-suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">    </span><span class="nt">&quot;contextual-lifecycle&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="nt">&quot;directive-class-suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="nt">&quot;directive-selector&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">      </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">      </span><span class="s2">&quot;attribute&quot;</span><span class="p">,</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="hll"><span class="w">      </span><span class="s2">&quot;htw&quot;</span><span class="p">,</span>
+</span></span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">      </span><span class="s2">&quot;camelCase&quot;</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">    </span><span class="nt">&quot;component-selector&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">      </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">      </span><span class="s2">&quot;element&quot;</span><span class="p">,</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="hll"><span class="w">      </span><span class="s2">&quot;htw&quot;</span><span class="p">,</span>
+</span></span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">      </span><span class="s2">&quot;kebab-case&quot;</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">    </span><span class="nt">&quot;import-blacklist&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">      </span><span class="kc">true</span><span class="p">,</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <p>Dort wo in den hervorgehobenen Zeilen nun das neue Prefix "htw" steht, stand vorher "app". In der <code>index.html</code> und in der <code>app.component.ts</code> auch noch ändern. Ab dann ist die Verwendung von "htw" als Prefix einegrichtet. Sie können es aber auch bei "app" belassen. Es soll an dieser Stelle einem besseren Verständnis des Prinzips dienen.</p>
-<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">index.html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Frontend<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;favicon.ico&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="hll">      <span class="p">&lt;</span><span class="nt">htw-root</span><span class="p">&gt;&lt;/</span><span class="nt">htw-root</span><span class="p">&gt;</span>
-</span>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">index.html</label><label for="__tabbed_5_2">app/app.component.ts</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="cp">&lt;!doctype html&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a>      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a>      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Frontend<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a>      <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a>      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a>      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/x-icon&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;favicon.ico&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="hll">      <span class="p">&lt;</span><span class="nt">htw-root</span><span class="p">&gt;&lt;/</span><span class="nt">htw-root</span><span class="p">&gt;</span>
+</span></span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
 </div>
-<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">app/app.component.ts</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
-<span class="hll">  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;htw-root&#39;</span><span class="p">,</span>
-</span>  <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;./app.component.html&#39;</span><span class="p">,</span>
-  <span class="nx">styleUrls</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;./app.component.css&#39;</span><span class="p">]</span>
-<span class="p">})</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
-  <span class="nx">title</span> <span class="o">=</span> <span class="s1">&#39;frontend&#39;</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-block">
+<div class="language-javascript highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span>
+<span class="normal"><a href="#__codelineno-15-8">8</a></span>
+<span class="normal"><a href="#__codelineno-15-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="hll"><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;htw-root&#39;</span><span class="p">,</span>
+</span></span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">  </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./app.component.html&#39;</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">  </span><span class="nx">styleUrls</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;./app.component.css&#39;</span><span class="p">]</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="p">})</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">AppComponent</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">  </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;frontend&#39;</span><span class="p">;</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <h3 id="komponenten-selektoren">Komponenten-Selektoren<a class="headerlink" href="#komponenten-selektoren" title="Permanent link">&para;</a></h3>
 <p>Nochmal zurück zu unserer <code>index.html</code> - der single page, die vom Webserver geladen wird und in die alle weiteren Komponenten eingebunden werden. Wir haben dort nun also den Komponenten-Selektor <code>&lt;htw-root&gt;&lt;/htw-root&gt;</code>. In diesen Selektor wird nun dir <code>root</code>-Komponente (<code>app.component</code>) geladen. Dieser Selektor wird durch die <code>root</code>-Komponente ersetzt. Das ist unsere <code>app/app.component.*</code>. Eine solche Komponente besteht immer aus einer <code>css</code>-, einer <code>html</code>- und einer <code>ts</code>-Datei. Es wird also in diesen Komponenten-Selektor der HTML-Code der <code>app.component.html</code> eingebunden. Das sehen Sie auch, wenn Sie die Developer-Tools an Ihrem Browser öffnen und sich den Quellcode der aktuellen Anwendung anschauen:  <img alt="angular" src="../files/04_angular_2.png" /> </p>
 <h3 id="neue-komponente-erzeugen">neue Komponente erzeugen<a class="headerlink" href="#neue-komponente-erzeugen" title="Permanent link">&para;</a></h3>
 <p>Wir erzeugen uns eine neue Komponente mit dem Namen <code>liste</code> und verwenden dafür die Angular-CLI. Im Terminal geben Sie innerhalb des Projektordners <code>frontend</code> dazu den Befehl</p>
-<div class="highlight"><pre><span></span><code>ng generate component liste
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ng<span class="w"> </span>generate<span class="w"> </span>component<span class="w"> </span>liste
+</span></code></pre></div>
 <p>In dem Befehl können Sie <code>generate</code> auch durch <code>g</code> und <code>component</code> durch <code>c</code> abkürzen. Es hätte also auch <code>ng g c liste</code> gereicht. Dadurch entsteht im <code>src/app</code>-Ordner eine neue Komponente <code>liste</code> (ein neuer Ordner <code>liste</code>), die folgende Dateien enthält:</p>
 <ul>
 <li><code>liste.component.css</code> - spezielle CSS-Definitionen nur für die Komponente</li>
@@ -796,27 +990,26 @@ git push
 <li><code>liste.component.ts</code> - die TypeScript-Datei der Komponente</li>
 </ul>
 <p>Angenommen, wir definieren uns für unsere neue Komponente in <code>liste.component.css</code> CSS-Eigenschfaten und angenommen, binden in <code>app.component.html</code> die neue Komponente über ihren Komponenten-Selektor <code>&lt;htw-liste&gt;&lt;/htw-liste&gt;</code> ein: </p>
-<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">src/app/app.component.html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="hll"><span class="p">&lt;</span><span class="nt">htw-liste</span><span class="p">&gt;&lt;/</span><span class="nt">htw-liste</span><span class="p">&gt;</span>
-</span><span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">src/app/app.component.html</label><label for="__tabbed_6_2">src/app/liste/liste.component.css</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="hll"><span class="p">&lt;</span><span class="nt">htw-liste</span><span class="p">&gt;&lt;/</span><span class="nt">htw-liste</span><span class="p">&gt;</span>
+</span></span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
 </div>
-<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">src/app/liste/liste.component.css</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>p {
-  border: red 3px solid;
-  color: red;
-}
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-block">
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>p {
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a>  border: red 3px solid;
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a>  color: red;
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4"></a>}
+</span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <p>, dann sieht unsere Anwenung so aus: <img alt="angular" src="../files/05_angular_3.png" /></p>
@@ -830,224 +1023,218 @@ git push
 <li><a href="https://get.foundation/"><strong>Foundation</strong></a></li>
 </ul>
 <p>Wir wollen hier exemplarisch einmal <strong>SemanticUI</strong> einbinden. Geben Sie dazu im Terminal in dem <code>frontend</code>-Verzeichnis </p>
-<div class="highlight"><pre><span></span><code>npm install semantic-ui-css
-</code></pre></div>
-
-<p>ein. Sollten Sie die Meldung bekommen, dass Paket bedenklich ist (<code>found 1 high severity vulnerability</code>), geben Sie danach noch <code>npm audit fix</code> ein. Durch diese Anweisung werden die benötigten Style-Dateien geladen und unter dem Ordner <code>node_modules/semantic-ui-css</code> gespeichert. Diese müssen jetzt nur noch in das Projekt eingebunden werden. Öffnen Sie dazu in Ihrer IDE die Datei <code>angular.json</code>. Bei dieser Datei handelt es sich um eine <a href="./javascript/#json">JSON</a>-Datei, die für die Konfiguration unserer Angular-Anwendung zuständig ist. In der <code>angular.json</code>-Datei ändern wir unter <strong>"projects"&rarr;"frontend"&rarr;"architect"&rarr;"build"&rarr;"options"&rarr;"styles"</strong> den Eintrag von </p>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;styles&quot;</span><span class="err">:</span> <span class="p">[</span>
-              <span class="s2">&quot;src/styles.css&quot;</span>
-            <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>npm install semantic-ui-css
+</span></code></pre></div>
+<p>ein. Sollten Sie die Meldung bekommen, dass Paket bedenklich ist (<code>found 1 high severity vulnerability</code>), geben Sie danach noch <code>npm audit fix</code> ein. Durch diese Anweisung werden die benötigten Style-Dateien geladen und unter dem Ordner <code>node_modules/semantic-ui-css</code> gespeichert. Diese müssen jetzt nur noch in das Projekt eingebunden werden. Öffnen Sie dazu in Ihrer IDE die Datei <code>angular.json</code>. Bei dieser Datei handelt es sich um eine <a href="https://www.json.org/json-de.html">JSON</a>-Datei, die für die Konfiguration unserer Angular-Anwendung zuständig ist. In der <code>angular.json</code>-Datei ändern wir unter <strong>"projects"&rarr;"frontend"&rarr;"architect"&rarr;"build"&rarr;"options"&rarr;"styles"</strong> den Eintrag von </p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">&quot;styles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">              </span><span class="s2">&quot;src/styles.css&quot;</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">            </span><span class="p">],</span>
+</span></code></pre></div>
 <p>auf 
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;styles&quot;</span><span class="err">:</span> <span class="p">[</span>
-              <span class="s2">&quot;node_modules/semantic-ui-css/semantic.css&quot;</span>
-            <span class="p">]</span><span class="err">,</span>
-</code></pre></div></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">&quot;styles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">              </span><span class="s2">&quot;node_modules/semantic-ui-css/semantic.css&quot;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">            </span><span class="p">],</span>
+</span></code></pre></div></p>
 <p>Sie können auch beides angeben. Die gleiche Änderung führen wir in <code>angular.json</code> unter <strong>"test"</strong> (statt <strong>"build"</strong>) durch, um die Styles auch beim Testen einzubeziehen. Also unter <strong>"projects"&rarr;"frontend"&rarr;"architect"&rarr;"test"&rarr;"options"&rarr;"styles"</strong> ebenfalls nach</p>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;styles&quot;</span><span class="err">:</span> <span class="p">[</span>
-              <span class="s2">&quot;node_modules/semantic-ui-css/semantic.css&quot;</span>
-            <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-
+<div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">&quot;styles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">              </span><span class="s2">&quot;node_modules/semantic-ui-css/semantic.css&quot;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">            </span><span class="p">],</span>
+</span></code></pre></div>
 <p>ändern.</p>
 <p>Um zu testen, ob das Einbinden der Semantic-UI-Styles geklappt hat, öffnen wir in der IDE die Datei <code>app.component.html</code> und geben die hervorgehobenen Zeilen ein (Listing zeigt die vollständige Datei <code>app.component.html</code>):</p>
-<div class="tabbed-set" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">app/app.component.html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">htw-liste</span><span class="p">&gt;&lt;/</span><span class="nt">htw-liste</span><span class="p">&gt;</span>
-<span class="hll"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui active inverted dimmer&quot;</span><span class="p">&gt;</span>
-</span><span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui text loader large&quot;</span><span class="p">&gt;</span>Lade Seite ...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span class="hll"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">app/app.component.html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="p">&lt;</span><span class="nt">htw-liste</span><span class="p">&gt;&lt;/</span><span class="nt">htw-liste</span><span class="p">&gt;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="hll"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui active inverted dimmer&quot;</span><span class="p">&gt;</span>
+</span></span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui text loader large&quot;</span><span class="p">&gt;</span>Lade Seite ...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="hll"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <p>Wir gestalten also das Template unserer App-Komponente als ein <code>div</code> im <code>div</code>. Beiden <code>div</code>s werden CSS-Klassen aus dem Semantic-UI-Framework zugeordnet (siehe z.B. Klasse <a href="https://semantic-ui.com/elements/loader.html">loader</a>). </p>
 <p>Als Beweis, dass die CSS-Eigenschaften des Frameworks auch in allen anderen Komponenten genutzt werden können, ändern wir auch noch unsere <code>liste.component.html</code>:</p>
-<div class="tabbed-set" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">app/liste/liste.component.html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>liste works!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="hll"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui three buttons&quot;</span><span class="p">&gt;</span>
-</span><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui active button&quot;</span><span class="p">&gt;</span>One<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui button&quot;</span><span class="p">&gt;</span>Two<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui button&quot;</span><span class="p">&gt;</span>Three<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><span class="hll"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">app/liste/liste.component.html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>liste works!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="hll"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui three buttons&quot;</span><span class="p">&gt;</span>
+</span></span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui active button&quot;</span><span class="p">&gt;</span>One<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui button&quot;</span><span class="p">&gt;</span>Two<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui button&quot;</span><span class="p">&gt;</span>Three<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="hll"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <h3 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h3>
 <p>Routing spielt eine zentrale Rolle in einer Applikation. Durch das Routing sind wir in der Lage, zwischen Komponenten hin- und her zu wechseln. Derzeit haben wir unsere Komponenten jeweils statisch über die Komponenten-Selektoren eingebunden. Nun soll ein dynamisches Einbinden erfolgen. Wenn wir uns nochmal die <code>app.component.html</code> anschauen, dann befindet sich darin eine Komponenten-Selektor <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code>. In diesen werden durch Routing nun dynamisch Komponenten eingebunden. </p>
 <p>Wir haben bei der Erstellung des Projektes bei der Frage, </p>
-<div class="highlight"><pre><span></span><code>? Would you like to add Angular routing? Yes
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>?<span class="w"> </span>Would<span class="w"> </span>you<span class="w"> </span>like<span class="w"> </span>to<span class="w"> </span>add<span class="w"> </span>Angular<span class="w"> </span>routing?<span class="w"> </span>Yes
+</span></code></pre></div>
 <p>mit "yes" geantwortet. Deshalb müssen wir das Routing-Modul nun nicht mehr einbinden. Sollte dies jedoch noch nicht geschehen sein, können Sie das mithilfe von </p>
-<div class="highlight"><pre><span></span><code>npm install @angular/router --save
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>npm<span class="w"> </span>install<span class="w"> </span>@angular/router<span class="w"> </span>--save
+</span></code></pre></div>
 <p>nachholen. </p>
 <p>Um das Routing zu erläutern, erstellen wir uns drei weitere Komponenten <code>dashboard</code>, <code>about</code> und <code>tasks</code>. </p>
-<div class="highlight"><pre><span></span><code>ng g c dashboard
-ng g c about
-ng g c tasks
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>ng<span class="w"> </span>g<span class="w"> </span>c<span class="w"> </span>dashboard
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>ng<span class="w"> </span>g<span class="w"> </span>c<span class="w"> </span>about
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>ng<span class="w"> </span>g<span class="w"> </span>c<span class="w"> </span>tasks
+</span></code></pre></div>
 <p>Die <code>dashboard</code>und die <code>about</code>-Komponente definieren wir jeweils als "Top-Level"-Routen. Das bedeutet, dass wir diese Komponenten über <code>localhost:4200/dashboard</code> bzw <code>localhost:4200/about</code> erreichen werden. Dazu öffnen wir die <code>app.routing.module.ts</code>-Datei, die sich im <code>app</code>-Ordner befindet und ergänzen sie wie folgt (hinzugefügte Zeilen hervorgehoben):</p>
-<div class="tabbed-set" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">app/app-routing.module.ts</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">NgModule</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">Routes</span><span class="p">,</span> <span class="nx">RouterModule</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/router&#39;</span><span class="p">;</span>
-
-<span class="hll"><span class="kr">import</span> <span class="p">{</span><span class="nx">DashboardComponent</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./dashboard/dashboard.component&#39;</span><span class="p">;</span>
-</span><span class="hll"><span class="kr">import</span> <span class="p">{</span><span class="nx">AboutComponent</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./about/about.component&#39;</span><span class="p">;</span>
-</span>
-<span class="hll"><span class="kr">const</span> <span class="nx">routes</span><span class="o">:</span> <span class="nx">Routes</span> <span class="o">=</span> <span class="p">[</span>
-</span><span class="hll">  <span class="p">{</span><span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span> <span class="nx">component</span><span class="o">:</span> <span class="nx">DashboardComponent</span><span class="p">},</span>
-</span><span class="hll">  <span class="p">{</span><span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;about&#39;</span><span class="p">,</span> <span class="nx">component</span><span class="o">:</span> <span class="nx">AboutComponent</span><span class="p">},</span>
-</span><span class="hll"><span class="p">];</span>
-</span>
-<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
-  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">routes</span><span class="p">)],</span>
-  <span class="nx">exports</span><span class="o">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">]</span>
-<span class="p">})</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppRoutingModule</span> <span class="p">{</span> <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">app/app-routing.module.ts</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-javascript highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-28-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-28-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-28-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-28-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-28-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-28-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-28-10">10</a></span>
+<span class="normal"><a href="#__codelineno-28-11">11</a></span>
+<span class="normal"><a href="#__codelineno-28-12">12</a></span>
+<span class="normal"><a href="#__codelineno-28-13">13</a></span>
+<span class="normal"><a href="#__codelineno-28-14">14</a></span>
+<span class="normal"><a href="#__codelineno-28-15">15</a></span>
+<span class="normal"><a href="#__codelineno-28-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NgModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Routes</span><span class="p">,</span><span class="w"> </span><span class="nx">RouterModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/router&#39;</span><span class="p">;</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3"></a>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">DashboardComponent</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./dashboard/dashboard.component&#39;</span><span class="p">;</span>
+</span></span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">AboutComponent</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./about/about.component&#39;</span><span class="p">;</span>
+</span></span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6"></a>
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="hll"><span class="kd">const</span><span class="w"> </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="nx">Routes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span></span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="hll"><span class="w">  </span><span class="p">{</span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;dashboard&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">DashboardComponent</span><span class="p">},</span>
+</span></span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="hll"><span class="w">  </span><span class="p">{</span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;about&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">AboutComponent</span><span class="p">},</span>
+</span></span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="hll"><span class="p">];</span>
+</span></span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11"></a>
+</span><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+</span><span id="__span-28-13"><a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="w">  </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">RouterModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">routes</span><span class="p">)],</span>
+</span><span id="__span-28-14"><a id="__codelineno-28-14" name="__codelineno-28-14"></a><span class="w">  </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">RouterModule</span><span class="p">]</span>
+</span><span id="__span-28-15"><a id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="p">})</span>
+</span><span id="__span-28-16"><a id="__codelineno-28-16" name="__codelineno-28-16"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">AppRoutingModule</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <p>In den Zeilen <code>4</code> und <code>5</code> wurden die Komponenten importiert, für die wir Routen anlegen wollen. Diese Routen wurden in den Zeilen <code>8</code> und <code>9</code> definiert. Die URL (<code>localhost:4200</code>) wird um den <code>path</code> <code>/dashboard</code> erweitert, um die <code>dashboard</code>-Komponente aufzurufen und um den <code>path</code> <code>/about</code>, um die <code>about</code>-Komponente einzubinden. </p>
 <p>Wir passen jetzt noch die Views der <code>root</code>-Komponente udn der <code>liste</code>-Komponente an, um das Ergebnis des Routings zu veranschaulichen (es sind jeweils die vollständigen <code>*.component.html</code>-Dateien angegeben:</p>
-<div class="tabbed-set" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">app/app.component.html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;border: black solid 2px; padding: 20px;&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">htw-liste</span><span class="p">&gt;&lt;/</span><span class="nt">htw-liste</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui page grid&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;computer tablet only row&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui inverted menu navbar&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;active item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/dashboard&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Dashboard<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/about&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;column padding-reset&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui large message&quot;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui huge header&quot;</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Das ist die <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>app<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>-Komponente<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://freiheit.f4.htw-berlin.de/projekte&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui blue button&quot;</span><span class="p">&gt;</span>Anleitung Projekte <span class="ni">&amp;raquo;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">app/app.component.html</label><label for="__tabbed_10_2">app/liste/liste.component.html</label><label for="__tabbed_10_3">app/liste/liste.component.css</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-29-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-29-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span>
+<span class="normal"><a href="#__codelineno-29-11">11</a></span>
+<span class="normal"><a href="#__codelineno-29-12">12</a></span>
+<span class="normal"><a href="#__codelineno-29-13">13</a></span>
+<span class="normal"><a href="#__codelineno-29-14">14</a></span>
+<span class="normal"><a href="#__codelineno-29-15">15</a></span>
+<span class="normal"><a href="#__codelineno-29-16">16</a></span>
+<span class="normal"><a href="#__codelineno-29-17">17</a></span>
+<span class="normal"><a href="#__codelineno-29-18">18</a></span>
+<span class="normal"><a href="#__codelineno-29-19">19</a></span>
+<span class="normal"><a href="#__codelineno-29-20">20</a></span>
+<span class="normal"><a href="#__codelineno-29-21">21</a></span>
+<span class="normal"><a href="#__codelineno-29-22">22</a></span>
+<span class="normal"><a href="#__codelineno-29-23">23</a></span>
+<span class="normal"><a href="#__codelineno-29-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;border: black solid 2px; padding: 20px;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a>  <span class="p">&lt;</span><span class="nt">htw-liste</span><span class="p">&gt;&lt;/</span><span class="nt">htw-liste</span><span class="p">&gt;</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui page grid&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;computer tablet only row&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6"></a>      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui inverted menu navbar&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;active item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/dashboard&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Dashboard<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/about&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12"></a>
+</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14"></a>      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;column padding-reset&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-29-15"><a id="__codelineno-29-15" name="__codelineno-29-15"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui large message&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-29-16"><a id="__codelineno-29-16" name="__codelineno-29-16"></a>          <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui huge header&quot;</span><span class="p">&gt;</span>This is app<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-29-17"><a id="__codelineno-29-17" name="__codelineno-29-17"></a>          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Das ist die <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>app<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>-Komponente<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-29-18"><a id="__codelineno-29-18" name="__codelineno-29-18"></a>          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://freiheit.f4.htw-berlin.de/projekte&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui blue button&quot;</span><span class="p">&gt;</span>Anleitung Projekte <span class="ni">&amp;raquo;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-29-19"><a id="__codelineno-29-19" name="__codelineno-29-19"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-29-20"><a id="__codelineno-29-20" name="__codelineno-29-20"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-29-21"><a id="__codelineno-29-21" name="__codelineno-29-21"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-29-22"><a id="__codelineno-29-22" name="__codelineno-29-22"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-29-23"><a id="__codelineno-29-23" name="__codelineno-29-23"></a>  <span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
+</span><span id="__span-29-24"><a id="__codelineno-29-24" name="__codelineno-29-24"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
 </div>
-<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">app/liste/liste.component.html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;margin: 20px; border: red solid 2px; padding: 20px;&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui page grid&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;computer tablet only row&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui inverted menu navbar&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;active item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/dashboard&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Dashboard<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/about&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;column padding-reset&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui large message&quot;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui huge header&quot;</span><span class="p">&gt;</span>This is liste<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Das ist die <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>liste<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>-Komponente<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://freiheit.f4.htw-berlin.de/projekte&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui blue button&quot;</span><span class="p">&gt;</span>Anleitung Projekte <span class="ni">&amp;raquo;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-block">
+<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-30-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-30-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-30-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-30-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-30-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-30-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-30-10">10</a></span>
+<span class="normal"><a href="#__codelineno-30-11">11</a></span>
+<span class="normal"><a href="#__codelineno-30-12">12</a></span>
+<span class="normal"><a href="#__codelineno-30-13">13</a></span>
+<span class="normal"><a href="#__codelineno-30-14">14</a></span>
+<span class="normal"><a href="#__codelineno-30-15">15</a></span>
+<span class="normal"><a href="#__codelineno-30-16">16</a></span>
+<span class="normal"><a href="#__codelineno-30-17">17</a></span>
+<span class="normal"><a href="#__codelineno-30-18">18</a></span>
+<span class="normal"><a href="#__codelineno-30-19">19</a></span>
+<span class="normal"><a href="#__codelineno-30-20">20</a></span>
+<span class="normal"><a href="#__codelineno-30-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;margin: 20px; border: red solid 2px; padding: 20px;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui page grid&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;computer tablet only row&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4"></a>      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui inverted menu navbar&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;active item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/dashboard&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Dashboard<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/about&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/&quot;</span> <span class="na">routerLinkActive</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10"></a>
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12"></a>      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;column padding-reset&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui large message&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-30-14"><a id="__codelineno-30-14" name="__codelineno-30-14"></a>          <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui huge header&quot;</span><span class="p">&gt;</span>This is liste<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-30-15"><a id="__codelineno-30-15" name="__codelineno-30-15"></a>          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Das ist die <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>liste<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>-Komponente<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-30-16"><a id="__codelineno-30-16" name="__codelineno-30-16"></a>          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://freiheit.f4.htw-berlin.de/projekte&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ui blue button&quot;</span><span class="p">&gt;</span>Anleitung Projekte <span class="ni">&amp;raquo;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-30-17"><a id="__codelineno-30-17" name="__codelineno-30-17"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-30-18"><a id="__codelineno-30-18" name="__codelineno-30-18"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-30-19"><a id="__codelineno-30-19" name="__codelineno-30-19"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-30-20"><a id="__codelineno-30-20" name="__codelineno-30-20"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-30-21"><a id="__codelineno-30-21" name="__codelineno-30-21"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
 </div>
-<input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><label for="__tabbed_10_3">app/liste/liste.component.css</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">/* diese Datei wieder leeren, also die Definition für p loeschen */</span>
-</code></pre></div>
-</td></tr></table>
-
+<div class="tabbed-block">
+<div class="language-css highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="c">/* diese Datei wieder leeren, also die Definition für p loeschen */</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 <p>Grob ist unsere HTML-Struktur nun wie folgt:</p>
@@ -1073,88 +1260,100 @@ ng g c tasks
 <li>Routen definieren.</li>
 </ul>
 <p>Damit haben Sie erstmal die notwendigsten Hilfsmittel in der Hand, um loszulegen, denke ich. Viel Spaß mit Angular und viel Erfolg im Projekt! </p>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="">
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
         
-          <a href="../server/" title="Virtueller Server" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+          
+          <a href="../server/" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Virtueller Server">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
-            <div class="md-footer-nav__title">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
               <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Zurück
-                </span>
                 Virtueller Server
               </div>
             </div>
           </a>
         
         
-          <a href="../backend/" title="Backend" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
+          
+          <a href="../backend/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Backend">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
               <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Weiter
-                </span>
                 Backend
               </div>
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
             </div>
           </a>
         
       </nav>
-    </div>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 Jörn Freiheit
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Jörn Freiheit
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../assets/javascripts/vendor.c51dfa35.min.js"></script>
-      <script src="../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "", "search.config.separator": "", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse"}</script>
-      
-      <script>
-        app = initialize({
-          base: "..",
-          features: ["instant", "tabs"],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.58d22e8e.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "tabs", "content.code.copy", "navigation.footer"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

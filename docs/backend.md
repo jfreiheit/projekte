@@ -68,7 +68,7 @@ npm install body-parser --save
 npm install morgan --save
 ```
 
-und in diesem Ordner erstellen wir mithilfe der [**IDE Ihrer Wahl**](./frontend/#ide) eine Datei `index.js`. Diese Datei soll folgenden Inhalt haben (wir fangen erstmal einfach an und bauen uns einen simplen Webserver):
+und in diesem Ordner erstellen wir mithilfe der [**IDE Ihrer Wahl**](./frontend.md#ide) eine Datei `index.js`. Diese Datei soll folgenden Inhalt haben (wir fangen erstmal einfach an und bauen uns einen simplen Webserver):
 
 === "backend/index.js"
 	```javascript

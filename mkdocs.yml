@@ -5,11 +5,11 @@ site_author: Jörn Freiheit
 site_url: http://freiheit.f4.htw-berlin.de/projekte
 
 # Repository
-repo_name: webtech
+repo_name: projekte
 repo_url: https://github.com/jfreiheit/projekte
 
 # Copyright
-copyright: Copyright &copy; 2020 Jörn Freiheit
+copyright: Copyright &copy; 2023 Jörn Freiheit
 
 # Configuration
 theme:
@@ -24,13 +24,18 @@ theme:
   features:
     - instant
     - tabs
+    - content.code.copy
+    - navigation.footer
   favicon: img/favicon.png
   logo: img/fiw.jpg
 
+extra_css:
+  - extra.css
 
 # Extensions
 markdown_extensions:
   - admonition
+  - attr_list
   - footnotes
   - pymdownx.arithmatex
   - pymdownx.betterem:
@@ -39,25 +44,39 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tilde
   - codehilite:
       guess_lang: false
   - toc:
       permalink: true
+  - md_in_html
 
 #Navigation
 nav:
     - Home: index.md
+    - Git: git.md 
+    - Spring Boot: spring.md 
     - Virtueller Server: server.md
     - Frontend: frontend.md
     - Backend: backend.md
+    - Beispiel: buchung.md 
+    - REST-API mit Spring: rest.md
+    - Vaadin: vaadin.md 
+    
