@@ -24,6 +24,7 @@
 
 .md-typeset a {
     color: #800000;
+    font-weight: bold;
 }
 
 .md-typeset blockquote p {

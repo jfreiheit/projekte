@@ -9,7 +9,7 @@ repo_name: projekte
 repo_url: https://github.com/jfreiheit/projekte
 
 # Copyright
-copyright: Copyright &copy; 2023 Jörn Freiheit
+copyright: Copyright &copy; 2026 Jörn Freiheit
 
 # Configuration
 theme:
@@ -24,8 +24,14 @@ theme:
   features:
     - instant
     - tabs
-    - content.code.copy
     - navigation.footer
+    - navigation.instant
+    - navigation.tabs
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
   favicon: img/favicon.png
   logo: img/fiw.jpg
 
@@ -35,7 +41,6 @@ extra_css:
 # Extensions
 markdown_extensions:
   - admonition
-  - attr_list
   - footnotes
   - pymdownx.arithmatex
   - pymdownx.betterem:
@@ -66,17 +71,12 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+  - attr_list
   - md_in_html
 
 #Navigation
 nav:
     - Home: index.md
-    - Git: git.md 
-    - Spring Boot: spring.md 
+    - GitHub-Repo: git.md 
     - Virtueller Server: server.md
-    - Frontend: frontend.md
-    - Backend: backend.md
-    - Beispiel: buchung.md 
-    - REST-API mit Spring: rest.md
-    - Vaadin: vaadin.md 
     
