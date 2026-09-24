@@ -452,6 +452,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scrum-konzepte-im-board-abbilden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrum-Konzepte im Board abbilden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scrum-Konzepte im Board abbilden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schatzen-und-priorisieren-priority-size-und-estimate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schätzen und priorisieren: Priority, Size und Estimate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterationen-sprints-im-board-abbilden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterationen: Sprints im Board abbilden
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -599,6 +632,39 @@
       Views im Projekt einrichten
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrum-konzepte-im-board-abbilden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrum-Konzepte im Board abbilden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scrum-Konzepte im Board abbilden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schatzen-und-priorisieren-priority-size-und-estimate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schätzen und priorisieren: Priority, Size und Estimate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterationen-sprints-im-board-abbilden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterationen: Sprints im Board abbilden
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -787,7 +853,129 @@
 <li>Die <strong>„Board"</strong>-View ist automatisch nach dem Status-Feld gruppiert (eine Spalte pro Status-Wert: Backlog, Current Planning, In Progress, Done) — das ist die klassische Kanban-Ansicht.</li>
 </ul>
 <p>Für eine Tabellen-View lässt sich über den Button <strong>„View" → „Group by"</strong> oben rechts zusätzlich festlegen, nach welchem Feld gruppiert werden soll (z. B. nach <code>Repository</code>, um Backend- und Frontend-Issues optisch zu trennen, oder nach <code>Milestone</code>). Das ist eine reine Oberflächen-Einstellung, die nur im Browser vorgenommen werden kann. Weitere Informationen zu Views finden Sie z.B. <a href="https://docs.github.com/de/enterprise-cloud@latest/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view">hier</a>.</p>
-<p>Für das agile Vorgehen in Sprints bieten sich <a href="">Iterationen</a>. Eine Beschreibung dazu finden Sie z.B. <a href="https://docs.github.com/de/enterprise-cloud@latest/issues/planning-and-tracking-with-projects/understanding-fields/about-iteration-fields">hier</a>.</p>
+<h2 id="scrum-konzepte-im-board-abbilden">Scrum-Konzepte im Board abbilden<a class="headerlink" href="#scrum-konzepte-im-board-abbilden" title="Permanent link">&para;</a></h2>
+<p>Der oben beschriebene Ablauf (User Story → Akzeptanzkriterien → Feature-Issues → Branch → Commits → Pull Request → Merge) ist bereits agil, orientiert sich aber noch nicht explizit an Scrum. Ein GitHub-Project bringt dafür passende Felder mit, die im <a href="https://github.com/users/jfreiheit/projects/1">DemoProject</a> bereits eingerichtet sind, bislang aber kaum genutzt wurden. Die folgende Tabelle ordnet die Scrum-Begriffe den GitHub-Konzepten zu, die wir im Folgenden verwenden:</p>
+<table>
+<thead>
+<tr>
+<th>Scrum-Begriff</th>
+<th>Entsprechung im GitHub-Project</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Backlog</td>
+<td>Alle Issues im Project, Status <code>Backlog</code></td>
+</tr>
+<tr>
+<td>User Story</td>
+<td>Issue mit Akzeptanzkriterien (Titel <code>US: ...</code>)</td>
+</tr>
+<tr>
+<td>Teilaufgabe / Task</td>
+<td>Feature-Issue (<em>Sub-Issue</em>)</td>
+</tr>
+<tr>
+<td>Schätzung (Story Points)</td>
+<td>Feld <code>Estimate</code></td>
+</tr>
+<tr>
+<td>Priorisierung</td>
+<td>Feld <code>Priority</code> (<code>P0</code>–<code>P2</code>)</td>
+</tr>
+<tr>
+<td>Aufwandsklasse</td>
+<td>Feld <code>Size</code> (<code>XS</code>–<code>XL</code>)</td>
+</tr>
+<tr>
+<td>Sprint</td>
+<td>Feld <code>Iteration</code></td>
+</tr>
+<tr>
+<td>Sprint-Board</td>
+<td>Table-View, nach <code>Iteration</code> gruppiert, oder die <code>Roadmap</code>-View</td>
+</tr>
+<tr>
+<td>Definition of Done</td>
+<td>Akzeptanzkriterium erfüllt, Pull Request gemerged, Feature-Issue geschlossen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="schatzen-und-priorisieren-priority-size-und-estimate">Schätzen und priorisieren: Priority, Size und Estimate<a class="headerlink" href="#schatzen-und-priorisieren-priority-size-und-estimate" title="Permanent link">&para;</a></h3>
+<p>Für jedes Feature-Issue (und für die User Story selbst) werden drei Felder gepflegt, entweder direkt in der Tabellen-View spaltenweise oder im Seitenpanel eines einzelnen Issues:</p>
+<ul>
+<li><strong>Priority</strong> (<code>P0</code>–<code>P2</code>): Wie dringend/wichtig ist das Issue? <code>P0</code> blockiert typischerweise die ganze Story, <code>P2</code> ist "nice to have".</li>
+<li><strong>Size</strong> (<code>XS</code>–<code>XL</code>): grobe, relative Aufwandsklasse.</li>
+<li><strong>Estimate</strong>: eine konkrete Zahl (Story Points).</li>
+</ul>
+<figure>
+  <img alt="github" src="../files/github10.png" width="100%" />
+  <figcaption>Priority/Size/Estimate im DemoProject-Board</figcaption>
+</figure>
+<p>So sieht die Schätzung für die Backend-Story „US: Datenbankverbindung herstellen" (<a href="https://github.com/jfreiheit/demobackenduser"><code>demobackenduser</code></a>) und ihre Feature-Issues aus:</p>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Priority</th>
+<th>Size</th>
+<th>Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#1 US: Datenbankverbindung herstellen</td>
+<td>P0</td>
+<td>M</td>
+<td>10</td>
+</tr>
+<tr>
+<td>#2 Abhängigkeiten für Datenbankverbindung in <code>pom.xml</code> eintragen</td>
+<td>P0</td>
+<td>XS</td>
+<td>1</td>
+</tr>
+<tr>
+<td>#3 Zugangsdaten für den Datenbankzugriff hinzufügen</td>
+<td>P0</td>
+<td>S</td>
+<td>2</td>
+</tr>
+<tr>
+<td>#4 Hibernate-Konfigurationen hinterlegen</td>
+<td>P0</td>
+<td>S</td>
+<td>2</td>
+</tr>
+<tr>
+<td>#5 Entität <code>User</code> hinzufügen</td>
+<td>P0</td>
+<td>S</td>
+<td>2</td>
+</tr>
+<tr>
+<td>#6 <code>UserRepository</code> hinzufügen</td>
+<td>P1</td>
+<td>XS</td>
+<td>1</td>
+</tr>
+<tr>
+<td>#7 <code>UserRepositoryTest</code> hinzufügen</td>
+<td>P1</td>
+<td>S</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Die Summe der Estimates der Feature-Issues (1+2+2+2+1+2 = 10) ist ein guter Anhaltspunkt für die Schätzung der Story selbst – beide liegen hier bewusst gleichauf. Genauso wurde die Frontend-Story „US: create registration form" (<a href="https://github.com/jfreiheit/demofrontenduser"><code>demofrontenduser</code></a>) geschätzt: Story <code>P1</code>/<code>L</code>/<code>9</code>, mit den fünf Feature-Issues <code>#2</code>–<code>#6</code> zwischen <code>XS</code>/<code>1</code> (z. B. das reine Anlegen der <code>role</code>-Enumeration) und <code>S</code>/<code>3</code> (das eigentliche Registrierungsformular als aufwändigstes Teilstück).</p>
+<h3 id="iterationen-sprints-im-board-abbilden">Iterationen: Sprints im Board abbilden<a class="headerlink" href="#iterationen-sprints-im-board-abbilden" title="Permanent link">&para;</a></h3>
+<p>Das Feld <code>Iteration</code> teilt die Zeit in aufeinanderfolgende, gleich lange Zeiträume ein – das entspricht Scrum-Sprints. Im DemoProject ist eine erste Iteration (schlicht <code>Iteration</code> genannt, 2 Wochen ab 19.02.2026) angelegt; beide Stories – die Backend-Story „Datenbankverbindung herstellen" <strong>und</strong> die Frontend-Story „create registration form" – fallen zeitlich in diese eine Iteration. Das zeigt gut, dass eine Iteration nicht auf ein Repository beschränkt ist: In einem Sprint arbeitet ein Team üblicherweise gleichzeitig an Backend- und Frontend-Issues.</p>
+<p>Jedem Issue (Story <strong>und</strong> Feature-Issues) wird die passende Iteration zugewiesen. Über <strong>„View" → „Group by" → <code>Iteration</code></strong> lässt sich die Tabellen-View so gruppieren, dass alle Issues eines Sprints auf einen Blick sichtbar sind – ähnlich einem klassischen Sprint-Board. Alternativ zeigt die <strong><code>Roadmap</code></strong>-View die Iterationen als Zeitstrahl.</p>
+<figure>
+  <img alt="github" src="../files/github11.png" width="100%" />
+  <figcaption>Roadmap</figcaption>
+</figure>
+<p>Für ein neues, mehrere Wochen laufendes Projekt legen Sie weitere, direkt aufeinanderfolgende Iterationen an (Project → Feld <code>Iteration</code> öffnen → „Add iteration" bzw. über das Zahnrad-Icon die Standarddauer einstellen) und ordnen künftige Stories bereits jetzt einer (noch leeren) Iteration zu – so entsteht ein Board, das den geplanten Projektverlauf über das gesamte Semester abbildet, nicht nur den aktuellen Stand. Weitere Informationen zu Iterationsfeldern finden Sie <a href="https://docs.github.com/de/enterprise-cloud@latest/issues/planning-and-tracking-with-projects/understanding-fields/about-iteration-fields">hier</a>.</p>
 
 
 

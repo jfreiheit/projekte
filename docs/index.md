@@ -8,7 +8,7 @@ Hier werden einige Anleitungen, Hilfen und Informationen für und über das Soft
 
 -   :material-git:{ .lg .middle } __GitHub-Repo__
 
-	[:octicons-arrow-right-24: :octicons-git-branch-24:](git.md#git)
+	[:octicons-arrow-right-24: :octicons-git-branch-24:](git.md#github)
 
 
 -   :material-server:{ .lg .middle } __Einrichten eines Virtuellen Servers__
