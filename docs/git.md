@@ -216,6 +216,19 @@ Closes #11
 
 Die Entscheidung zwischen „ein PR pro Feature-Issue" und „mehrere Feature-Issues in einem PR" ist also keine starre Regel, sondern eine bewusste Abwägung: Würden unabhängige Features denselben Bereich derselben Datei anfassen, entstünden bei getrennten, sofort gemergten Branches unnötige Merge-Konflikte und eine unübersichtliche Historie mit halbfertigen Zwischenständen auf `main`.
 
+### Ein viertes Beispiel: abhängige (gestapelte) Pull Requests
+
+Manchmal hängt eine User Story technisch von einer anderen ab, die noch nicht gemergt ist — der neue Branch braucht Code, der erst in einem offenen Pull Request entsteht. Statt zu warten, kann der abhängige Branch direkt vom noch offenen Feature-Branch abgezweigt werden (nicht von `main`); man spricht von **gestapelten (stacked) Pull Requests**.
+
+Beispiel: Die User Story [`US: Anmeldung über REST-Endpoint mit JWT ermöglichen`](https://github.com/jfreiheit/demobackenduser/issues/14) (Repository [`demobackenduser`](https://github.com/jfreiheit/demobackenduser)) braucht die `PasswordEncoder`-Bean, die erst in der vorausgehenden User Story [`US: Registrierung über REST-Endpoint ermöglichen`](https://github.com/jfreiheit/demobackenduser/issues/13) entsteht. Statt auf den Merge von [Pull Request #21](https://github.com/jfreiheit/demobackenduser/pull/21) zu warten, wurde der Login-Branch [`14-anmeldung-ueber-rest-endpoint-mit-jwt-ermoeglichen`](https://github.com/jfreiheit/demobackenduser/tree/14-anmeldung-ueber-rest-endpoint-mit-jwt-ermoeglichen) direkt vom Registrierungs-Branch abgezweigt. [Pull Request #22](https://github.com/jfreiheit/demobackenduser/pull/22) macht diese Abhängigkeit in der Beschreibung explizit:
+
+```text
+⚠️ Baut auf #21 auf. Bitte zuerst #21 mergen, dieser PR
+verkleinert sich danach automatisch auf die Login-spezifischen Commits.
+```
+
+Solange #21 offen ist, zeigt #22 auch dessen Commits mit an — das ist beabsichtigt und kein Fehler. Sobald #21 nach `main` gemergt ist, verschwinden diese Commits automatisch aus der Diff-Ansicht von #22, weil sie dann bereits in `main` enthalten sind. Die Merge-Reihenfolge (zuerst die Basis, dann der abhängige PR) muss dabei eingehalten werden.
+
 ### User Story abschließen
 
 Eine User Story ist fertig, wenn alle ihre Feature-Issues (Sub-Issues) geschlossen sind. Das schließt die User Story selbst aber **nicht automatisch** — dafür gibt es keine Closing-Keyword-Verknüpfung, da die User Story ja nicht über einen eigenen Pull Request umgesetzt wird. Zwei Dinge sind daher von Hand zu erledigen, sobald der letzte Teilschritt gemergt ist:

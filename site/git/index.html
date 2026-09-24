@@ -439,6 +439,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ein-viertes-beispiel-abhangige-gestapelte-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein viertes Beispiel: abhängige (gestapelte) Pull Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#user-story-abschlieen" class="md-nav__link">
     <span class="md-ellipsis">
       User Story abschließen
@@ -625,6 +634,15 @@
   <a href="#ein-drittes-beispiel-mehrere-feature-issues-in-einem-pull-request" class="md-nav__link">
     <span class="md-ellipsis">
       Ein drittes Beispiel: mehrere Feature-Issues in einem Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ein-viertes-beispiel-abhangige-gestapelte-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein viertes Beispiel: abhängige (gestapelte) Pull Requests
     </span>
   </a>
   
@@ -864,6 +882,13 @@
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Closes #11
 </span></code></pre></div>
 <p>Die Entscheidung zwischen „ein PR pro Feature-Issue" und „mehrere Feature-Issues in einem PR" ist also keine starre Regel, sondern eine bewusste Abwägung: Würden unabhängige Features denselben Bereich derselben Datei anfassen, entstünden bei getrennten, sofort gemergten Branches unnötige Merge-Konflikte und eine unübersichtliche Historie mit halbfertigen Zwischenständen auf <code>main</code>.</p>
+<h3 id="ein-viertes-beispiel-abhangige-gestapelte-pull-requests">Ein viertes Beispiel: abhängige (gestapelte) Pull Requests<a class="headerlink" href="#ein-viertes-beispiel-abhangige-gestapelte-pull-requests" title="Permanent link">&para;</a></h3>
+<p>Manchmal hängt eine User Story technisch von einer anderen ab, die noch nicht gemergt ist — der neue Branch braucht Code, der erst in einem offenen Pull Request entsteht. Statt zu warten, kann der abhängige Branch direkt vom noch offenen Feature-Branch abgezweigt werden (nicht von <code>main</code>); man spricht von <strong>gestapelten (stacked) Pull Requests</strong>.</p>
+<p>Beispiel: Die User Story <a href="https://github.com/jfreiheit/demobackenduser/issues/14"><code>US: Anmeldung über REST-Endpoint mit JWT ermöglichen</code></a> (Repository <a href="https://github.com/jfreiheit/demobackenduser"><code>demobackenduser</code></a>) braucht die <code>PasswordEncoder</code>-Bean, die erst in der vorausgehenden User Story <a href="https://github.com/jfreiheit/demobackenduser/issues/13"><code>US: Registrierung über REST-Endpoint ermöglichen</code></a> entsteht. Statt auf den Merge von <a href="https://github.com/jfreiheit/demobackenduser/pull/21">Pull Request #21</a> zu warten, wurde der Login-Branch <a href="https://github.com/jfreiheit/demobackenduser/tree/14-anmeldung-ueber-rest-endpoint-mit-jwt-ermoeglichen"><code>14-anmeldung-ueber-rest-endpoint-mit-jwt-ermoeglichen</code></a> direkt vom Registrierungs-Branch abgezweigt. <a href="https://github.com/jfreiheit/demobackenduser/pull/22">Pull Request #22</a> macht diese Abhängigkeit in der Beschreibung explizit:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>⚠️ Baut auf #21 auf. Bitte zuerst #21 mergen, dieser PR
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>verkleinert sich danach automatisch auf die Login-spezifischen Commits.
+</span></code></pre></div>
+<p>Solange #21 offen ist, zeigt #22 auch dessen Commits mit an — das ist beabsichtigt und kein Fehler. Sobald #21 nach <code>main</code> gemergt ist, verschwinden diese Commits automatisch aus der Diff-Ansicht von #22, weil sie dann bereits in <code>main</code> enthalten sind. Die Merge-Reihenfolge (zuerst die Basis, dann der abhängige PR) muss dabei eingehalten werden.</p>
 <h3 id="user-story-abschlieen">User Story abschließen<a class="headerlink" href="#user-story-abschlieen" title="Permanent link">&para;</a></h3>
 <p>Eine User Story ist fertig, wenn alle ihre Feature-Issues (Sub-Issues) geschlossen sind. Das schließt die User Story selbst aber <strong>nicht automatisch</strong> — dafür gibt es keine Closing-Keyword-Verknüpfung, da die User Story ja nicht über einen eigenen Pull Request umgesetzt wird. Zwei Dinge sind daher von Hand zu erledigen, sobald der letzte Teilschritt gemergt ist:</p>
 <ol>
