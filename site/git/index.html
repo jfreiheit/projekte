@@ -430,6 +430,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ein-drittes-beispiel-mehrere-feature-issues-in-einem-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein drittes Beispiel: mehrere Feature-Issues in einem Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#user-story-abschlieen" class="md-nav__link">
     <span class="md-ellipsis">
       User Story abschließen
@@ -607,6 +616,15 @@
   <a href="#ein-zweites-beispiel-derselbe-ablauf-im-backend" class="md-nav__link">
     <span class="md-ellipsis">
       Ein zweites Beispiel: derselbe Ablauf im Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ein-drittes-beispiel-mehrere-feature-issues-in-einem-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ein drittes Beispiel: mehrere Feature-Issues in einem Pull Request
     </span>
   </a>
   
@@ -829,6 +847,23 @@
 <li>ein aussagekräftiger Commit mit Issue-Referenz (<a href="https://github.com/jfreiheit/demobackenduser/commit/01a197b3c3283c4bd945d4a66eb52138a085e6fc">#5</a>, <a href="https://github.com/jfreiheit/demobackenduser/commit/bd144b1e327caf80ddc58bfb6f4445b04c3187ea">#6</a>, <a href="https://github.com/jfreiheit/demobackenduser/commit/7bda89dc8717b356116b0145b89753965e2247c2">#7</a>), </li>
 <li>Pull Request mit <code>Closes #&lt;nr&gt;</code> (<a href="https://github.com/jfreiheit/demobackenduser/pull/10">#10</a>, <a href="https://github.com/jfreiheit/demobackenduser/pull/11">#11</a>, <a href="https://github.com/jfreiheit/demobackenduser/pull/12">#12</a>). </li>
 </ol>
+<h3 id="ein-drittes-beispiel-mehrere-feature-issues-in-einem-pull-request">Ein drittes Beispiel: mehrere Feature-Issues in einem Pull Request<a class="headerlink" href="#ein-drittes-beispiel-mehrere-feature-issues-in-einem-pull-request" title="Permanent link">&para;</a></h3>
+<p>Der oben beschriebene Ablauf — ein Branch, ein Pull Request pro Feature-Issue — ist der Normalfall. Betreffen mehrere Akzeptanzkriterien jedoch <strong>dieselbe, in sich geschlossene Änderung</strong> (z. B. denselben einzelnen Dokument), ist es sinnvoller, sie gemeinsam in einem Branch mit mehreren, klar abgegrenzten Commits umzusetzen und über einen einzigen Pull Request zu schließen — statt für jedes Akzeptanzkriterium einen eigenen, sofort zu mergenden Branch zu eröffnen, der die vorherigen Änderungen am selben Dokument wieder aufnehmen müsste.</p>
+<p>Beispiel: Die User Story <a href="https://github.com/jfreiheit/demofrontenduser/issues/11"><code>US: Repräsentative README für Frontend und Backend erstellen</code></a> (Milestone „Projektdokumentation", Repository <a href="https://github.com/jfreiheit/demofrontenduser"><code>demofrontenduser</code></a>) hat vier Akzeptanzkriterien als Sub-Issues (<code>#12</code>–<code>#15</code>), die alle dieselbe Datei (<code>README.md</code>) betreffen. Sie wurden auf einem gemeinsamen Branch <a href="https://github.com/jfreiheit/demofrontenduser/tree/11-repraesentative-readme-fuer-frontend-und-backend-erstellen"><code>11-repraesentative-readme-fuer-frontend-und-backend-erstellen</code></a> als vier aufeinanderfolgende Commits umgesetzt — jeder Commit referenziert das Akzeptanzkriterium, das er erfüllt:</p>
+<ol>
+<li><code>docs: Projektbeschreibung und Architekturüberblick in README ergänzt (#12)</code></li>
+<li><code>docs: Setup- und Start-Anleitung für Backend und Frontend in README ergänzt (#13)</code></li>
+<li><code>docs: Screenshots der Anwendung in README eingebunden (#14)</code></li>
+<li><code>docs: Badges, Lizenz und Projektlinks in README ergänzt (#15)</code></li>
+</ol>
+<p><a href="https://github.com/jfreiheit/demofrontenduser/pull/16">Pull Request #16</a> schließt alle vier Feature-Issues <strong>und</strong> die übergeordnete User Story gleichzeitig, da mit dem Merge dieses einen Pull Requests tatsächlich alle Akzeptanzkriterien erfüllt sind:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Closes #12
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Closes #13
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Closes #14
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Closes #15
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Closes #11
+</span></code></pre></div>
+<p>Die Entscheidung zwischen „ein PR pro Feature-Issue" und „mehrere Feature-Issues in einem PR" ist also keine starre Regel, sondern eine bewusste Abwägung: Würden unabhängige Features denselben Bereich derselben Datei anfassen, entstünden bei getrennten, sofort gemergten Branches unnötige Merge-Konflikte und eine unübersichtliche Historie mit halbfertigen Zwischenständen auf <code>main</code>.</p>
 <h3 id="user-story-abschlieen">User Story abschließen<a class="headerlink" href="#user-story-abschlieen" title="Permanent link">&para;</a></h3>
 <p>Eine User Story ist fertig, wenn alle ihre Feature-Issues (Sub-Issues) geschlossen sind. Das schließt die User Story selbst aber <strong>nicht automatisch</strong> — dafür gibt es keine Closing-Keyword-Verknüpfung, da die User Story ja nicht über einen eigenen Pull Request umgesetzt wird. Zwei Dinge sind daher von Hand zu erledigen, sobald der letzte Teilschritt gemergt ist:</p>
 <ol>

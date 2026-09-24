@@ -193,6 +193,29 @@ wurden nach demselben Schema abgearbeitet — jeweils
 
 
 
+### Ein drittes Beispiel: mehrere Feature-Issues in einem Pull Request
+
+Der oben beschriebene Ablauf — ein Branch, ein Pull Request pro Feature-Issue — ist der Normalfall. Betreffen mehrere Akzeptanzkriterien jedoch **dieselbe, in sich geschlossene Änderung** (z. B. denselben einzelnen Dokument), ist es sinnvoller, sie gemeinsam in einem Branch mit mehreren, klar abgegrenzten Commits umzusetzen und über einen einzigen Pull Request zu schließen — statt für jedes Akzeptanzkriterium einen eigenen, sofort zu mergenden Branch zu eröffnen, der die vorherigen Änderungen am selben Dokument wieder aufnehmen müsste.
+
+Beispiel: Die User Story [`US: Repräsentative README für Frontend und Backend erstellen`](https://github.com/jfreiheit/demofrontenduser/issues/11) (Milestone „Projektdokumentation", Repository [`demofrontenduser`](https://github.com/jfreiheit/demofrontenduser)) hat vier Akzeptanzkriterien als Sub-Issues (`#12`–`#15`), die alle dieselbe Datei (`README.md`) betreffen. Sie wurden auf einem gemeinsamen Branch [`11-repraesentative-readme-fuer-frontend-und-backend-erstellen`](https://github.com/jfreiheit/demofrontenduser/tree/11-repraesentative-readme-fuer-frontend-und-backend-erstellen) als vier aufeinanderfolgende Commits umgesetzt — jeder Commit referenziert das Akzeptanzkriterium, das er erfüllt:
+
+1. `docs: Projektbeschreibung und Architekturüberblick in README ergänzt (#12)`
+2. `docs: Setup- und Start-Anleitung für Backend und Frontend in README ergänzt (#13)`
+3. `docs: Screenshots der Anwendung in README eingebunden (#14)`
+4. `docs: Badges, Lizenz und Projektlinks in README ergänzt (#15)`
+
+[Pull Request #16](https://github.com/jfreiheit/demofrontenduser/pull/16) schließt alle vier Feature-Issues **und** die übergeordnete User Story gleichzeitig, da mit dem Merge dieses einen Pull Requests tatsächlich alle Akzeptanzkriterien erfüllt sind:
+
+```text
+Closes #12
+Closes #13
+Closes #14
+Closes #15
+Closes #11
+```
+
+Die Entscheidung zwischen „ein PR pro Feature-Issue" und „mehrere Feature-Issues in einem PR" ist also keine starre Regel, sondern eine bewusste Abwägung: Würden unabhängige Features denselben Bereich derselben Datei anfassen, entstünden bei getrennten, sofort gemergten Branches unnötige Merge-Konflikte und eine unübersichtliche Historie mit halbfertigen Zwischenständen auf `main`.
+
 ### User Story abschließen
 
 Eine User Story ist fertig, wenn alle ihre Feature-Issues (Sub-Issues) geschlossen sind. Das schließt die User Story selbst aber **nicht automatisch** — dafür gibt es keine Closing-Keyword-Verknüpfung, da die User Story ja nicht über einen eigenen Pull Request umgesetzt wird. Zwei Dinge sind daher von Hand zu erledigen, sobald der letzte Teilschritt gemergt ist:
